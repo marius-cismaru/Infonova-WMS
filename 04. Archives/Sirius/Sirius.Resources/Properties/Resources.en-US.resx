@@ -1,0 +1,2380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Exit_Button" xml:space="preserve">
+    <value>Exit</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Login_Button" xml:space="preserve">
+    <value>Login</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Logout_Tooltip" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Tooltip</comment>
+  </data>
+  <data name="NA_Text" xml:space="preserve">
+    <value>N/A</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sirius_Title" xml:space="preserve">
+    <value>Sirius</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Management_Text" xml:space="preserve">
+    <value>Management</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Users_Button" xml:space="preserve">
+    <value>Users</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Users_Title" xml:space="preserve">
+    <value>Users</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Orders_Button" xml:space="preserve">
+    <value>Orders</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Orders_Title" xml:space="preserve">
+    <value>Orders</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Product_Text" xml:space="preserve">
+    <value>Product</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Username_Text" xml:space="preserve">
+    <value>Username</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AccessCode_Text" xml:space="preserve">
+    <value>Access Code</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AccessRight_Text" xml:space="preserve">
+    <value>Access Right</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Address_Text" xml:space="preserve">
+    <value>Address</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Email_Text" xml:space="preserve">
+    <value>Email</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FirstName_Text" xml:space="preserve">
+    <value>First Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Function_Text" xml:space="preserve">
+    <value>Function</value>
+    <comment>Text</comment>
+  </data>
+  <data name="LastName_Text" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Password_Text" xml:space="preserve">
+    <value>Password</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Phone_Text" xml:space="preserve">
+    <value>Phone</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Add_Button" xml:space="preserve">
+    <value>Add</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AreaOfUse_Header" xml:space="preserve">
+    <value>Area of Use</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Delete_MenuItem" xml:space="preserve">
+    <value>Delete</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="Edit_MenuItem" xml:space="preserve">
+    <value>Edit</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="Name_Header" xml:space="preserve">
+    <value>Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AreaOfUse_Text" xml:space="preserve">
+    <value>Area of Use</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AccessCode_Header" xml:space="preserve">
+    <value>Access Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MoldPieces_Header" xml:space="preserve">
+    <value>Mold Pieces</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AccessRight_Header" xml:space="preserve">
+    <value>Access Right</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Weight_Text" xml:space="preserve">
+    <value>Weight (Grams)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Address_Header" xml:space="preserve">
+    <value>Address</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Norm_Header" xml:space="preserve">
+    <value>Norm (Seconds)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MoldPieces_Text" xml:space="preserve">
+    <value>Mold Pieces</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Details_MenuItem" xml:space="preserve">
+    <value>Details</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="Norm_Text" xml:space="preserve">
+    <value>Norm (Seconds)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Email_Header" xml:space="preserve">
+    <value>Email</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FirstName_Header" xml:space="preserve">
+    <value>First Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Function_Header" xml:space="preserve">
+    <value>Function</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LastName_Header" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Password_Header" xml:space="preserve">
+    <value>Password</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Phone_Header" xml:space="preserve">
+    <value>Phone</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Username_Header" xml:space="preserve">
+    <value>Username</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Cancel_Button" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Confirmation_Title" xml:space="preserve">
+    <value>Confirmation</value>
+    <comment>Title</comment>
+  </data>
+  <data name="DeleteConfirmation_Message" xml:space="preserve">
+    <value>Are you sure you want to detele this record?</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Ok_Button" xml:space="preserve">
+    <value>OK</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UsernameExists_Message" xml:space="preserve">
+    <value>Username already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AccessCodeExists_Message" xml:space="preserve">
+    <value>AccessCode already exists</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineType_Title" xml:space="preserve">
+    <value>Machine Types</value>
+    <comment>Title</comment>
+  </data>
+  <data name="MachineName_Header" xml:space="preserve">
+    <value>Machine Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MachineTypeName_Header" xml:space="preserve">
+    <value>MachineType Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Vendor_Header" xml:space="preserve">
+    <value>Vendor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FillAllFields_Message" xml:space="preserve">
+    <value>Please fill in all mandatory fields!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SearchProduct_Text" xml:space="preserve">
+    <value>Search product</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Search_Button" xml:space="preserve">
+    <value>Search</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineType_Button" xml:space="preserve">
+    <value>Machines Types</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Date_Header" xml:space="preserve">
+    <value>Date</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorsType_Title" xml:space="preserve">
+    <value>Sensors Type</value>
+    <comment>Title</comment>
+  </data>
+  <data name="EndHour_Header" xml:space="preserve">
+    <value>End Hour</value>
+    <comment>Header</comment>
+  </data>
+  <data name="EndHour_Text" xml:space="preserve">
+    <value>End Hour</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ShiftNameExists_Message" xml:space="preserve">
+    <value>Shift Name already esists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ShiftName_Header" xml:space="preserve">
+    <value>Shift Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ShiftName_Text" xml:space="preserve">
+    <value>Shift Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Shifts_Button" xml:space="preserve">
+    <value>Shifts</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Shifts_Title" xml:space="preserve">
+    <value>Shifts</value>
+    <comment>Title</comment>
+  </data>
+  <data name="StartHour_Header" xml:space="preserve">
+    <value>Start Hour</value>
+    <comment>Header</comment>
+  </data>
+  <data name="StartHour_Text" xml:space="preserve">
+    <value>Start Hour</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakPlan_Button" xml:space="preserve">
+    <value>Break Plan</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SensorsType_Button" xml:space="preserve">
+    <value>Sensors Type</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakPlan_Title" xml:space="preserve">
+    <value>Break Plan</value>
+    <comment>Title</comment>
+  </data>
+  <data name="MachineName_Text" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineType_Text" xml:space="preserve">
+    <value>Machine Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Machines_Text" xml:space="preserve">
+    <value>Machines</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sensors_Text" xml:space="preserve">
+    <value>Sensors</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Vendor_Text" xml:space="preserve">
+    <value>Vendor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="InputType_Button" xml:space="preserve">
+    <value>Input Type</value>
+    <comment>Button</comment>
+  </data>
+  <data name="InputType_Title" xml:space="preserve">
+    <value>Input Type</value>
+    <comment>Title</comment>
+  </data>
+  <data name="InputType_Text" xml:space="preserve">
+    <value>Input Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="UM_Text" xml:space="preserve">
+    <value>Measurment Unit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypeName_Header" xml:space="preserve">
+    <value>Break Type Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakTypeName_Text" xml:space="preserve">
+    <value>Break Type Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsGlobalBreak_Text" xml:space="preserve">
+    <value>Global Break</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsAvailabilityAffected_Text" xml:space="preserve">
+    <value>Availability Affected</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsPlanned_Text" xml:space="preserve">
+    <value>Planned</value>
+    <comment>Text</comment>
+  </data>
+  <data name="WeekSchema_Text" xml:space="preserve">
+    <value>Week Schema</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Breaks_Text" xml:space="preserve">
+    <value>Breaks</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DayName_Header" xml:space="preserve">
+    <value>Day Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DayNo_Header" xml:space="preserve">
+    <value>Day Number</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DaySchemaName_Header" xml:space="preserve">
+    <value>Schema Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="HasBreak_Header" xml:space="preserve">
+    <value>Has Break</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DaysSchema_Title" xml:space="preserve">
+    <value>Days Schema</value>
+    <comment>Title</comment>
+  </data>
+  <data name="DayName_Text" xml:space="preserve">
+    <value>Day Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DayNo_Text" xml:space="preserve">
+    <value>Day Number</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CalibrationInterval_Header" xml:space="preserve">
+    <value>Calibration Interval (days)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="InputType_Header" xml:space="preserve">
+    <value>Input Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaxInputValue_Header" xml:space="preserve">
+    <value>Max Input Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaxOutputValue_Header" xml:space="preserve">
+    <value>Max Output Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MinInputValue_Header" xml:space="preserve">
+    <value>Min Input Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MinOutputValue_Header" xml:space="preserve">
+    <value>Min Output Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OutputType_Header" xml:space="preserve">
+    <value>Output Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorType_Header" xml:space="preserve">
+    <value>Sensor Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DaySchemaExists_Message" xml:space="preserve">
+    <value>Day already exists</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DaySchemaNameExists_Message" xml:space="preserve">
+    <value>Schema Name already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DaySchema_Button" xml:space="preserve">
+    <value>Days Schema</value>
+    <comment>Button</comment>
+  </data>
+  <data name="HasBreak_Text" xml:space="preserve">
+    <value>Has Break</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SchemaName_Text" xml:space="preserve">
+    <value>Schema Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Configure_MenuItem" xml:space="preserve">
+    <value>Configure</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="CalibrationInterval_Text" xml:space="preserve">
+    <value>Calibration Interval (days)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxInputValue_Text" xml:space="preserve">
+    <value>Max Input Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxOutputValue_Text" xml:space="preserve">
+    <value>Max Output Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinInputValue_Text" xml:space="preserve">
+    <value>Min Input Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinOutputValue_Text" xml:space="preserve">
+    <value>Min Output Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputType_Text" xml:space="preserve">
+    <value>Output Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorType_Text" xml:space="preserve">
+    <value>Sensor Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorsTypes_Header" xml:space="preserve">
+    <value>Sensors Types</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Machines_Title" xml:space="preserve">
+    <value>Machines</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Monday_Text" xml:space="preserve">
+    <value>Monday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Machines_Button" xml:space="preserve">
+    <value>Machines</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Tuesday_Text" xml:space="preserve">
+    <value>Tuesday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineType_Header" xml:space="preserve">
+    <value>Machine Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OutputType_Title" xml:space="preserve">
+    <value>Output Type</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SensorsType_Text" xml:space="preserve">
+    <value>Sensors Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputType_Button" xml:space="preserve">
+    <value>Output Type</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MeasurementUnit_Text" xml:space="preserve">
+    <value>Measurement Unit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Manage_Button" xml:space="preserve">
+    <value>Manage</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Sensors_Title" xml:space="preserve">
+    <value>Sensors</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Sensor_Button" xml:space="preserve">
+    <value>Sensors</value>
+    <comment>Button</comment>
+  </data>
+  <data name="InputValueUM_Header" xml:space="preserve">
+    <value>Input Value / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="InputValueUM_Text" xml:space="preserve">
+    <value>Input Value / UM</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineDescription_Header" xml:space="preserve">
+    <value>Machine</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Name_Text" xml:space="preserve">
+    <value>Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputValueUM_Header" xml:space="preserve">
+    <value>Output Value / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="NoSchemaSelected_Message" xml:space="preserve">
+    <value>Please select a Schema Name</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SelectDay_Message" xml:space="preserve">
+    <value>Please select a Day!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Friday_Text" xml:space="preserve">
+    <value>Friday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Saturday_Text" xml:space="preserve">
+    <value>Saturday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sunday_Text" xml:space="preserve">
+    <value>Sunday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Thursday_Text" xml:space="preserve">
+    <value>Thursday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Wednesday_Text" xml:space="preserve">
+    <value>Wednesday</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputValueUM_Text" xml:space="preserve">
+    <value>Output Value / UM</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorTypeName_Text" xml:space="preserve">
+    <value>Sensor Type Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sensors_Header" xml:space="preserve">
+    <value>Sensors</value>
+    <comment>Header</comment>
+  </data>
+  <data name="InputTypeUM_Header" xml:space="preserve">
+    <value>Input Type / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FillSchemaName_Message" xml:space="preserve">
+    <value>Please fill in Schema Name!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AddDaysSchema_Button" xml:space="preserve">
+    <value>Add Days</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AddSchemaName_Button" xml:space="preserve">
+    <value>Add Schema</value>
+    <comment>Button</comment>
+  </data>
+  <data name="OutputTypeUM_Header" xml:space="preserve">
+    <value>Output Type / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SelectMachine_Text" xml:space="preserve">
+    <value>Select machine</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ViewAll_Text" xml:space="preserve">
+    <value>View All</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypes_Title" xml:space="preserve">
+    <value>Break Types</value>
+    <comment>Title</comment>
+  </data>
+  <data name="IsGlobalBreak_Header" xml:space="preserve">
+    <value>Global Break</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IsAvailabilityAffected_Header" xml:space="preserve">
+    <value>Availability Affected</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IsPlanned_Header" xml:space="preserve">
+    <value>Planned</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakTypes_Button" xml:space="preserve">
+    <value>Break Types</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakTypeNameExists_Message" xml:space="preserve">
+    <value>Break Type already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorsTypes_Text" xml:space="preserve">
+    <value>Sensors Types</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sensors_Button" xml:space="preserve">
+    <value>Sensors</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineParametersTypes_Header" xml:space="preserve">
+    <value>Machine Sensors Types</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Machine_Header" xml:space="preserve">
+    <value>Machine</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Sensor_Header" xml:space="preserve">
+    <value>Sensor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FirstRead_Header" xml:space="preserve">
+    <value>First Read</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FirstResult_Header" xml:space="preserve">
+    <value>First Result</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Offset_Header" xml:space="preserve">
+    <value>Offset</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Scale_Header" xml:space="preserve">
+    <value>Scale</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SecondRead_Header" xml:space="preserve">
+    <value>Second Read</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SecondResult_Header" xml:space="preserve">
+    <value>Second Result</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LastModifiedDate_Header" xml:space="preserve">
+    <value>Last Modified Date</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LastModifiedDate_Text" xml:space="preserve">
+    <value>Last Modified Date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AddSensor_Button" xml:space="preserve">
+    <value>Add Sensor</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SensorCalibration_Text" xml:space="preserve">
+    <value>Calibration</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ModifiedDate_Header" xml:space="preserve">
+    <value>Modified Date</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ModifiedDate_Text" xml:space="preserve">
+    <value>Modified Date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IntroducetiUserSiParola_Text" xml:space="preserve">
+    <value>Introduceti userul si parola</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoShiftMatches_Message" xml:space="preserve">
+    <value>No Shift matches the break interval</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UnplannedBreaks_Title" xml:space="preserve">
+    <value>Unplanned Breaks</value>
+    <comment>Title</comment>
+  </data>
+  <data name="UnplannedBreaks_Button" xml:space="preserve">
+    <value>Unplanned Breaks</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ScanDate_Text" xml:space="preserve">
+    <value>Scan Date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Error</value>
+    <comment>Title</comment>
+  </data>
+  <data name="InvalidUsernameAndPassword_Message" xml:space="preserve">
+    <value>Invalid username and password</value>
+    <comment>Message</comment>
+  </data>
+  <data name="PleaseEnterUsernameAndPassword_Text" xml:space="preserve">
+    <value>Please enter username and password</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AnvisGroup_Title" xml:space="preserve">
+    <value>ANVIS ROM</value>
+    <comment>Title</comment>
+  </data>
+  <data name="AllDays_Text" xml:space="preserve">
+    <value>All days</value>
+    <comment>Text</comment>
+  </data>
+  <data name="General_Text" xml:space="preserve">
+    <value>General</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DaySchemaNameAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Day Schema Name cannot be deleted as it is assigned to a break!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BreakTypeAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Break Type cannot be deleted as it is assigned to a break!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ShiftAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Shift cannot be deleted as it is assigned to a break!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Products_Text" xml:space="preserve">
+    <value>Products</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ProductTypes_Button" xml:space="preserve">
+    <value>Product Types</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ProductType_Header" xml:space="preserve">
+    <value>Product Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ProductType_Text" xml:space="preserve">
+    <value>Product Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Weight_Header" xml:space="preserve">
+    <value>Weight (Grams)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ProductTypes_Title" xml:space="preserve">
+    <value>Product Types</value>
+    <comment>Title</comment>
+  </data>
+  <data name="ProductTypeAssignedToOrder_Message" xml:space="preserve">
+    <value>Product Type cannot be deleted as it is assigned to an order!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineTypeAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Machine Type cannot be deleted as it is assigned to a machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorTypeAssignedToMachine_Message" xml:space="preserve">
+    <value>Sensor Type cannot be deleted as it is assigned to a machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="InputTypeAssignedToSensorType_Message" xml:space="preserve">
+    <value>Input Type cannot be deleted as it is assigned to a sensor type!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="OutputTypeAssignedToSensorType_Message" xml:space="preserve">
+    <value>Output Type cannot be deleted as it is assigned to a sensor type!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypes_Title" xml:space="preserve">
+    <value>Cycle Types</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Cycles_Text" xml:space="preserve">
+    <value>Cycles</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CycleTypeName_Header" xml:space="preserve">
+    <value>Cycle Type Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CycleTypes_Button" xml:space="preserve">
+    <value>Cycle Types</value>
+    <comment>Button</comment>
+  </data>
+  <data name="CycleTypeName_Text" xml:space="preserve">
+    <value>Cycle Type Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillCycleTypeName_Message" xml:space="preserve">
+    <value>Please fill in Cycle Type Name!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleDivisionName_Header" xml:space="preserve">
+    <value>Cycle Division Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaxTime_Header" xml:space="preserve">
+    <value>Max Time (seconds)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Order_Header" xml:space="preserve">
+    <value>Order</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorName_Header" xml:space="preserve">
+    <value>Sensor Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorValue_Header" xml:space="preserve">
+    <value>Sensor Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CycleDivisionName_Text" xml:space="preserve">
+    <value>Cycle Division</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxTime_Text" xml:space="preserve">
+    <value>Max Time (seconds)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Order_Text" xml:space="preserve">
+    <value>Order</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorName_Text" xml:space="preserve">
+    <value>Sensor Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorValue_Text" xml:space="preserve">
+    <value>Sensor Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoCycleTypeSelected_Message" xml:space="preserve">
+    <value>Please select a Cycle Type!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypeAssignedToMachineType_Message" xml:space="preserve">
+    <value>Cycle type cannot be deleted as it is assigned to a machine type!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypeExists_Message" xml:space="preserve">
+    <value>Cycle Type already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleDivisionAssignedToCycle_Message" xml:space="preserve">
+    <value>Cycle division cannot be deleted as it is assigned to a cycle!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypeAssignedToCycle_Message" xml:space="preserve">
+    <value>Cycle type cannot be deleted as it is assigned to a cycle!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="IP_Text" xml:space="preserve">
+    <value>IP</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CycleType_Text" xml:space="preserve">
+    <value>Cycle Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Date_Text" xml:space="preserve">
+    <value>Date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FirstRead_Text" xml:space="preserve">
+    <value>First read</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FirstResult_Text" xml:space="preserve">
+    <value>First result</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Offset_Text" xml:space="preserve">
+    <value>Offset</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Scale_Text" xml:space="preserve">
+    <value>Scale</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SecondRead_Text" xml:space="preserve">
+    <value>Second read</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SecondResult_Text" xml:space="preserve">
+    <value>Second result</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NameAlreadyExists_Message" xml:space="preserve">
+    <value>Name already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleType_Header" xml:space="preserve">
+    <value>Cycle Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Calibration_Button" xml:space="preserve">
+    <value>Calibration</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SensorTypeAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Sensor Type is already assigned to machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorNameAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Sensor Name is already assigned to machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineAlreadyExists_Message" xml:space="preserve">
+    <value>Machine Already Exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="NoSensorSelected_Message" xml:space="preserve">
+    <value>Please select a Sensor!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Scans_Title" xml:space="preserve">
+    <value>Scans</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Code_Header" xml:space="preserve">
+    <value>Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Code_Text" xml:space="preserve">
+    <value>Code</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanCodeExists_Message" xml:space="preserve">
+    <value>Scan Code already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Scans_Button" xml:space="preserve">
+    <value>Scans</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Scans_Text" xml:space="preserve">
+    <value>Scans</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanTypeNameExists_Message" xml:space="preserve">
+    <value>Scan Type Name already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ScanTypeName_Header" xml:space="preserve">
+    <value>Scan Type Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ScanTypeName_Text" xml:space="preserve">
+    <value>Scan Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanTypes_Button" xml:space="preserve">
+    <value>Scan Types</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ScanTypes_Title" xml:space="preserve">
+    <value>Scan Types</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Value_Header" xml:space="preserve">
+    <value>Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Value_Text" xml:space="preserve">
+    <value>Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanTypeAssignedToScan_Message" xml:space="preserve">
+    <value>Cannot delete scan type as it is already assigned to a scan command!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineSensorsTypeUncorespondingCycle_Message" xml:space="preserve">
+    <value>Machine types sensors do not corespond with the selected cycle type!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineNameTypeAlreadyExist_Message" xml:space="preserve">
+    <value>Machine name type already exist!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleDivision_Header" xml:space="preserve">
+    <value>Cycle Division</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Cycles_Button" xml:space="preserve">
+    <value>Cycles</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Cycles_Title" xml:space="preserve">
+    <value>Cycles</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Reports_Text" xml:space="preserve">
+    <value>Reports</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoMachineSelected_Message" xml:space="preserve">
+    <value>Please select a machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AddCalibration_Button" xml:space="preserve">
+    <value>Add Calibration</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Calibration_Title" xml:space="preserve">
+    <value>Calibration</value>
+    <comment>Title</comment>
+  </data>
+  <data name="ProductTypeAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Product type is already assigned to machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="IP_Header" xml:space="preserve">
+    <value>IP</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Time_Text" xml:space="preserve">
+    <value>Time</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineTypeAssignedToMachine_Message" xml:space="preserve">
+    <value>Machine type cannot be deleted as it is assigned to a machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RejectedProducts_Title" xml:space="preserve">
+    <value>Not OK Products</value>
+    <comment>Title</comment>
+  </data>
+  <data name="State_Header" xml:space="preserve">
+    <value>State</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RejectedProducts_Button" xml:space="preserve">
+    <value>Not OK Products</value>
+    <comment>Button</comment>
+  </data>
+  <data name="State_Text" xml:space="preserve">
+    <value>State</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineSensorsIncludedInCycle_Message" xml:space="preserve">
+    <value>Sensor type can not be deleted because it is included in machine cycle type!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Description_Header" xml:space="preserve">
+    <value>Description</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Description_Text" xml:space="preserve">
+    <value>Description</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorsReading_Title" xml:space="preserve">
+    <value>Sensors Reading</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SensorsReading_Button" xml:space="preserve">
+    <value>Sensors Reading</value>
+    <comment>Button</comment>
+  </data>
+  <data name="InputTypeAlreadyExists_Message" xml:space="preserve">
+    <value>Input Type already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="OutputTypeAlreadyExists_Message" xml:space="preserve">
+    <value>Output Type already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FromDate_Text" xml:space="preserve">
+    <value>From date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ToDate_Text" xml:space="preserve">
+    <value>To date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RejectedProductsStates_Title" xml:space="preserve">
+    <value>Not OK Products States</value>
+    <comment>Title</comment>
+  </data>
+  <data name="StateName_Header" xml:space="preserve">
+    <value>State Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RejectedProductsStates_Button" xml:space="preserve">
+    <value>Not OK Products States</value>
+    <comment>Button</comment>
+  </data>
+  <data name="StateName_Text" xml:space="preserve">
+    <value>State Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillStateName_Message" xml:space="preserve">
+    <value>Please fill in State Name!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="StateNameOrCodeAlreadyExists_Message" xml:space="preserve">
+    <value>State Name or Code already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionName_Header" xml:space="preserve">
+    <value>Function Name</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FunctionName_Text" xml:space="preserve">
+    <value>Function Name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillFunctionName_Message" xml:space="preserve">
+    <value>Please fill in Function Name!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionNameExists_Message" xml:space="preserve">
+    <value>Function Name already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionNameAlreadyAssignedToUser_Message" xml:space="preserve">
+    <value>Function cannot be deleted as it is already assigned to a user!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UsersFunctions_Button" xml:space="preserve">
+    <value>Users Functions</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UsersFunctions_Title" xml:space="preserve">
+    <value>Users Functions</value>
+    <comment>Title</comment>
+  </data>
+  <data name="CannotModifyCurrentShift_Message" xml:space="preserve">
+    <value>Cannot modify a shift which is currently loading!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Hour_Text" xml:space="preserve">
+    <value>Hour</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoCycleMatches_Message" xml:space="preserve">
+    <value>Break cannot be added as no machine cycle is matched!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CauseCode_Header" xml:space="preserve">
+    <value>Cause Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CauseCode_Text" xml:space="preserve">
+    <value>Cause Code</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ReadValue_Header" xml:space="preserve">
+    <value>Read Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ReadValue_Text" xml:space="preserve">
+    <value>Read Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ResultValue_Header" xml:space="preserve">
+    <value>Result Value</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ResultValue_Text" xml:space="preserve">
+    <value>Result Value</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Remove_Button" xml:space="preserve">
+    <value>Remove</value>
+    <comment>Button</comment>
+  </data>
+  <data name="NoItemSelected_Message" xml:space="preserve">
+    <value>Please select an item!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CannotDeleteCalibration_Message" xml:space="preserve">
+    <value>Cannot delete calibration!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ReadingsList_Text" xml:space="preserve">
+    <value>Readings List</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorsAlert_Title" xml:space="preserve">
+    <value>Sensors Alert</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Alerts_Button" xml:space="preserve">
+    <value>Alerts</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Column_Text" xml:space="preserve">
+    <value>Position</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Row_Text" xml:space="preserve">
+    <value>Row</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Column_Header" xml:space="preserve">
+    <value>Position</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Row_Header" xml:space="preserve">
+    <value>Row</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RowColumnOccupied_Message" xml:space="preserve">
+    <value>Row and Position are occupied</value>
+    <comment>Message</comment>
+  </data>
+  <data name="LiveBoard_Button" xml:space="preserve">
+    <value>Live Board</value>
+    <comment>Button</comment>
+  </data>
+  <data name="LiveBoard_Title" xml:space="preserve">
+    <value>Live Board</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SensorTypeAndProductTypeAlreadyExist_Message" xml:space="preserve">
+    <value>Sensor Type and Product Type already exist!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Graphic_Text" xml:space="preserve">
+    <value>Graphic</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineProcessesHistory_Button" xml:space="preserve">
+    <value>Machine Processes History</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineProcessesHistory_Title" xml:space="preserve">
+    <value>Machine Processes History</value>
+    <comment>Title</comment>
+  </data>
+  <data name="ScrapProducts_Title" xml:space="preserve">
+    <value>Top 5 Scrap Products</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Top5_Text" xml:space="preserve">
+    <value>Top 5</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScrapNumber_Header" xml:space="preserve">
+    <value>Scrap number</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Top5ScrapMachine_Title" xml:space="preserve">
+    <value>Top 5 Scrap Machines</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Top5_Button" xml:space="preserve">
+    <value>Top 5</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreaksNumber_Header" xml:space="preserve">
+    <value>Breaks number</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Top5MachineScrap_Text" xml:space="preserve">
+    <value>Top 5 Machine Scrap</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Top5_Title" xml:space="preserve">
+    <value>Top 5</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Top5ProductScrap_Text" xml:space="preserve">
+    <value>Top 5 Product Scrap</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorTypeAndOrderExists_Message" xml:space="preserve">
+    <value>Sensor Type and Order already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ScanOrderExists_Message" xml:space="preserve">
+    <value>Scan Order already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CauseCodeExists_Message" xml:space="preserve">
+    <value>Code already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CauseDescription_Header" xml:space="preserve">
+    <value>Description</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CauseDescription_Text" xml:space="preserve">
+    <value>Description</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillCauseCode_Message" xml:space="preserve">
+    <value>Please fill Cause Code</value>
+    <comment>Message</comment>
+  </data>
+  <data name="NOKCauses_Title" xml:space="preserve">
+    <value>Not OK Products Causes</value>
+    <comment>Title</comment>
+  </data>
+  <data name="NOKProductsCauses_Button" xml:space="preserve">
+    <value>Not OK Causes</value>
+    <comment>Button</comment>
+  </data>
+  <data name="OrderCode_Header" xml:space="preserve">
+    <value>Order</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OrderCode_Text" xml:space="preserve">
+    <value>Order</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Cause1_Header" xml:space="preserve">
+    <value>Cause 1</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Cause2_Header" xml:space="preserve">
+    <value>Cause 2</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Productivity_Text" xml:space="preserve">
+    <value>Productivity</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxOutputValueIsNull_Message" xml:space="preserve">
+    <value>If checkbox is checked Maximum Output Value cannot be null</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MinOutputValueIsNull_Message" xml:space="preserve">
+    <value>If checkbox is checked Minimum Output Value cannot be null</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MinOVandMaxOVCannotBenull_Message" xml:space="preserve">
+    <value>Minimum and maximum output values can not be both null!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Generate_Button" xml:space="preserve">
+    <value>Generate</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineProcessesRealtime_Button" xml:space="preserve">
+    <value>Machine Processes Realtime</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineProcessesRealtime_Title" xml:space="preserve">
+    <value>Machine Processes Realtime</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Stop_Button" xml:space="preserve">
+    <value>Stop</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakType_Header" xml:space="preserve">
+    <value>Break Type</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Top5Breaks_Text" xml:space="preserve">
+    <value>Top 5 Breaks</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Scrap_Button" xml:space="preserve">
+    <value>Scrap</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Quality_Text" xml:space="preserve">
+    <value>Quality</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Availability_Text" xml:space="preserve">
+    <value>Availability</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Start_Button" xml:space="preserve">
+    <value>Start</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AllMachines_Text" xml:space="preserve">
+    <value>All Machines</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllOrders_Text" xml:space="preserve">
+    <value>All Orders</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllScans_Text" xml:space="preserve">
+    <value>All Scans</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllSensorTypes_Text" xml:space="preserve">
+    <value>All Sensor Types</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Running_Text" xml:space="preserve">
+    <value>Running</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Stopped_Text" xml:space="preserve">
+    <value>Stopped</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AppSettings_Button" xml:space="preserve">
+    <value>Application Settings</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>Application Settings</value>
+    <comment>Title</comment>
+  </data>
+  <data name="IntervalMinutes_Text" xml:space="preserve">
+    <value>Interval (min)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ProductCode_Header" xml:space="preserve">
+    <value>Product Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AllProductCodes_Text" xml:space="preserve">
+    <value>All Product Codes</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ProductCode_Text" xml:space="preserve">
+    <value>Product Code</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ResetSensors_Text" xml:space="preserve">
+    <value>Reset Sensors</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoCycleDivisionSelected_Message" xml:space="preserve">
+    <value>Please select a division!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Details_Button" xml:space="preserve">
+    <value>Details</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UnknownBreak_Text" xml:space="preserve">
+    <value>Unknown Break</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxAlert_Text" xml:space="preserve">
+    <value>Max Alert</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinAlert_Text" xml:space="preserve">
+    <value>Min Alert</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OrderDivision_Header" xml:space="preserve">
+    <value>Order</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OrderDivision_Text" xml:space="preserve">
+    <value>Order</value>
+    <comment>Text</comment>
+  </data>
+  <data name="StoppedIn_Message" xml:space="preserve">
+    <value>STOPPED IN</value>
+    <comment>Message</comment>
+  </data>
+  <data name="OEE_Text" xml:space="preserve">
+    <value>OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="VisibleOnLiveBoard_Header" xml:space="preserve">
+    <value>Visible on LiveBoard</value>
+    <comment>Header</comment>
+  </data>
+  <data name="VisibleOnLiveBoard_Text" xml:space="preserve">
+    <value>Visible on LiveBoard</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TechnicalSupport_Title" xml:space="preserve">
+    <value>Technical Support</value>
+    <comment>Title</comment>
+  </data>
+  <data name="BreakTypeCodeExists_Message" xml:space="preserve">
+    <value>Break Type Code exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="TechSupport_Button" xml:space="preserve">
+    <value>Technical Support</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakCode_Header" xml:space="preserve">
+    <value>Break Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakCode_Text" xml:space="preserve">
+    <value>Break Code</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllBreakTypes_Text" xml:space="preserve">
+    <value>All Break Types</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Top5HighestProductivity_Text" xml:space="preserve">
+    <value>Top5 Highest Productivity</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Top5LowestOEE_Text" xml:space="preserve">
+    <value>Top 5 Lowest OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OEE_Header" xml:space="preserve">
+    <value>OEE</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Productivity_Header" xml:space="preserve">
+    <value>Productivity</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Refresh_Button" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Top5NormDeviation_Text" xml:space="preserve">
+    <value>Top 5 Norm Deviation</value>
+    <comment>Text</comment>
+  </data>
+  <data name="PercentRealised_Header" xml:space="preserve">
+    <value>Percent realised</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Status_Text" xml:space="preserve">
+    <value>Status</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CannotConnectToDB_Message" xml:space="preserve">
+    <value>Cannot connect to database.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="IndicatorsHistory_Button" xml:space="preserve">
+    <value>Indicators by Day</value>
+    <comment>Button</comment>
+  </data>
+  <data name="IndicatorsHistory_Title" xml:space="preserve">
+    <value>Indicators by Day</value>
+    <comment>Title</comment>
+  </data>
+  <data name="IndicatorsPeriod_Button" xml:space="preserve">
+    <value>Indicators by Period</value>
+    <comment>Button</comment>
+  </data>
+  <data name="IndicatorsPeriod_Title" xml:space="preserve">
+    <value>Indicators by Period</value>
+    <comment>Title</comment>
+  </data>
+  <data name="DateEndBreak_Header" xml:space="preserve">
+    <value>Date End Break</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DateScanBreak_Header" xml:space="preserve">
+    <value>Date Scan Break</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DateScanTechBegin_Header" xml:space="preserve">
+    <value>Begin Technical Support</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DateStartBreak_Header" xml:space="preserve">
+    <value>Date Start Break</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeBreakDuration_Header" xml:space="preserve">
+    <value>Break Duration</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeBreakSolve_Header" xml:space="preserve">
+    <value>Time Break Solve</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeScanBreak_Header" xml:space="preserve">
+    <value>Time Scan Break</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeScanTechSupport_Header" xml:space="preserve">
+    <value>Time Scan Support</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Day_Text" xml:space="preserve">
+    <value>Day</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Shift_Text" xml:space="preserve">
+    <value>Shift</value>
+    <comment>Text</comment>
+  </data>
+  <data name="UserSettings_Button" xml:space="preserve">
+    <value>User Settings</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UserSettings_Title" xml:space="preserve">
+    <value>User Settings</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Language_Header" xml:space="preserve">
+    <value>Language</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RealtimeDisplayMinutes_Header" xml:space="preserve">
+    <value>Realtime Display (m)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshSensorsSeconds_Header" xml:space="preserve">
+    <value>Refresh Sensors (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="User_Header" xml:space="preserve">
+    <value>User</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>Language</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RealtimeDisplayMinutes_Text" xml:space="preserve">
+    <value>Realtime Display (m)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshSensorsSeconds_Text" xml:space="preserve">
+    <value>Refresh Sensors (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshAlertsSeconds_Header" xml:space="preserve">
+    <value>Refresh Alerts (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshCycleSeconds_Header" xml:space="preserve">
+    <value>Refresh Cycle (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshIndicatorsMinutes_Header" xml:space="preserve">
+    <value>Refresh Indicators (m)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshLiveBoardSeconds_Header" xml:space="preserve">
+    <value>Refresh LiveBoard (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IndicatorsIntervalMinutes_Header" xml:space="preserve">
+    <value>Indicators Interval (m)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IndicatorsIntervalMinutes_Text" xml:space="preserve">
+    <value>Indicators Interval (m)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshAlertsSeconds_Text" xml:space="preserve">
+    <value>Refresh Alerts (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshCycleSeconds_Text" xml:space="preserve">
+    <value>Refresh Cycle (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshIndicatorsMinutes_Text" xml:space="preserve">
+    <value>Refresh Indicators (m)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshLiveBoardSeconds_Text" xml:space="preserve">
+    <value>Refresh LiveBoard (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NeedsRestart_Message" xml:space="preserve">
+    <value>The application needs to be restarted, please restart your application !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Alerts_Title" xml:space="preserve">
+    <value>Alerts</value>
+    <comment>Title</comment>
+  </data>
+  <data name="AlertOnMax_Header" xml:space="preserve">
+    <value>Alert on Max</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AlertOnMin_Header" xml:space="preserve">
+    <value>Alert on Min</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakAlertRules_Text" xml:space="preserve">
+    <value>Break Alert Rules</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypeAlertRules_Text" xml:space="preserve">
+    <value>Break Type Alert Rules</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorAlertRules_Text" xml:space="preserve">
+    <value>Sensor Alert Rules</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Users_Text" xml:space="preserve">
+    <value>Users</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakAlert_Text" xml:space="preserve">
+    <value>Break Alert</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypeAlert_Text" xml:space="preserve">
+    <value>Break Type Alert</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorAlert_Text" xml:space="preserve">
+    <value>Sensor Alert</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AlertType_Text" xml:space="preserve">
+    <value>Alert Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Color_Header" xml:space="preserve">
+    <value>Color</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Color_Text" xml:space="preserve">
+    <value>Color</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Machine_Text" xml:space="preserve">
+    <value>Machine</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineDescriptionCannotContainSpaces_Message" xml:space="preserve">
+    <value>Machine Description cannot contain spaces!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CodeAlreadyExists_Message" xml:space="preserve">
+    <value>Code already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AddSensorCondition_MenuItem" xml:space="preserve">
+    <value>Add Sensor Condition</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="AllNOKStates_Text" xml:space="preserve">
+    <value>All States</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Next_Button" xml:space="preserve">
+    <value>Next &gt;</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Previous_Button" xml:space="preserve">
+    <value>&lt; Previous</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Information_Text" xml:space="preserve">
+    <value>Information</value>
+    <comment>Text</comment>
+  </data>
+  <data name="StateCode_Header" xml:space="preserve">
+    <value>State Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakType_Text" xml:space="preserve">
+    <value>Break Type</value>
+    <comment>Text</comment>
+  </data>
+  <data name="All_Text" xml:space="preserve">
+    <value>All</value>
+    <comment>Text</comment>
+  </data>
+  <data name="EndDate_Text" xml:space="preserve">
+    <value>End Date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="StartDate_Text" xml:space="preserve">
+    <value>Start Date</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanDate_Header" xml:space="preserve">
+    <value>Scan Date</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ScanHour_Text" xml:space="preserve">
+    <value>Scan Hour</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Finish_Button" xml:space="preserve">
+    <value>Finish</value>
+    <comment>Button</comment>
+  </data>
+  <data name="RuleName_Text" xml:space="preserve">
+    <value>Rule name</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AlertOn_Text" xml:space="preserve">
+    <value>Alert on</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Maximum_Text" xml:space="preserve">
+    <value>Maximum</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Minimum_Text" xml:space="preserve">
+    <value>Minimum</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ChannelCode_Header" xml:space="preserve">
+    <value>Channel Code</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ChannelCode_Text" xml:space="preserve">
+    <value>Channel Code</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ChannelCodeAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Channel Code already assigned to machine</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Import_Button" xml:space="preserve">
+    <value>Import</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Browse_Button" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BrowseFile_Message" xml:space="preserve">
+    <value>Please browse a file!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="WrongExcelFormat_Message" xml:space="preserve">
+    <value>Wrong Excel Format!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="From_Message" xml:space="preserve">
+    <value>from</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Information_Message" xml:space="preserve">
+    <value>Information</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsInserted_Message" xml:space="preserve">
+    <value>inserted records</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsRejectedBecauseNullNormOrMoldPieces_Message" xml:space="preserve">
+    <value>rejected records (null value for Norm or Mold Pieces )</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsRejectedBecauseZeroNormOrMoldPieces_Message" xml:space="preserve">
+    <value>rejected records (0 value for Norm or Mold Pieces )</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsUpdated_Message" xml:space="preserve">
+    <value>updated records</value>
+    <comment>Message</comment>
+  </data>
+  <data name="TotalProducts_Message" xml:space="preserve">
+    <value>total products</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Zoom_Button" xml:space="preserve">
+    <value>Zoom</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SerialNumber_Text" xml:space="preserve">
+    <value>Serial Number</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SerialNumber_Header" xml:space="preserve">
+    <value>Serial Number</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SenderEmail_Header" xml:space="preserve">
+    <value>Sender Email</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SenderPassword_Header" xml:space="preserve">
+    <value>Sender Password</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SMTPAddress_Header" xml:space="preserve">
+    <value>SMTP Address</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SMTPPort_Header" xml:space="preserve">
+    <value>SMTP Port</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SSL_Header" xml:space="preserve">
+    <value>SSL</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SenderEmail_Text" xml:space="preserve">
+    <value>Sender Email</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SenderPassword_Text" xml:space="preserve">
+    <value>Sender Password</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SMTPAddress_Text" xml:space="preserve">
+    <value>SMTP Address</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SMTPPort_Text" xml:space="preserve">
+    <value>SMTP Port</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SSL_Text" xml:space="preserve">
+    <value>SSL</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DateScanTechEnd_Header" xml:space="preserve">
+    <value>End Technical Support</value>
+    <comment>Header</comment>
+  </data>
+  <data name="GeneralSettings_Text" xml:space="preserve">
+    <value>General Settings</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OEESettings_Text" xml:space="preserve">
+    <value>OEE Settings</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Maximum_Header" xml:space="preserve">
+    <value>Maximum</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Minimum_Header" xml:space="preserve">
+    <value>Minimum</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IntervalAlreadyExists_Message" xml:space="preserve">
+    <value>The interval you entered is already included in an already existing interval.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Blinking_Header" xml:space="preserve">
+    <value>Blinking</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AlertSubjectBreakType_Message" xml:space="preserve">
+    <value>Break Type Alert</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSubjectSensor_Message" xml:space="preserve">
+    <value>Sensor Alert</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSubjectUnplannedBreak_Message" xml:space="preserve">
+    <value>Unplanned Break Alert</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertMessageBreakType_Message" xml:space="preserve">
+    <value>An Unplanned Break Alert occured with the following information:</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertMessageSensor_Message" xml:space="preserve">
+    <value>A Sensor Value Alert occured with the following information:</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertMessageUnplannedBreak_Message" xml:space="preserve">
+    <value>An Unplanned Break Alert occured with the following information:</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SaveAsNewGroup_CheckBox" xml:space="preserve">
+    <value>Save selection as new group</value>
+    <comment>CheckBox</comment>
+  </data>
+  <data name="AlertUserGroupAlreadyExists_Message" xml:space="preserve">
+    <value>There is already a group with this name, please select another.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSensorValueOverMax_Message" xml:space="preserve">
+    <value>Sensor Value is over Max set Value</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSensorValueUnderMin_Message" xml:space="preserve">
+    <value>Sensor Value is under Min set Value</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Top5HighestOEE_Text" xml:space="preserve">
+    <value>Top 5 Highest OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Application_Text" xml:space="preserve">
+    <value>Application</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AlertLimits_Button" xml:space="preserve">
+    <value>Alert Limits</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineTypes_Text" xml:space="preserve">
+    <value>Machine Types</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorTypes_Text" xml:space="preserve">
+    <value>Sensor Types</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ExportToExcel_Button" xml:space="preserve">
+    <value>Export To Excel</value>
+    <comment>Button</comment>
+  </data>
+  <data name="TechnicalSupportBreak_Text" xml:space="preserve">
+    <value>Technical Support Break</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreaksMinutes_Header" xml:space="preserve">
+    <value>Breaks Minutes</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakMinutes_Header" xml:space="preserve">
+    <value>Break Minutes</value>
+    <comment>Header</comment>
+  </data>
+  <data name="NoProductSelected_Message" xml:space="preserve">
+    <value>Please select a Product!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="TechSupport_Text" xml:space="preserve">
+    <value>Technical Support</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TechSupportDuration_Header" xml:space="preserve">
+    <value>Duration</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IsBeginTechSupport_Text" xml:space="preserve">
+    <value>Is Begin Tech Support</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsEndTechSupport_Text" xml:space="preserve">
+    <value>Is End Tech Support</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ShowCycles_Text" xml:space="preserve">
+    <value>Show Cycles</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoTechSupportSelected_Message" xml:space="preserve">
+    <value>Please select a break!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DateBegin_Text" xml:space="preserve">
+    <value>Date Begin</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DateEnd_Text" xml:space="preserve">
+    <value>Date End</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BeginDateCouldNotBeGreaterThanEndDate_Message" xml:space="preserve">
+    <value>Begin Date could not be greater than End Date!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Blinking_Text" xml:space="preserve">
+    <value>Blinking</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinimumCannotBeGreaterThanMaximum_Message" xml:space="preserve">
+    <value>Minimum cannot be greater than Maximum!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertLimits_Title" xml:space="preserve">
+    <value>Alert Limits</value>
+    <comment>Title</comment>
+  </data>
+  <data name="BrokenMoldPieces_Header" xml:space="preserve">
+    <value>Broken Mold Pieces</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BrokenMoldPieces_Text" xml:space="preserve">
+    <value>Broken Mold Pieces</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CannotDeleteActiveMachine_Message" xml:space="preserve">
+    <value>Cannot delete an active machine!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UserSettingExists_Message" xml:space="preserve">
+    <value>User setting already exists!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ProductTypeNotOnCurrentOrder_Message" xml:space="preserve">
+    <value>Product Type not on current Order!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CurrentStateMinutes_Text" xml:space="preserve">
+    <value>Current state minutes</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineIsAlreadyInBreak_Message" xml:space="preserve">
+    <value>Machine is already in break!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DefectTypeCannotBeNull_Message" xml:space="preserve">
+    <value>Defect Type cannot be null!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ProducedPieces_Text" xml:space="preserve">
+    <value>Produced Pieces</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllTypes_Text" xml:space="preserve">
+    <value>All</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FunctionCannotBeDeleted_Message" xml:space="preserve">
+    <value>Function cannot be deleted!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionCannotBeRenamed_Message" xml:space="preserve">
+    <value>Function cannot be renamed!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ImportFromExcel_Button" xml:space="preserve">
+    <value>Import from ERP</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ImportFinished_Message" xml:space="preserve">
+    <value>Import finished!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BreaksRights_Button" xml:space="preserve">
+    <value>Breaks Rights</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AddBreakRight_MenuItem" xml:space="preserve">
+    <value>Add Break Right</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="BreakTypeAlreadyAssigned_Message" xml:space="preserve">
+    <value>BreakType already assigned!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BreaksRights_Title" xml:space="preserve">
+    <value>Breaks Rights</value>
+    <comment>Title</comment>
+  </data>
+  <data name="MaximumLimit_Header" xml:space="preserve">
+    <value>Max. Limit</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MinimumLimit_Header" xml:space="preserve">
+    <value>Min. Limit</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaximumLimit_Text" xml:space="preserve">
+    <value>Max. Limit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinimumLimit_Text" xml:space="preserve">
+    <value>Min. Limit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="GroupByMachine_Text" xml:space="preserve">
+    <value>Group by Machine</value>
+    <comment>Text</comment>
+  </data>
+  <data name="GroupByOrder_Text" xml:space="preserve">
+    <value>Group by Order</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TotalBreakMinutes_Header" xml:space="preserve">
+    <value>Total Break Min</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakCode1_Header" xml:space="preserve">
+    <value>Break Code1</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakCode2_Header" xml:space="preserve">
+    <value>Break Code2</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakMinutes1_Header" xml:space="preserve">
+    <value>Break Minutes1</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakMinutes2_Header" xml:space="preserve">
+    <value>Break Minutes2</value>
+    <comment>Header</comment>
+  </data>
+  <data name="HighestOEE_Header" xml:space="preserve">
+    <value>Highest OEE</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LowestOEE_Header" xml:space="preserve">
+    <value>Lowest OEE</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ForDecision_Text" xml:space="preserve">
+    <value>For Decision</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Scrap_Text" xml:space="preserve">
+    <value>Scrap</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RejectedProductsTmp_Title" xml:space="preserve">
+    <value>Rejected Products Temp List</value>
+    <comment>Title</comment>
+  </data>
+  <data name="RejectedProductsTmp_Button" xml:space="preserve">
+    <value>Rejected Products Temp</value>
+    <comment>Button</comment>
+  </data>
+  <data name="NoMoldPcs_Text" xml:space="preserve">
+    <value>W/O MOLD PCS</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoOrder_Text" xml:space="preserve">
+    <value>W/O ORDER</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoUser_Text" xml:space="preserve">
+    <value>W/O USER</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Reboot_MenuItem" xml:space="preserve">
+    <value>Reboot</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="CannotConnectViaSSH_Message" xml:space="preserve">
+    <value>SSH connection could not be established for machine</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Calibration_Sent_Message" xml:space="preserve">
+    <value>Calibration sent</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Reboot_Started_Message" xml:space="preserve">
+    <value>Reboot started</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SendCalibration_Button" xml:space="preserve">
+    <value>Send Calibration</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SendCalibration_MenuItem" xml:space="preserve">
+    <value>Send Calibration</value>
+    <comment>MenuItem</comment>
+  </data>
+</root>

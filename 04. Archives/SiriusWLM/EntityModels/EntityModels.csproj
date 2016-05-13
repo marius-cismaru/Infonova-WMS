@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7505382C-73C0-4358-AA78-374B43EFAC88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sirius.EntityModels</RootNamespace>
+    <AssemblyName>EntityModels</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EntityModelSirius.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityModelSirius.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\CommonLibs\EPPlus\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Properties\DataSources\EntityModelSirius.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Clients\Client.cs" />
+    <Compile Include="Entities\Clients\ClientCollection.cs" />
+    <Compile Include="Entities\Clients\ClientFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Clients\ClientFormBrowse.Designer.cs">
+      <DependentUpon>ClientFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Clients\ClientFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Clients\ClientFormEdit.Designer.cs">
+      <DependentUpon>ClientFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Clients\ClientFilterCriteria.cs" />
+    <Compile Include="Entities\ClientUsers\ClientUserCollection.cs" />
+    <Compile Include="Entities\ClientUsers\ClientUserFilterCriteria.cs" />
+    <Compile Include="Entities\ClientUsers\ClientUserFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ClientUsers\ClientUserFormBrowse.Designer.cs">
+      <DependentUpon>ClientUserFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Companies\Company.cs" />
+    <Compile Include="Entities\Companies\CompanyCollection.cs" />
+    <Compile Include="Entities\Companies\CompanyFilterCriteria.cs" />
+    <Compile Include="Entities\Companies\CompanyFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Companies\CompanyFormEdit.Designer.cs">
+      <DependentUpon>CompanyFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Companies\CompanyFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Companies\CompanyFormBrowse.Designer.cs">
+      <DependentUpon>CompanyFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ClientUsers\ClientUser.cs" />
+    <Compile Include="Entities\ClientUsers\ClientUserFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ClientUsers\ClientUserFormEdit.Designer.cs">
+      <DependentUpon>ClientUserFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ClientDestinations\ClientDestination.cs" />
+    <Compile Include="Entities\ClientDestinations\ClientDestinationCollection.cs" />
+    <Compile Include="Entities\ClientDestinations\ClientDestinationFilterCriteria.cs" />
+    <Compile Include="Entities\ClientDestinations\ClientDestinationFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ClientDestinations\ClientDestinationFormBrowse.Designer.cs">
+      <DependentUpon>ClientDestinationFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ClientDestinations\ClientDestinationFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ClientDestinations\ClientDestinationFormEdit.Designer.cs">
+      <DependentUpon>ClientDestinationFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStation.cs" />
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStationCollection.cs" />
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStationFilterCriteria.cs" />
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStationFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStationFormBrowse.Designer.cs">
+      <DependentUpon>ConfigurationStationFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStationFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ConfigurationStations\ConfigurationStationFormEdit.Designer.cs">
+      <DependentUpon>ConfigurationStationFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ConfigurationVersions\ConfigurationVersionFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ConfigurationVersions\ConfigurationVersionFormBrowse.Designer.cs">
+      <DependentUpon>ConfigurationVersionFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ConfigurationVersions\ConfigurationVersion.cs" />
+    <Compile Include="Entities\ConfigurationVersions\ConfigurationVersionCollection.cs" />
+    <Compile Include="Entities\Package\PackageFormEditReal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormEditReal.Designer.cs">
+      <DependentUpon>PackageFormEditReal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormAddReal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormAddReal.Designer.cs">
+      <DependentUpon>PackageFormAddReal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormAddVirtual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormAddVirtual.Designer.cs">
+      <DependentUpon>PackageFormAddVirtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Transfers\Transfer.cs" />
+    <Compile Include="Entities\Transfers\TransferCollection.cs" />
+    <Compile Include="Entities\Transfers\TransferFilterCriteria.cs" />
+    <Compile Include="Entities\Transfers\TransferFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Transfers\TransferFormAdd.Designer.cs">
+      <DependentUpon>TransferFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Transfers\TransferFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Transfers\TransferFormBrowse.Designer.cs">
+      <DependentUpon>TransferFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Deliveries\DeliveryFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Deliveries\DeliveryFormEdit.Designer.cs">
+      <DependentUpon>DeliveryFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DeliveryOrderProducts\DeliveryOrderProductFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\DeliveryOrderProducts\DeliveryOrderProductFormEdit.Designer.cs">
+      <DependentUpon>DeliveryOrderProductFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DeliveryProducts\DeliveryProductCollection.cs" />
+    <Compile Include="Entities\DeliveryOrderProducts\DeliveryOrderProduct.cs" />
+    <Compile Include="Entities\DeliveryOrderProducts\DeliveryOrderProductCollection.cs" />
+    <Compile Include="Entities\DeliveryOrderProducts\DeliveryOrderProductFilterCriteria.cs" />
+    <Compile Include="Entities\DeliveryProducts\DeliveryProductFilterCriteria.cs" />
+    <Compile Include="Entities\DeliveryProducts\DeliveryProduct.cs" />
+    <Compile Include="Entities\Package\PackageFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormBrowse.Designer.cs">
+      <DependentUpon>PackageFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ReceptionOrderProducts\ReceptionOrderProductFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ReceptionOrderProducts\ReceptionOrderProductFormEdit.Designer.cs">
+      <DependentUpon>ReceptionOrderProductFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ReceptionProducts\ReceptionProductFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\ReceptionProducts\ReceptionProductFormEdit.Designer.cs">
+      <DependentUpon>ReceptionProductFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ReceptionProducts\ReceptionProduct.cs" />
+    <Compile Include="Entities\ReceptionProducts\ReceptionProductCollection.cs" />
+    <Compile Include="Entities\ReceptionProducts\ReceptionProductFilterCriteria.cs" />
+    <Compile Include="Entities\Deliveries\DeliveryFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Deliveries\DeliveryFormAdd.Designer.cs">
+      <DependentUpon>DeliveryFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Deliveries\Delivery.cs" />
+    <Compile Include="Entities\Deliveries\DeliveryCollection.cs" />
+    <Compile Include="Entities\Deliveries\DeliveryFilterCriteria.cs" />
+    <Compile Include="Entities\Deliveries\DeliveryFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Deliveries\DeliveryFormBrowse.Designer.cs">
+      <DependentUpon>DeliveryFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Receptions\ReceptionFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Receptions\ReceptionFormEdit.Designer.cs">
+      <DependentUpon>ReceptionFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormSelect.Designer.cs">
+      <DependentUpon>WarehouseContainerFormSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseRows\WarehouseRowOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseRows\WarehouseRowOverview.Designer.cs">
+      <DependentUpon>WarehouseRowOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\_Helpers\HelperDelivery.cs" />
+    <Compile Include="Entities\_Helpers\HelperDeliveryOrderProduct.cs" />
+    <Compile Include="Entities\_Helpers\HelperDeliveryPackage.cs" />
+    <Compile Include="Reports\ReportStockProductsByClient\ReportStockProductsByClient.cs" />
+    <Compile Include="Reports\ReportStockProductsByClient\ReportStockProductsByClientFilterCriteria.cs" />
+    <Compile Include="Reports\ReportReceptions\ReportReceptions.cs" />
+    <Compile Include="Reports\ReportReceptions\ReportReceptionsFilterCriteria.cs" />
+    <Compile Include="Reports\ReportReceptions\ReportReceptionsFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportReceptions\ReportReceptionsFormReport.Designer.cs">
+      <DependentUpon>ReportReceptionsFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDeliveries\ReportDeliveries.cs" />
+    <Compile Include="Reports\ReportDeliveries\ReportDeliveriesFilterCriteria.cs" />
+    <Compile Include="Reports\ReportDeliveries\ReportDeliveriesFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportDeliveries\ReportDeliveriesFormReport.Designer.cs">
+      <DependentUpon>ReportDeliveriesFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportReceptionNote\ReportReceptionNoteFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportReceptionNote\ReportReceptionNoteFormReport.Designer.cs">
+      <DependentUpon>ReportReceptionNoteFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportStockVariationDetail\ReportStockVariationDetail.cs" />
+    <Compile Include="Reports\ReportStockVariationDetail\ReportStockVariationDetailAction.cs" />
+    <Compile Include="Reports\ReportStockVariationDetail\ReportStockVariationDetailFilterCriteria.cs" />
+    <Compile Include="Reports\ReportStockVariationDetail\ReportStockVariationDetailFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportStockVariationDetail\ReportStockVariationDetailFormReport.Designer.cs">
+      <DependentUpon>ReportStockVariationDetailFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportWarehouseRowOverview\ReportWarehouseRowOverview.cs" />
+    <Compile Include="Reports\ReportWarehouseRowOverview\ReportWarehouseRowOverviewFilterCriteria.cs" />
+    <Compile Include="Reports\ReportWarehouseRowOverview\ReportWarehouseRowOverviewFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportWarehouseRowOverview\ReportWarehouseRowOverviewFormReport.Designer.cs">
+      <DependentUpon>ReportWarehouseRowOverviewFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportStockProducts\ReportStockProducts.cs" />
+    <Compile Include="Reports\ReportStockProducts\ReportStockProductsFilterCriteria.cs" />
+    <Compile Include="Reports\ReportStockProducts\ReportStockProductsFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportStockProducts\ReportStockProductsFormReport.Designer.cs">
+      <DependentUpon>ReportStockProductsFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDeliveryNotice\ReportDeliveryNotice.cs" />
+    <Compile Include="Reports\ReportDeliveryNotice\ReportDeliveryNoticeFilterCriteria.cs" />
+    <Compile Include="Reports\ReportDeliveryNotice\ReportDeliveryNoticeFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportDeliveryNotice\ReportDeliveryNoticeFormReport.Designer.cs">
+      <DependentUpon>ReportDeliveryNoticeFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDeliveryPickingList\ReportDeliveryPickingList.cs" />
+    <Compile Include="Reports\ReportDeliveryPickingList\ReportDeliveryPickingListFilterCriteria.cs" />
+    <Compile Include="Reports\ReportDeliveryPickingList\ReportDeliveryPickingListFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportDeliveryPickingList\ReportDeliveryPickingListFormReport.Designer.cs">
+      <DependentUpon>ReportDeliveryPickingListFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportReceptionNote\ReportReceptionNote.cs" />
+    <Compile Include="Reports\ReportReceptionNote\ReportReceptionNoteFilterCriteria.cs" />
+    <Compile Include="Entities\Labels\LabelFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Labels\LabelFormEdit.Designer.cs">
+      <DependentUpon>LabelFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Labels\Label.cs" />
+    <Compile Include="Entities\Labels\LabelCollection.cs" />
+    <Compile Include="Entities\Labels\LabelFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Labels\LabelFormBrowse.Designer.cs">
+      <DependentUpon>LabelFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Receptions\ReceptionFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Receptions\ReceptionFormAdd.Designer.cs">
+      <DependentUpon>ReceptionFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Package\PackageFormSelect.Designer.cs">
+      <DependentUpon>PackageFormSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerLocation.cs" />
+    <Compile Include="Entities\WarehouseRows\WarehouseRow.cs" />
+    <Compile Include="Entities\WarehouseRows\WarehouseRowCollection.cs" />
+    <Compile Include="Entities\WarehouseRows\WarehouseRowFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseRows\WarehouseRowFormBrowse.Designer.cs">
+      <DependentUpon>WarehouseRowFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseRows\WarehouseRowFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseRows\WarehouseRowFormEdit.Designer.cs">
+      <DependentUpon>WarehouseRowFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseRows\WarehouseRowFilterCriteria.cs" />
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoom.cs" />
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoomCollection.cs" />
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoomFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoomFormBrowse.Designer.cs">
+      <DependentUpon>WarehouseRoomFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoomFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoomFormEdit.Designer.cs">
+      <DependentUpon>WarehouseRoomFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseRooms\WarehouseRoomFilterCriteria.cs" />
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainer.cs" />
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerCollection.cs" />
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormAdd.Designer.cs">
+      <DependentUpon>WarehouseContainerFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormBrowse.Designer.cs">
+      <DependentUpon>WarehouseContainerFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFormEdit.Designer.cs">
+      <DependentUpon>WarehouseContainerFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\WarehouseContainers\WarehouseContainerFilterCriteria.cs" />
+    <Compile Include="Entities\Receptions\ReceptionFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Receptions\ReceptionFormBrowse.Designer.cs">
+      <DependentUpon>ReceptionFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Receptions\Reception.cs" />
+    <Compile Include="Entities\Receptions\ReceptionCollection.cs" />
+    <Compile Include="Entities\Receptions\ReceptionFilterCriteria.cs" />
+    <Compile Include="Entities\PackageTypes\PackageType.cs" />
+    <Compile Include="Entities\PackageTypes\PackageTypeCollection.cs" />
+    <Compile Include="Entities\PackageTypes\PackageTypeFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\PackageTypes\PackageTypeFormBrowse.Designer.cs">
+      <DependentUpon>PackageTypeFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\PackageTypes\PackageTypeFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\PackageTypes\PackageTypeFormEdit.Designer.cs">
+      <DependentUpon>PackageTypeFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ReceptionOrderProducts\ReceptionOrderProduct.cs" />
+    <Compile Include="Entities\ReceptionOrderProducts\ReceptionOrderProductCollection.cs" />
+    <Compile Include="Entities\ReceptionOrderProducts\ReceptionOrderProductFilterCriteria.cs" />
+    <Compile Include="Entities\Package\PackageFilterCriteria.cs" />
+    <Compile Include="Entities\Package\PackageCollection.cs" />
+    <Compile Include="Entities\Package\Package.cs" />
+    <Compile Include="Entities\Products\Product.cs" />
+    <Compile Include="Entities\Products\ProductCollection.cs" />
+    <Compile Include="Entities\Products\ProductFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Products\ProductFormBrowse.Designer.cs">
+      <DependentUpon>ProductFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Products\ProductFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Products\ProductFormEdit.Designer.cs">
+      <DependentUpon>ProductFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Products\ProductFilterCriteria.cs" />
+    <Compile Include="Entities\Warehouses\Warehouse.cs" />
+    <Compile Include="Entities\Warehouses\WarehouseCollection.cs" />
+    <Compile Include="Entities\Warehouses\WarehouseFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Warehouses\WarehouseFormBrowse.Designer.cs">
+      <DependentUpon>WarehouseFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Warehouses\WarehouseFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Warehouses\WarehouseFormEdit.Designer.cs">
+      <DependentUpon>WarehouseFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Warehouses\WarehouseFilterCriteria.cs" />
+    <Compile Include="Entities\MeasuringUnits\MeasuringUnit.cs" />
+    <Compile Include="Entities\MeasuringUnits\MeasuringUnitCollection.cs" />
+    <Compile Include="Entities\MeasuringUnits\MeasuringUnitFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\MeasuringUnits\MeasuringUnitFormBrowse.Designer.cs">
+      <DependentUpon>MeasuringUnitFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MeasuringUnits\MeasuringUnitFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\MeasuringUnits\MeasuringUnitFormEdit.Designer.cs">
+      <DependentUpon>MeasuringUnitFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Countries\CountryFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Countries\CountryFormEdit.Designer.cs">
+      <DependentUpon>CountryFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Countries\CountryFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Countries\CountryFormBrowse.Designer.cs">
+      <DependentUpon>CountryFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Countries\CountryCollection.cs" />
+    <Compile Include="Entities\Countries\Country.cs" />
+    <Compile Include="EntityModelSirius.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelSirius.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Users\UserFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Users\UserFormEdit.Designer.cs">
+      <DependentUpon>UserFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Users\UserFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Users\UserFormBrowse.Designer.cs">
+      <DependentUpon>UserFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Users\UserCollection.cs" />
+    <Compile Include="Entities\Users\User.cs" />
+    <Compile Include="Reports\ReportStockPackages\ReportStockPackagesFilterCriteria.cs" />
+    <Compile Include="Reports\ReportStockPackages\ReportStockPackages.cs" />
+    <Compile Include="Reports\ReportStockPackages\ReportStockPackagesFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportStockPackages\ReportStockPackagesFormReport.Designer.cs">
+      <DependentUpon>ReportStockPackagesFormReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityModelSirius.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLibs\CommonLibs.csproj">
+      <Project>{CE726C2F-1602-4EDE-ACAE-9D96704387BE}</Project>
+      <Name>CommonLibs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{84439E74-2F5E-49BD-8EB0-568BA851AA48}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{C85DAE34-27D2-48FC-9E63-1ED20C8FBC19}</Project>
+      <Name>CustomControls</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Entities\Clients\ClientFormBrowse.resx">
+      <DependentUpon>ClientFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Clients\ClientFormEdit.resx">
+      <DependentUpon>ClientFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ClientUsers\ClientUserFormBrowse.resx">
+      <DependentUpon>ClientUserFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Companies\CompanyFormEdit.resx">
+      <DependentUpon>CompanyFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Companies\CompanyFormBrowse.resx">
+      <DependentUpon>CompanyFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ClientUsers\ClientUserFormEdit.resx">
+      <DependentUpon>ClientUserFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ClientDestinations\ClientDestinationFormBrowse.resx">
+      <DependentUpon>ClientDestinationFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ClientDestinations\ClientDestinationFormEdit.resx">
+      <DependentUpon>ClientDestinationFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ConfigurationStations\ConfigurationStationFormBrowse.resx">
+      <DependentUpon>ConfigurationStationFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ConfigurationStations\ConfigurationStationFormEdit.resx">
+      <DependentUpon>ConfigurationStationFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ConfigurationVersions\ConfigurationVersionFormBrowse.resx">
+      <DependentUpon>ConfigurationVersionFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Package\PackageFormEditReal.resx">
+      <DependentUpon>PackageFormEditReal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Package\PackageFormAddReal.resx">
+      <DependentUpon>PackageFormAddReal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Package\PackageFormAddVirtual.resx">
+      <DependentUpon>PackageFormAddVirtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Transfers\TransferFormAdd.resx">
+      <DependentUpon>TransferFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Transfers\TransferFormBrowse.resx">
+      <DependentUpon>TransferFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Deliveries\DeliveryFormEdit.resx">
+      <DependentUpon>DeliveryFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\DeliveryOrderProducts\DeliveryOrderProductFormEdit.resx">
+      <DependentUpon>DeliveryOrderProductFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Package\PackageFormBrowse.resx">
+      <DependentUpon>PackageFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ReceptionOrderProducts\ReceptionOrderProductFormEdit.resx">
+      <DependentUpon>ReceptionOrderProductFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\ReceptionProducts\ReceptionProductFormEdit.resx">
+      <DependentUpon>ReceptionProductFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Deliveries\DeliveryFormAdd.resx">
+      <DependentUpon>DeliveryFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Deliveries\DeliveryFormBrowse.resx">
+      <DependentUpon>DeliveryFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Labels\LabelFormEdit.resx">
+      <DependentUpon>LabelFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Labels\LabelFormBrowse.resx">
+      <DependentUpon>LabelFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Receptions\ReceptionFormEdit.resx">
+      <DependentUpon>ReceptionFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Receptions\ReceptionFormAdd.resx">
+      <DependentUpon>ReceptionFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Package\PackageFormSelect.resx">
+      <DependentUpon>PackageFormSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseContainers\WarehouseContainerFormSelect.resx">
+      <DependentUpon>WarehouseContainerFormSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseRows\WarehouseRowFormBrowse.resx">
+      <DependentUpon>WarehouseRowFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseRows\WarehouseRowFormEdit.resx">
+      <DependentUpon>WarehouseRowFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseRooms\WarehouseRoomFormBrowse.resx">
+      <DependentUpon>WarehouseRoomFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseRooms\WarehouseRoomFormEdit.resx">
+      <DependentUpon>WarehouseRoomFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseContainers\WarehouseContainerFormAdd.resx">
+      <DependentUpon>WarehouseContainerFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseContainers\WarehouseContainerFormBrowse.resx">
+      <DependentUpon>WarehouseContainerFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseContainers\WarehouseContainerFormEdit.resx">
+      <DependentUpon>WarehouseContainerFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Receptions\ReceptionFormBrowse.resx">
+      <DependentUpon>ReceptionFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\PackageTypes\PackageTypeFormBrowse.resx">
+      <DependentUpon>PackageTypeFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\PackageTypes\PackageTypeFormEdit.resx">
+      <DependentUpon>PackageTypeFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Products\ProductFormBrowse.resx">
+      <DependentUpon>ProductFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Products\ProductFormEdit.resx">
+      <DependentUpon>ProductFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\WarehouseRows\WarehouseRowOverview.resx">
+      <DependentUpon>WarehouseRowOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Warehouses\WarehouseFormBrowse.resx">
+      <DependentUpon>WarehouseFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Warehouses\WarehouseFormEdit.resx">
+      <DependentUpon>WarehouseFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\MeasuringUnits\MeasuringUnitFormBrowse.resx">
+      <DependentUpon>MeasuringUnitFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\MeasuringUnits\MeasuringUnitFormEdit.resx">
+      <DependentUpon>MeasuringUnitFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Countries\CountryFormEdit.resx">
+      <DependentUpon>CountryFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Countries\CountryFormBrowse.resx">
+      <DependentUpon>CountryFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Users\UserFormEdit.resx">
+      <DependentUpon>UserFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entities\Users\UserFormBrowse.resx">
+      <DependentUpon>UserFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportReceptions\ReportReceptionsFormReport.resx">
+      <DependentUpon>ReportReceptionsFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportDeliveries\ReportDeliveriesFormReport.resx">
+      <DependentUpon>ReportDeliveriesFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportReceptionNote\ReportReceptionNoteFormReport.resx">
+      <DependentUpon>ReportReceptionNoteFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportStockVariationDetail\ReportStockVariationDetailFormReport.resx">
+      <DependentUpon>ReportStockVariationDetailFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportWarehouseRowOverview\ReportWarehouseRowOverviewFormReport.resx">
+      <DependentUpon>ReportWarehouseRowOverviewFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportStockProducts\ReportStockProductsFormReport.resx">
+      <DependentUpon>ReportStockProductsFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportDeliveryNotice\ReportDeliveryNoticeFormReport.resx">
+      <DependentUpon>ReportDeliveryNoticeFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportDeliveryPickingList\ReportDeliveryPickingListFormReport.resx">
+      <DependentUpon>ReportDeliveryPickingListFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportStockPackages\ReportStockPackagesFormReport.resx">
+      <DependentUpon>ReportStockPackagesFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

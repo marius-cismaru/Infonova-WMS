@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0329921-AED2-43CD-956B-3CB13A7C6534}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Equistat.Infrastructure</RootNamespace>
+    <AssemblyName>Equistat.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Composite">
+      <HintPath>..\CAL\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Presentation">
+      <HintPath>..\CAL\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\CAL\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\references\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf">
+      <HintPath>..\references\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachedProps\Expander.cs" />
+    <Compile Include="Attributes\Attributes.cs" />
+    <Compile Include="BaseClasses\DialogViewModelBase.cs" />
+    <Compile Include="BaseClasses\PanelBase.cs" />
+    <Compile Include="BaseClasses\ServiceBase.cs" />
+    <Compile Include="BaseClasses\ViewModelBase.cs" />
+    <Compile Include="BaseClasses\WizardPageBase.cs" />
+    <Compile Include="Events\LoginEvent.cs" />
+    <Compile Include="Events\LogoutEvent.cs" />
+    <Compile Include="Events\PageOpenEvent.cs" />
+    <Compile Include="LiveBoard\IMainViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IApp.cs" />
+    <Compile Include="Services\IDatabaseSvc.cs" />
+    <Compile Include="Services\IExportSvc.cs" />
+    <Compile Include="Services\ILoginSvc.cs" />
+    <Compile Include="Services\IModule.cs" />
+    <Compile Include="Services\IShell.cs" />
+    <Compile Include="Services\IUIManagerSvc.cs" />
+    <Compile Include="Services\IWizardController.cs" />
+    <Compile Include="UI\IDialogView.cs" />
+    <Compile Include="UI\IDialogViewModel.cs" />
+    <Compile Include="UI\IMainViewModel.cs" />
+    <Compile Include="UI\IView.cs" />
+    <Compile Include="UI\IViewModel.cs" />
+    <Compile Include="UI\ViewModels\IBreakRightOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IBreakRightViewModel.cs" />
+    <Compile Include="UI\ViewModels\ILongOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachineDetailZoomedViewModel.cs" />
+    <Compile Include="UI\ViewModels\IAlertRuleOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IAlertsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IAppSettingsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IBreaksPlanOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IBreaksPlanViewModel.cs" />
+    <Compile Include="UI\ViewModels\IBreakTypesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IBreakTypesViewModel.cs" />
+    <Compile Include="UI\ViewModels\ICycleDivisionResetSensorsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ICycleDivisionsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ICyclesViewModel.cs" />
+    <Compile Include="UI\ViewModels\ICycleTypesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ICycleTypesViewModel.cs" />
+    <Compile Include="UI\ViewModels\ICalibrationOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IDaysSchemaNameOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IDaysSchemaOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IDaysSchemaViewModel.cs" />
+    <Compile Include="UI\ViewModels\IIndicatorsPeriodViewModel.cs" />
+    <Compile Include="UI\ViewModels\IIndicatorsShiftViewModel.cs" />
+    <Compile Include="UI\ViewModels\IIndicatorsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IInputTypeOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IInputTypeViewModel.cs" />
+    <Compile Include="UI\ViewModels\ILoginViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachineDetailsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachineOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachineSensorsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachinesViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachineTypesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IMachineTypesViewModel.cs" />
+    <Compile Include="UI\ViewModels\INOKCausesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\INOKCausesViewModel.cs" />
+    <Compile Include="UI\ViewModels\IOEESettingsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IProductTypesImportViewModel.cs" />
+    <Compile Include="UI\ViewModels\IRejectedProductsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IRejectedProductsStatesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IRejectedProductsStatesViewModel.cs" />
+    <Compile Include="UI\ViewModels\IRejectedProductsTmpViewModel.cs" />
+    <Compile Include="UI\ViewModels\IRejectedProductsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IOutputTypeOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IOutputTypeViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorHistoryViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorRealtimeViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsAlertOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsAlertViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IOrdersViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsReadingViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsTypeOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsTypeViewModel.cs" />
+    <Compile Include="UI\ViewModels\IOrdersOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISensorsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IProductTypesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IProductTypesViewModel.cs" />
+    <Compile Include="UI\ViewModels\IScansViewModel.cs" />
+    <Compile Include="UI\ViewModels\IScanTypesOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IScanTypesViewModel.cs" />
+    <Compile Include="UI\ViewModels\ISettingsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IShiftsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IShiftsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IScrapViewModel.cs" />
+    <Compile Include="UI\ViewModels\ITechnicalSupportOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\ITechnicalSupportViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUnplannedBreaksOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUnplannedBreaksViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUserSettingsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUserSettingsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUsersFunctionsOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUsersFunctionsViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUsersOperationViewModel.cs" />
+    <Compile Include="UI\ViewModels\IUsersViewModel.cs" />
+    <Compile Include="UI\ViewModels\IWizardPage.cs" />
+    <Compile Include="UI\Wrappers\DateValueWrapper.cs" />
+    <Compile Include="UI\Wrappers\LanguageWrapper.cs" />
+    <Compile Include="UI\Wrappers\WizardOption.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Equistat.Data\Equistat.Data.csproj">
+      <Project>{ffc1f4f7-04ae-4b88-8d2d-fb95917172b8}</Project>
+      <Name>Equistat.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Equistat.Resources\Equistat.Resources.csproj">
+      <Project>{981025B4-A126-4B95-8416-C004D149F299}</Project>
+      <Name>Equistat.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfExtensions\WpfExtensions.csproj">
+      <Project>{B2602346-E7C7-4B3F-8FA3-36CDDAB7F04E}</Project>
+      <Name>WpfExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LiveBoard\ViewModels\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

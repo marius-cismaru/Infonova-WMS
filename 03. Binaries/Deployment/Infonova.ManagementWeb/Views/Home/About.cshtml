@@ -1,0 +1,31 @@
+﻿@model Infonova.ManagementWeb.Models.StockViewModel
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<table border="1" cellpadding="4" cellspacing="0">
+    <thead>
+        <tr>
+        <th>Categorie</th>
+        <th>Grupa</th>
+        <th>Subgrupa</th>
+        <th>Articol</th>
+        <th>Cantitate</th>
+        <th>UM</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in ViewBag.Stock.StockList)
+        {
+            <tr>
+                <td>@item.ArticleCategory</td>
+                <td>@item.ArticleGroup</td>
+                <td>@item.ArticleSubGroup</td>
+                <td>@item.Article</td>
+                <td>@item.Quantity</td>
+                <td>@item.MU</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

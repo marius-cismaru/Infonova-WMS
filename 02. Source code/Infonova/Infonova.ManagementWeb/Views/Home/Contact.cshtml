@@ -1,0 +1,110 @@
+﻿@model Infonova.ManagementWeb.Models.AddSaleOrderViewModel
+
+@{
+    List<SelectListItem> companies = new List<SelectListItem>();
+    List<SelectListItem> employees = new List<SelectListItem>();
+    List<SelectListItem> collaborators = new List<SelectListItem>();
+    List<SelectListItem> products = new List<SelectListItem>();
+
+    foreach (var item in ViewBag.SaleOrder.Companies)
+    {
+        companies.Add(new SelectListItem { Text = item });
+    }
+
+    foreach (var item in ViewBag.SaleOrder.Collaborators)
+    {
+        collaborators.Add(new SelectListItem { Text = item });
+    }
+
+    foreach (var item in ViewBag.SaleOrder.Employees)
+    {
+        employees.Add(new SelectListItem { Text = item });
+    }
+
+    foreach (var item in ViewBag.Stock.StockList)
+    {
+        products.Add(new SelectListItem { Text = (item.Article + " (disponibil: " + item.Quantity) });
+    }
+}
+
+<h2><u>@ViewBag.Title</u></h2>
+
+<hr />
+<h4>Detalii comanda</h4>
+<table cellpadding="8">
+    <tr>
+        <td align="right"><b>Firma:</b></td>
+        <td>@Html.DropDownListFor(m => m.Companies, companies, "-- Selecteaza firma --")</td>
+    </tr>
+    <tr>
+        <td align="right"><b>Client:</b></td>
+        <td>@Html.DropDownListFor(m => m.Collaborators, collaborators, "-- Selecteaza client --")</td>
+    </tr>
+    <tr>
+        <td align="right"><b>Agent:</b></td>
+        <td>@Html.DropDownListFor(m => m.Employees, employees, "-- Selecteaza agent --")</td>
+    </tr>
+</table>
+
+<hr />
+<h4>Adaugare produs</h4>
+
+<table border="0" cellpadding="16">
+    <tbody>
+        <tr>
+            <td>
+                <b>Produs</b><br/>
+                @Html.DropDownListFor(m => m.Employees, products, "-- Selecteaza produs --")
+            </td>
+            <td>
+                <b>Cantitate</b><br />
+                @Html.TextBox("Cantitate")
+            </td>
+            <td>
+                <b>Pret unitar</b><br />
+                @Html.TextBox("Pret")
+            </td>
+            <td>
+                <br />
+                <button type="button" name="Add">Adaugare</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+<h4>Produse adaugate deja</h4>
+
+<table border="1" cellpadding="6" cellspacing="6">
+    <thead>
+        <tr>
+            <th align="center">Nr.</th>
+            <th align="center">Produs</th>
+            <th align="center">UM</th>
+            <th align="center">Cantitate</th>
+            <th align="center">Pret unitar<br />RON</th>
+            <th align="center">Total<br />RON</th>
+            <th align="center">Actiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{  int index = 1; }
+        @foreach (var item in ViewBag.SaleOrder.Items)
+        {
+            <tr>
+                <td align="center">@index</td>
+                <td>@item.Article</td>
+                <td>@item.MU</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price</td>
+                <td>@item.Total</td>
+                <td><button type="button" name="Modify">Modificare</button>&nbsp;&nbsp;<button type="button" name="Delete">Stergere</button></td>
+            </tr>
+
+            index++;
+        }
+    </tbody>
+</table>
+
+<hr />
+<button type="button" name="Save">Salvare comanda</button>

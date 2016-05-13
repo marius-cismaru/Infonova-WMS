@@ -1,0 +1,69 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+   <!--Button-->
+   <Style TargetType="{x:Type Button}">
+      <Setter Property="Background" Value="#CEECF5"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="BorderBrush" Value="LightBlue"/>
+      <!--<Setter Property="Margin" Value="2"/>-->
+      <!--<Setter Property="Height" Value="20"/>-->
+   </Style>
+
+   <!--Button-->
+   <Style TargetType="{x:Type Button}" x:Key="MainButton">
+      <Setter Property="Background" Value="#CEECF5"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="BorderBrush" Value="LightBlue"/>
+      <Setter Property="Margin" Value="5"/>
+      <Setter Property="Height" Value="30"/>
+      <Setter Property="Visibility" Value="Collapsed"/>
+   </Style>
+
+   <Style TargetType="{x:Type Button}" x:Key="SimpleButton">
+      <Setter Property="SnapsToDevicePixels" Value="true"/>
+      <Setter Property="OverridesDefaultStyle" Value="true"/>
+      <!--<Setter Property="MinHeight" Value="23"/>
+      <Setter Property="MinWidth" Value="75"/>-->
+      <Setter Property="Template">
+         <Setter.Value>
+            <ControlTemplate TargetType="{x:Type Button}">
+               <Border Name="Border" CornerRadius="2"
+                       Background="#808080"
+                       BorderBrush="#404040">
+                  <ContentPresenter Margin="0"
+                                 HorizontalAlignment="Center"
+                                 VerticalAlignment="Center" 
+                                 RecognizesAccessKey="True"/>
+               </Border>
+               <ControlTemplate.Triggers>
+                  <Trigger Property="IsEnabled" Value="True">
+                     <Setter Property="Foreground" Value="Yellow"/>
+                     <Setter TargetName="Border" Property="BorderThickness" Value="0"/>
+                  </Trigger>
+                  <Trigger Property="IsKeyboardFocused" Value="true">
+                     <Setter TargetName="Border" Property="BorderBrush" Value="#202020" />
+                  </Trigger>
+                  <Trigger Property="IsDefaulted" Value="true">
+                     <Setter TargetName="Border" Property="BorderBrush" Value="#202020" />
+                  </Trigger>
+                  <Trigger Property="IsMouseOver" Value="true">
+                     <!--<Setter TargetName="Border" Property="Background" Value="#E0E0E0" />-->
+                     <Setter Property="Foreground" Value="White"/>
+                  </Trigger>
+                  <Trigger Property="IsPressed" Value="true">
+                     <!--<Setter TargetName="Border" Property="Background" Value="#E0E0E0" />-->
+                     <Setter TargetName="Border" Property="BorderBrush" Value="#606060" />
+                  </Trigger>
+                  <Trigger Property="IsEnabled" Value="false">
+                     <!--<Setter TargetName="Border" Property="Background" Value="#EEEEEE" />-->
+                     <Setter TargetName="Border" Property="BorderBrush" Value="#AAAAAA" />
+                     <Setter Property="Foreground" Value="#888888"/>
+                  </Trigger>
+               </ControlTemplate.Triggers>
+            </ControlTemplate>
+         </Setter.Value>
+      </Setter>
+   </Style>
+
+</ResourceDictionary>

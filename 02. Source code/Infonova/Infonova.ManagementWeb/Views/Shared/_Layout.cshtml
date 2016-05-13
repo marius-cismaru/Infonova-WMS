@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Infonova", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <!--<div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Stoc", "About", "Home")</li>
+                    <li>@Html.ActionLink("Adaugare comanda vanzare", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>-->
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Distributie <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Stoc curent", "About", "Home")</li>
+                            <li><a href="#">Articole</a></li>
+                            <li class="dropdown dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrul vanzari </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Comenzi vanzare</a></li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Livrari </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Adaugare livrare</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Imprimare facturi</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Incarcari vehicule</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Clienti</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rapoarte </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Facturi neincasate</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Comenzi active</a></li>
+                                            <li><a href="#">Top vanzari</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Vanzari per agent</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrul achizitii </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Comenzi cumparare</a></li>
+                                    <li><a href="#">Receptii</a></li>
+                                    <li><a href="#">Furnizori</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rapoarte</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Top achizitii per articol</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Total achizitii per perioada</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Clienti</a></li>
+                            <li><a href="#">Articole clienti</a></li>
+                            <li><a href="#">Stoc clienti</a></li>
+                            <li class="dropdown dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intrari </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Receptii</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rapoarte </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Receptii</a></li>
+                                            <li><a href="#">Facturi</a></li>
+                                            <li><a href="#">Top clienti logistica</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iesiri </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Livrari</a></li>
+                                    <li><a href="#">Destinatii livrari</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Rapoarte </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Livrari per client</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contabilitate <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Note contabile</a></li>
+                            <li><a href="#">Registrul casa</a></li>
+                            <li><a href="#">Mijloace fixe</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Helvetica Distribution</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

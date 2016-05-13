@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E92B2A3-4218-4405-9D65-C7879FF28440}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infonova.Data</RootNamespace>
+    <AssemblyName>Infonova.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Infonova\Article.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ArticleCategory.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ArticleGroup.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ArticlePackage.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ArticleSubGroup.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Collaborator.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CollaboratorArticle.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CollaboratorArticleGroup.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CollaboratorLocation.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CollaboratorUser.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Company.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CompanyEmployeeEnrollment.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CompanyLocation.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Country.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Currency.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\CurrencyExchangeRate.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\EmailMessage.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Employee.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\EmployeeGroup.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\EmployeeGroupPermission.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ModelInfonova.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelInfonova.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ModelInfonova.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ModelInfonova.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelInfonova.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\ModelInfonova.Extended.cs" />
+    <Compile Include="Models\Infonova\Purchase.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\PurchaseOrder.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\PurchaseOrderProduct.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\SaleAgentRoute.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\SaleAgentRouteCollaborator.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\SaleOrder.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\SaleOrderProduct.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Stock.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\VAT.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\Warehouse.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\WarehouseContainer.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\WarehouseRoom.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infonova\WarehouseRow.cs">
+      <DependentUpon>ModelInfonova.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Infonova\ModelInfonova.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelInfonova.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Models\Infonova\ModelInfonova.edmx.diagram">
+      <DependentUpon>ModelInfonova.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Infonova\ModelInfonova.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelInfonova.edmx</DependentUpon>
+      <LastGenOutput>ModelInfonova.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Infonova\ModelInfonova.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelInfonova.edmx</DependentUpon>
+      <LastGenOutput>ModelInfonova.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

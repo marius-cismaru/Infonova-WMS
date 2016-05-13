@@ -1,0 +1,2618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelInfonova.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ArticleCategories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="VATId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ArticleCategoryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticlePackages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Weight" Type="float" Nullable="false" />
+          <Property Name="Cost" Type="money" Nullable="false" />
+          <Property Name="IsReusable" Type="bit" Nullable="false" />
+          <Property Name="UnitMultiplicationFactor" Type="float" Nullable="false" />
+          <Property Name="SelectionPriority" Type="int" Nullable="false" />
+          <Property Name="IsRetired" Type="bit" Nullable="false" />
+          <Property Name="ArticleId" Type="int" Nullable="false" />
+          <Property Name="CollaboratorId" Type="int" />
+        </EntityType>
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="100" />
+          <Property Name="NameFull" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameFromSupplier" Type="nvarchar" MaxLength="100" />
+          <Property Name="NameInvoice" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsCalibrated" Type="bit" Nullable="false" />
+          <Property Name="UnitWeightFactor" Type="float" Nullable="false" />
+          <Property Name="IsForbiddenUnitySale" Type="bit" Nullable="false" />
+          <Property Name="IsForbiddenUnityPurchase" Type="bit" Nullable="false" />
+          <Property Name="ArticleSubGroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleSubGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ArticleGroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CollaboratorArticleGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CollaboratorArticles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameFull" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameFriendly" Type="nvarchar" MaxLength="100" />
+          <Property Name="NameInvoice" Type="nvarchar" MaxLength="100" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="CollaboratorId" Type="int" Nullable="false" />
+          <Property Name="CollaboratorArticleGroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CollaboratorLocations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsHeadquarters" Type="bit" Nullable="false" />
+          <Property Name="IsGPSDetermined" Type="bit" Nullable="false" />
+          <Property Name="DateGPSDetermined" Type="datetime" />
+          <Property Name="GPSLongitude" Type="float" Nullable="false" />
+          <Property Name="GPSLatitude" Type="float" Nullable="false" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="CollaboratorId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Collaborators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameFull" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameFriendly" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CodeAlpha2Chars" Type="nvarchar" MaxLength="10" />
+          <Property Name="CodeAlpha3Chars" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsRelationCustomer" Type="bit" Nullable="false" />
+          <Property Name="IsRelationSupplier" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CollaboratorUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Companies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameFull" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameFriendly" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyEmployeeEnrollmentGroupLinks">
+          <Key>
+            <PropertyRef Name="CompanyEmployeeEnrollmentId" />
+            <PropertyRef Name="EmployeeGroupId" />
+          </Key>
+          <Property Name="CompanyEmployeeEnrollmentId" Type="int" Nullable="false" />
+          <Property Name="EmployeeGroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyEmployeeEnrollments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateEmployed" Type="datetime" Nullable="false" />
+          <Property Name="DateResignation" Type="datetime" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+          <Property Name="IsLoginAllowed" Type="bit" Nullable="false" />
+          <Property Name="JobName" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmployeeId" Type="int" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CompanyLocations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsHeadquarters" Type="bit" Nullable="false" />
+          <Property Name="AddressDistrict" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressLocality" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressStreet" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddressPostalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumbers" Type="nvarchar" MaxLength="100" />
+          <Property Name="FaxNumbers" Type="nvarchar" MaxLength="100" />
+          <Property Name="Emails" Type="nvarchar" MaxLength="100" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Countries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CodeAlpha2Chars" Type="nvarchar" MaxLength="10" />
+          <Property Name="CodeAlpha3Chars" Type="nvarchar" MaxLength="10" />
+          <Property Name="CurrencyCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CurrencyExchangeRates">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="CurrencyCodeOriginal" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CurrencyCodeExchange" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Rate" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmailMessages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeGroupCompanyLocationLinks">
+          <Key>
+            <PropertyRef Name="EmployeeGroupId" />
+            <PropertyRef Name="CompanyLocationId" />
+          </Key>
+          <Property Name="EmployeeGroupId" Type="int" Nullable="false" />
+          <Property Name="CompanyLocationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeGroupPermissions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Module" Type="int" Nullable="false" />
+          <Property Name="AccessLevel" Type="int" Nullable="false" />
+          <Property Name="EmployeeGroupId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmployeeGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameFirst" Type="nvarchar" MaxLength="50" />
+          <Property Name="NameLast" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NameMiddle" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateBirth" Type="datetime" />
+          <Property Name="PhoneNumbers" Type="nvarchar" MaxLength="100" />
+          <Property Name="Emails" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="IDSeriesAndNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="PersonalNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoginPassword" Type="nvarchar" MaxLength="200" />
+          <Property Name="IsLoginToDomain" Type="bit" Nullable="false" />
+          <Property Name="LoginDomain" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderProducts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quantity" Type="float" Nullable="false" />
+          <Property Name="ArticleId" Type="int" Nullable="false" />
+          <Property Name="PurchaseOrderId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PurchaseOrders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateValid" Type="datetime" />
+          <Property Name="IsClosed" Type="bit" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="CollaboratorId" Type="int" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Purchases">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="PurchaseOrderId" Type="int" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleAgentRouteCollaborators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="SaleAgentRouteId" Type="int" Nullable="false" />
+          <Property Name="CollaboratorLocationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleAgentRoutes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DayOfWeek" Type="int" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleOrderProducts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QuantityUnity" Type="float" Nullable="false" />
+          <Property Name="QuantityPackage" Type="float" Nullable="false" />
+          <Property Name="PriceWithoutVAT" Type="money" Nullable="false" />
+          <Property Name="ArticleId" Type="int" Nullable="false" />
+          <Property Name="ArticlePackageId" Type="int" />
+          <Property Name="SaleOrderId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SaleOrders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateSale" Type="datetime" Nullable="false" />
+          <Property Name="IsClosed" Type="bit" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" Nullable="false" />
+          <Property Name="CollaboratorId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Stocks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BatchNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="float" Nullable="false" />
+          <Property Name="ArticleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VATs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameDocuments" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NameFriendly" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Percentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WarehouseContainers">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsUnlimitedCapacity" Type="bit" Nullable="false" />
+          <Property Name="WarehouseId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WarehouseRooms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="TemperatureRangeMin" Type="float" Nullable="false" />
+          <Property Name="TemperatureRangeMax" Type="float" Nullable="false" />
+          <Property Name="WarehouseId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WarehouseRows">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsMirrored" Type="bit" Nullable="false" />
+          <Property Name="WarehouseRoomId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Warehouses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CompanyLocationId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Article_ArticlePackages">
+          <End Role="Articles" Type="Self.Articles" Multiplicity="1" />
+          <End Role="ArticlePackages" Type="Self.ArticlePackages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticlePackages">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_PurchaseOrderProducts">
+          <End Role="Articles" Type="Self.Articles" Multiplicity="1" />
+          <End Role="PurchaseOrderProducts" Type="Self.PurchaseOrderProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrderProducts">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_SaleOrderProducts">
+          <End Role="Articles" Type="Self.Articles" Multiplicity="1" />
+          <End Role="SaleOrderProducts" Type="Self.SaleOrderProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrderProducts">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_Stocks">
+          <End Role="Articles" Type="Self.Articles" Multiplicity="1" />
+          <End Role="Stocks" Type="Self.Stocks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Stocks">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleCategory_ArticleGroups">
+          <End Role="ArticleCategories" Type="Self.ArticleCategories" Multiplicity="1" />
+          <End Role="ArticleGroups" Type="Self.ArticleGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleCategories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleGroups">
+              <PropertyRef Name="ArticleCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleGroup_ArticleSubGroups">
+          <End Role="ArticleGroups" Type="Self.ArticleGroups" Multiplicity="1" />
+          <End Role="ArticleSubGroups" Type="Self.ArticleSubGroups" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleSubGroups">
+              <PropertyRef Name="ArticleGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticlePackage_SaleOrderProducts">
+          <End Role="ArticlePackages" Type="Self.ArticlePackages" Multiplicity="0..1" />
+          <End Role="SaleOrderProducts" Type="Self.SaleOrderProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticlePackages">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrderProducts">
+              <PropertyRef Name="ArticlePackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleSubGroup_Articles">
+          <End Role="ArticleSubGroups" Type="Self.ArticleSubGroups" Multiplicity="1" />
+          <End Role="Articles" Type="Self.Articles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleSubGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Articles">
+              <PropertyRef Name="ArticleSubGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_ArticlePackages">
+          <End Role="Collaborators" Type="Self.Collaborators" Multiplicity="0..1" />
+          <End Role="ArticlePackages" Type="Self.ArticlePackages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticlePackages">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_CollaboratorArticles">
+          <End Role="Collaborators" Type="Self.Collaborators" Multiplicity="1" />
+          <End Role="CollaboratorArticles" Type="Self.CollaboratorArticles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorArticles">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_CollaboratorLocations">
+          <End Role="Collaborators" Type="Self.Collaborators" Multiplicity="1" />
+          <End Role="CollaboratorLocations" Type="Self.CollaboratorLocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorLocations">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_PurchaseOrders">
+          <End Role="Collaborators" Type="Self.Collaborators" Multiplicity="1" />
+          <End Role="PurchaseOrders" Type="Self.PurchaseOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrders">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_SaleOrders">
+          <End Role="Collaborators" Type="Self.Collaborators" Multiplicity="1" />
+          <End Role="SaleOrders" Type="Self.SaleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrders">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CollaboratorArticleGroup_CollaboratorArticles">
+          <End Role="CollaboratorArticleGroups" Type="Self.CollaboratorArticleGroups" Multiplicity="1" />
+          <End Role="CollaboratorArticles" Type="Self.CollaboratorArticles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollaboratorArticleGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorArticles">
+              <PropertyRef Name="CollaboratorArticleGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CollaboratorLocation_SaleAgentRouteCollaborators">
+          <End Role="CollaboratorLocations" Type="Self.CollaboratorLocations" Multiplicity="1" />
+          <End Role="SaleAgentRouteCollaborators" Type="Self.SaleAgentRouteCollaborators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollaboratorLocations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleAgentRouteCollaborators">
+              <PropertyRef Name="CollaboratorLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_CompanyEmployeeEnrollments">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="CompanyEmployeeEnrollments" Type="Self.CompanyEmployeeEnrollments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyEmployeeEnrollments">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_CompanyLocations">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="CompanyLocations" Type="Self.CompanyLocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyLocations">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_PurchaseOrders">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="PurchaseOrders" Type="Self.PurchaseOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrders">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_Purchases">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="Purchases" Type="Self.Purchases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchases">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_SaleOrders">
+          <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+          <End Role="SaleOrders" Type="Self.SaleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Companies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrders">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyEmployeeEnrollment_CompanyEmployeeEnrollmentGroupLinks">
+          <End Role="CompanyEmployeeEnrollments" Type="Self.CompanyEmployeeEnrollments" Multiplicity="1" />
+          <End Role="CompanyEmployeeEnrollmentGroupLinks" Type="Self.CompanyEmployeeEnrollmentGroupLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyEmployeeEnrollments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyEmployeeEnrollmentGroupLinks">
+              <PropertyRef Name="CompanyEmployeeEnrollmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyLocation_EmployeeGroupCompanyLocationLinks">
+          <End Role="CompanyLocations" Type="Self.CompanyLocations" Multiplicity="1" />
+          <End Role="EmployeeGroupCompanyLocationLinks" Type="Self.EmployeeGroupCompanyLocationLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyLocations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeGroupCompanyLocationLinks">
+              <PropertyRef Name="CompanyLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyLocation_Warehouses">
+          <End Role="CompanyLocations" Type="Self.CompanyLocations" Multiplicity="1" />
+          <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyLocations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Warehouses">
+              <PropertyRef Name="CompanyLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_CollaboratorLocations">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="CollaboratorLocations" Type="Self.CollaboratorLocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorLocations">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_CompanyLocations">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="CompanyLocations" Type="Self.CompanyLocations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyLocations">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_Employees">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_VATs">
+          <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+          <End Role="VATs" Type="Self.VATs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VATs">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_CompanyEmployeeEnrollments">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="CompanyEmployeeEnrollments" Type="Self.CompanyEmployeeEnrollments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyEmployeeEnrollments">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_PurchaseOrders">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="PurchaseOrders" Type="Self.PurchaseOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrders">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Purchases">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Purchases" Type="Self.Purchases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchases">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_SaleOrders">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="SaleOrders" Type="Self.SaleOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrders">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeGroup_CompanyEmployeeEnrollmentGroupLinks">
+          <End Role="EmployeeGroups" Type="Self.EmployeeGroups" Multiplicity="1" />
+          <End Role="CompanyEmployeeEnrollmentGroupLinks" Type="Self.CompanyEmployeeEnrollmentGroupLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyEmployeeEnrollmentGroupLinks">
+              <PropertyRef Name="EmployeeGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeGroup_EmployeeGroupCompanyLocationLinks">
+          <End Role="EmployeeGroups" Type="Self.EmployeeGroups" Multiplicity="1" />
+          <End Role="EmployeeGroupCompanyLocationLinks" Type="Self.EmployeeGroupCompanyLocationLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeGroupCompanyLocationLinks">
+              <PropertyRef Name="EmployeeGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeGroup_EmployeeGroupPermissions">
+          <End Role="EmployeeGroups" Type="Self.EmployeeGroups" Multiplicity="1" />
+          <End Role="EmployeeGroupPermissions" Type="Self.EmployeeGroupPermissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeGroupPermissions">
+              <PropertyRef Name="EmployeeGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_PurchaseOrderProducts">
+          <End Role="PurchaseOrders" Type="Self.PurchaseOrders" Multiplicity="1" />
+          <End Role="PurchaseOrderProducts" Type="Self.PurchaseOrderProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrderProducts">
+              <PropertyRef Name="PurchaseOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_Purchases">
+          <End Role="PurchaseOrders" Type="Self.PurchaseOrders" Multiplicity="1" />
+          <End Role="Purchases" Type="Self.Purchases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchases">
+              <PropertyRef Name="PurchaseOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaleAgentRoute_SaleAgentRouteCollaborators">
+          <End Role="SaleAgentRoutes" Type="Self.SaleAgentRoutes" Multiplicity="1" />
+          <End Role="SaleAgentRouteCollaborators" Type="Self.SaleAgentRouteCollaborators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleAgentRoutes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleAgentRouteCollaborators">
+              <PropertyRef Name="SaleAgentRouteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaleOrder_SaleOrderProducts">
+          <End Role="SaleOrders" Type="Self.SaleOrders" Multiplicity="1" />
+          <End Role="SaleOrderProducts" Type="Self.SaleOrderProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleOrders">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrderProducts">
+              <PropertyRef Name="SaleOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VAT_ArticleCategories">
+          <End Role="VATs" Type="Self.VATs" Multiplicity="1" />
+          <End Role="ArticleCategories" Type="Self.ArticleCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VATs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategories">
+              <PropertyRef Name="VATId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Warehouse_WarehouseRooms">
+          <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="1" />
+          <End Role="WarehouseRooms" Type="Self.WarehouseRooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Warehouses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WarehouseRooms">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WarehouseRoom_WarehouseRows">
+          <End Role="WarehouseRooms" Type="Self.WarehouseRooms" Multiplicity="1" />
+          <End Role="WarehouseRows" Type="Self.WarehouseRows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WarehouseRooms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WarehouseRows">
+              <PropertyRef Name="WarehouseRoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelInfonovaStoreContainer">
+          <EntitySet Name="ArticleCategories" EntityType="Self.ArticleCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArticleGroups" EntityType="Self.ArticleGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArticlePackages" EntityType="Self.ArticlePackages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArticleSubGroups" EntityType="Self.ArticleSubGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CollaboratorArticleGroups" EntityType="Self.CollaboratorArticleGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CollaboratorArticles" EntityType="Self.CollaboratorArticles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CollaboratorLocations" EntityType="Self.CollaboratorLocations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Collaborators" EntityType="Self.Collaborators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CollaboratorUsers" EntityType="Self.CollaboratorUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyEmployeeEnrollmentGroupLinks" EntityType="Self.CompanyEmployeeEnrollmentGroupLinks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyEmployeeEnrollments" EntityType="Self.CompanyEmployeeEnrollments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyLocations" EntityType="Self.CompanyLocations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currencies" EntityType="Self.Currencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CurrencyExchangeRates" EntityType="Self.CurrencyExchangeRates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmailMessages" EntityType="Self.EmailMessages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeGroupCompanyLocationLinks" EntityType="Self.EmployeeGroupCompanyLocationLinks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeGroupPermissions" EntityType="Self.EmployeeGroupPermissions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeGroups" EntityType="Self.EmployeeGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseOrderProducts" EntityType="Self.PurchaseOrderProducts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseOrders" EntityType="Self.PurchaseOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Purchases" EntityType="Self.Purchases" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleAgentRouteCollaborators" EntityType="Self.SaleAgentRouteCollaborators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleAgentRoutes" EntityType="Self.SaleAgentRoutes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleOrderProducts" EntityType="Self.SaleOrderProducts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaleOrders" EntityType="Self.SaleOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VATs" EntityType="Self.VATs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WarehouseContainers" EntityType="Self.WarehouseContainers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WarehouseRooms" EntityType="Self.WarehouseRooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WarehouseRows" EntityType="Self.WarehouseRows" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Warehouses" EntityType="Self.Warehouses" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Article_ArticlePackages" Association="Self.FK_Article_ArticlePackages">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="ArticlePackages" EntitySet="ArticlePackages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_PurchaseOrderProducts" Association="Self.FK_Article_PurchaseOrderProducts">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="PurchaseOrderProducts" EntitySet="PurchaseOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_SaleOrderProducts" Association="Self.FK_Article_SaleOrderProducts">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="SaleOrderProducts" EntitySet="SaleOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_Stocks" Association="Self.FK_Article_Stocks">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Stocks" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleCategory_ArticleGroups" Association="Self.FK_ArticleCategory_ArticleGroups">
+            <End Role="ArticleCategories" EntitySet="ArticleCategories" />
+            <End Role="ArticleGroups" EntitySet="ArticleGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleGroup_ArticleSubGroups" Association="Self.FK_ArticleGroup_ArticleSubGroups">
+            <End Role="ArticleGroups" EntitySet="ArticleGroups" />
+            <End Role="ArticleSubGroups" EntitySet="ArticleSubGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticlePackage_SaleOrderProducts" Association="Self.FK_ArticlePackage_SaleOrderProducts">
+            <End Role="ArticlePackages" EntitySet="ArticlePackages" />
+            <End Role="SaleOrderProducts" EntitySet="SaleOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleSubGroup_Articles" Association="Self.FK_ArticleSubGroup_Articles">
+            <End Role="ArticleSubGroups" EntitySet="ArticleSubGroups" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_ArticlePackages" Association="Self.FK_Collaborator_ArticlePackages">
+            <End Role="Collaborators" EntitySet="Collaborators" />
+            <End Role="ArticlePackages" EntitySet="ArticlePackages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_CollaboratorArticles" Association="Self.FK_Collaborator_CollaboratorArticles">
+            <End Role="Collaborators" EntitySet="Collaborators" />
+            <End Role="CollaboratorArticles" EntitySet="CollaboratorArticles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_CollaboratorLocations" Association="Self.FK_Collaborator_CollaboratorLocations">
+            <End Role="Collaborators" EntitySet="Collaborators" />
+            <End Role="CollaboratorLocations" EntitySet="CollaboratorLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_PurchaseOrders" Association="Self.FK_Collaborator_PurchaseOrders">
+            <End Role="Collaborators" EntitySet="Collaborators" />
+            <End Role="PurchaseOrders" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_SaleOrders" Association="Self.FK_Collaborator_SaleOrders">
+            <End Role="Collaborators" EntitySet="Collaborators" />
+            <End Role="SaleOrders" EntitySet="SaleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CollaboratorArticleGroup_CollaboratorArticles" Association="Self.FK_CollaboratorArticleGroup_CollaboratorArticles">
+            <End Role="CollaboratorArticleGroups" EntitySet="CollaboratorArticleGroups" />
+            <End Role="CollaboratorArticles" EntitySet="CollaboratorArticles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CollaboratorLocation_SaleAgentRouteCollaborators" Association="Self.FK_CollaboratorLocation_SaleAgentRouteCollaborators">
+            <End Role="CollaboratorLocations" EntitySet="CollaboratorLocations" />
+            <End Role="SaleAgentRouteCollaborators" EntitySet="SaleAgentRouteCollaborators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_CompanyEmployeeEnrollments" Association="Self.FK_Company_CompanyEmployeeEnrollments">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="CompanyEmployeeEnrollments" EntitySet="CompanyEmployeeEnrollments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_CompanyLocations" Association="Self.FK_Company_CompanyLocations">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="CompanyLocations" EntitySet="CompanyLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_PurchaseOrders" Association="Self.FK_Company_PurchaseOrders">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="PurchaseOrders" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_Purchases" Association="Self.FK_Company_Purchases">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="Purchases" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_SaleOrders" Association="Self.FK_Company_SaleOrders">
+            <End Role="Companies" EntitySet="Companies" />
+            <End Role="SaleOrders" EntitySet="SaleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyEmployeeEnrollment_CompanyEmployeeEnrollmentGroupLinks" Association="Self.FK_CompanyEmployeeEnrollment_CompanyEmployeeEnrollmentGroupLinks">
+            <End Role="CompanyEmployeeEnrollments" EntitySet="CompanyEmployeeEnrollments" />
+            <End Role="CompanyEmployeeEnrollmentGroupLinks" EntitySet="CompanyEmployeeEnrollmentGroupLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyLocation_EmployeeGroupCompanyLocationLinks" Association="Self.FK_CompanyLocation_EmployeeGroupCompanyLocationLinks">
+            <End Role="CompanyLocations" EntitySet="CompanyLocations" />
+            <End Role="EmployeeGroupCompanyLocationLinks" EntitySet="EmployeeGroupCompanyLocationLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyLocation_Warehouses" Association="Self.FK_CompanyLocation_Warehouses">
+            <End Role="CompanyLocations" EntitySet="CompanyLocations" />
+            <End Role="Warehouses" EntitySet="Warehouses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_CollaboratorLocations" Association="Self.FK_Country_CollaboratorLocations">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="CollaboratorLocations" EntitySet="CollaboratorLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_CompanyLocations" Association="Self.FK_Country_CompanyLocations">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="CompanyLocations" EntitySet="CompanyLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_Employees" Association="Self.FK_Country_Employees">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_VATs" Association="Self.FK_Country_VATs">
+            <End Role="Countries" EntitySet="Countries" />
+            <End Role="VATs" EntitySet="VATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_CompanyEmployeeEnrollments" Association="Self.FK_Employee_CompanyEmployeeEnrollments">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="CompanyEmployeeEnrollments" EntitySet="CompanyEmployeeEnrollments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_PurchaseOrders" Association="Self.FK_Employee_PurchaseOrders">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="PurchaseOrders" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Purchases" Association="Self.FK_Employee_Purchases">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Purchases" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_SaleOrders" Association="Self.FK_Employee_SaleOrders">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="SaleOrders" EntitySet="SaleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeGroup_CompanyEmployeeEnrollmentGroupLinks" Association="Self.FK_EmployeeGroup_CompanyEmployeeEnrollmentGroupLinks">
+            <End Role="EmployeeGroups" EntitySet="EmployeeGroups" />
+            <End Role="CompanyEmployeeEnrollmentGroupLinks" EntitySet="CompanyEmployeeEnrollmentGroupLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeGroup_EmployeeGroupCompanyLocationLinks" Association="Self.FK_EmployeeGroup_EmployeeGroupCompanyLocationLinks">
+            <End Role="EmployeeGroups" EntitySet="EmployeeGroups" />
+            <End Role="EmployeeGroupCompanyLocationLinks" EntitySet="EmployeeGroupCompanyLocationLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeGroup_EmployeeGroupPermissions" Association="Self.FK_EmployeeGroup_EmployeeGroupPermissions">
+            <End Role="EmployeeGroups" EntitySet="EmployeeGroups" />
+            <End Role="EmployeeGroupPermissions" EntitySet="EmployeeGroupPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_PurchaseOrderProducts" Association="Self.FK_PurchaseOrder_PurchaseOrderProducts">
+            <End Role="PurchaseOrders" EntitySet="PurchaseOrders" />
+            <End Role="PurchaseOrderProducts" EntitySet="PurchaseOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_Purchases" Association="Self.FK_PurchaseOrder_Purchases">
+            <End Role="PurchaseOrders" EntitySet="PurchaseOrders" />
+            <End Role="Purchases" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleAgentRoute_SaleAgentRouteCollaborators" Association="Self.FK_SaleAgentRoute_SaleAgentRouteCollaborators">
+            <End Role="SaleAgentRoutes" EntitySet="SaleAgentRoutes" />
+            <End Role="SaleAgentRouteCollaborators" EntitySet="SaleAgentRouteCollaborators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleOrder_SaleOrderProducts" Association="Self.FK_SaleOrder_SaleOrderProducts">
+            <End Role="SaleOrders" EntitySet="SaleOrders" />
+            <End Role="SaleOrderProducts" EntitySet="SaleOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VAT_ArticleCategories" Association="Self.FK_VAT_ArticleCategories">
+            <End Role="VATs" EntitySet="VATs" />
+            <End Role="ArticleCategories" EntitySet="ArticleCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Warehouse_WarehouseRooms" Association="Self.FK_Warehouse_WarehouseRooms">
+            <End Role="Warehouses" EntitySet="Warehouses" />
+            <End Role="WarehouseRooms" EntitySet="WarehouseRooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WarehouseRoom_WarehouseRows" Association="Self.FK_WarehouseRoom_WarehouseRows">
+            <End Role="WarehouseRooms" EntitySet="WarehouseRooms" />
+            <End Role="WarehouseRows" EntitySet="WarehouseRows" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Infonova.Data" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ModelInfonova" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ArticleCategories" EntityType="Infonova.Data.ArticleCategory" />
+          <EntitySet Name="ArticleGroups" EntityType="Infonova.Data.ArticleGroup" />
+          <EntitySet Name="ArticlePackages" EntityType="Infonova.Data.ArticlePackage" />
+          <EntitySet Name="Articles" EntityType="Infonova.Data.Article" />
+          <EntitySet Name="ArticleSubGroups" EntityType="Infonova.Data.ArticleSubGroup" />
+          <EntitySet Name="CollaboratorArticleGroups" EntityType="Infonova.Data.CollaboratorArticleGroup" />
+          <EntitySet Name="CollaboratorArticles" EntityType="Infonova.Data.CollaboratorArticle" />
+          <EntitySet Name="CollaboratorLocations" EntityType="Infonova.Data.CollaboratorLocation" />
+          <EntitySet Name="Collaborators" EntityType="Infonova.Data.Collaborator" />
+          <EntitySet Name="CollaboratorUsers" EntityType="Infonova.Data.CollaboratorUser" />
+          <EntitySet Name="Companies" EntityType="Infonova.Data.Company" />
+          <EntitySet Name="CompanyEmployeeEnrollments" EntityType="Infonova.Data.CompanyEmployeeEnrollment" />
+          <EntitySet Name="CompanyLocations" EntityType="Infonova.Data.CompanyLocation" />
+          <EntitySet Name="Countries" EntityType="Infonova.Data.Country" />
+          <EntitySet Name="Currencies" EntityType="Infonova.Data.Currency" />
+          <EntitySet Name="CurrencyExchangeRates" EntityType="Infonova.Data.CurrencyExchangeRate" />
+          <EntitySet Name="EmailMessages" EntityType="Infonova.Data.EmailMessage" />
+          <EntitySet Name="EmployeeGroupPermissions" EntityType="Infonova.Data.EmployeeGroupPermission" />
+          <EntitySet Name="EmployeeGroups" EntityType="Infonova.Data.EmployeeGroup" />
+          <EntitySet Name="Employees" EntityType="Infonova.Data.Employee" />
+          <EntitySet Name="PurchaseOrderProducts" EntityType="Infonova.Data.PurchaseOrderProduct" />
+          <EntitySet Name="PurchaseOrders" EntityType="Infonova.Data.PurchaseOrder" />
+          <EntitySet Name="Purchases" EntityType="Infonova.Data.Purchase" />
+          <EntitySet Name="SaleAgentRouteCollaborators" EntityType="Infonova.Data.SaleAgentRouteCollaborator" />
+          <EntitySet Name="SaleAgentRoutes" EntityType="Infonova.Data.SaleAgentRoute" />
+          <EntitySet Name="SaleOrderProducts" EntityType="Infonova.Data.SaleOrderProduct" />
+          <EntitySet Name="SaleOrders" EntityType="Infonova.Data.SaleOrder" />
+          <EntitySet Name="Stocks" EntityType="Infonova.Data.Stock" />
+          <EntitySet Name="VATs" EntityType="Infonova.Data.VAT" />
+          <EntitySet Name="WarehouseContainers" EntityType="Infonova.Data.WarehouseContainer" />
+          <EntitySet Name="WarehouseRooms" EntityType="Infonova.Data.WarehouseRoom" />
+          <EntitySet Name="WarehouseRows" EntityType="Infonova.Data.WarehouseRow" />
+          <EntitySet Name="Warehouses" EntityType="Infonova.Data.Warehouse" />
+          <AssociationSet Name="FK_ArticleCategory_ArticleGroups" Association="Infonova.Data.FK_ArticleCategory_ArticleGroups">
+            <End Role="ArticleCategory" EntitySet="ArticleCategories" />
+            <End Role="ArticleGroup" EntitySet="ArticleGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VAT_ArticleCategories" Association="Infonova.Data.FK_VAT_ArticleCategories">
+            <End Role="VAT" EntitySet="VATs" />
+            <End Role="ArticleCategory" EntitySet="ArticleCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleGroup_ArticleSubGroups" Association="Infonova.Data.FK_ArticleGroup_ArticleSubGroups">
+            <End Role="ArticleGroup" EntitySet="ArticleGroups" />
+            <End Role="ArticleSubGroup" EntitySet="ArticleSubGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_ArticlePackages" Association="Infonova.Data.FK_Article_ArticlePackages">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="ArticlePackage" EntitySet="ArticlePackages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticlePackage_SaleOrderProducts" Association="Infonova.Data.FK_ArticlePackage_SaleOrderProducts">
+            <End Role="ArticlePackage" EntitySet="ArticlePackages" />
+            <End Role="SaleOrderProduct" EntitySet="SaleOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_ArticlePackages" Association="Infonova.Data.FK_Collaborator_ArticlePackages">
+            <End Role="Collaborator" EntitySet="Collaborators" />
+            <End Role="ArticlePackage" EntitySet="ArticlePackages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_PurchaseOrderProducts" Association="Infonova.Data.FK_Article_PurchaseOrderProducts">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="PurchaseOrderProduct" EntitySet="PurchaseOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_SaleOrderProducts" Association="Infonova.Data.FK_Article_SaleOrderProducts">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="SaleOrderProduct" EntitySet="SaleOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_Stocks" Association="Infonova.Data.FK_Article_Stocks">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleSubGroup_Articles" Association="Infonova.Data.FK_ArticleSubGroup_Articles">
+            <End Role="ArticleSubGroup" EntitySet="ArticleSubGroups" />
+            <End Role="Article" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CollaboratorArticleGroup_CollaboratorArticles" Association="Infonova.Data.FK_CollaboratorArticleGroup_CollaboratorArticles">
+            <End Role="CollaboratorArticleGroup" EntitySet="CollaboratorArticleGroups" />
+            <End Role="CollaboratorArticle" EntitySet="CollaboratorArticles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_CollaboratorArticles" Association="Infonova.Data.FK_Collaborator_CollaboratorArticles">
+            <End Role="Collaborator" EntitySet="Collaborators" />
+            <End Role="CollaboratorArticle" EntitySet="CollaboratorArticles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_CollaboratorLocations" Association="Infonova.Data.FK_Collaborator_CollaboratorLocations">
+            <End Role="Collaborator" EntitySet="Collaborators" />
+            <End Role="CollaboratorLocation" EntitySet="CollaboratorLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CollaboratorLocation_SaleAgentRouteCollaborators" Association="Infonova.Data.FK_CollaboratorLocation_SaleAgentRouteCollaborators">
+            <End Role="CollaboratorLocation" EntitySet="CollaboratorLocations" />
+            <End Role="SaleAgentRouteCollaborator" EntitySet="SaleAgentRouteCollaborators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_CollaboratorLocations" Association="Infonova.Data.FK_Country_CollaboratorLocations">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="CollaboratorLocation" EntitySet="CollaboratorLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_PurchaseOrders" Association="Infonova.Data.FK_Collaborator_PurchaseOrders">
+            <End Role="Collaborator" EntitySet="Collaborators" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Collaborator_SaleOrders" Association="Infonova.Data.FK_Collaborator_SaleOrders">
+            <End Role="Collaborator" EntitySet="Collaborators" />
+            <End Role="SaleOrder" EntitySet="SaleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_CompanyEmployeeEnrollments" Association="Infonova.Data.FK_Company_CompanyEmployeeEnrollments">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="CompanyEmployeeEnrollment" EntitySet="CompanyEmployeeEnrollments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_CompanyLocations" Association="Infonova.Data.FK_Company_CompanyLocations">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="CompanyLocation" EntitySet="CompanyLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_PurchaseOrders" Association="Infonova.Data.FK_Company_PurchaseOrders">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_Purchases" Association="Infonova.Data.FK_Company_Purchases">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Purchase" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_SaleOrders" Association="Infonova.Data.FK_Company_SaleOrders">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="SaleOrder" EntitySet="SaleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_CompanyEmployeeEnrollments" Association="Infonova.Data.FK_Employee_CompanyEmployeeEnrollments">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="CompanyEmployeeEnrollment" EntitySet="CompanyEmployeeEnrollments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyLocation_Warehouses" Association="Infonova.Data.FK_CompanyLocation_Warehouses">
+            <End Role="CompanyLocation" EntitySet="CompanyLocations" />
+            <End Role="Warehouse" EntitySet="Warehouses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_CompanyLocations" Association="Infonova.Data.FK_Country_CompanyLocations">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="CompanyLocation" EntitySet="CompanyLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_Employees" Association="Infonova.Data.FK_Country_Employees">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Country_VATs" Association="Infonova.Data.FK_Country_VATs">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="VAT" EntitySet="VATs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeGroup_EmployeeGroupPermissions" Association="Infonova.Data.FK_EmployeeGroup_EmployeeGroupPermissions">
+            <End Role="EmployeeGroup" EntitySet="EmployeeGroups" />
+            <End Role="EmployeeGroupPermission" EntitySet="EmployeeGroupPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_PurchaseOrders" Association="Infonova.Data.FK_Employee_PurchaseOrders">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Purchases" Association="Infonova.Data.FK_Employee_Purchases">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Purchase" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_SaleOrders" Association="Infonova.Data.FK_Employee_SaleOrders">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="SaleOrder" EntitySet="SaleOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_PurchaseOrderProducts" Association="Infonova.Data.FK_PurchaseOrder_PurchaseOrderProducts">
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+            <End Role="PurchaseOrderProduct" EntitySet="PurchaseOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseOrder_Purchases" Association="Infonova.Data.FK_PurchaseOrder_Purchases">
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+            <End Role="Purchase" EntitySet="Purchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleAgentRoute_SaleAgentRouteCollaborators" Association="Infonova.Data.FK_SaleAgentRoute_SaleAgentRouteCollaborators">
+            <End Role="SaleAgentRoute" EntitySet="SaleAgentRoutes" />
+            <End Role="SaleAgentRouteCollaborator" EntitySet="SaleAgentRouteCollaborators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaleOrder_SaleOrderProducts" Association="Infonova.Data.FK_SaleOrder_SaleOrderProducts">
+            <End Role="SaleOrder" EntitySet="SaleOrders" />
+            <End Role="SaleOrderProduct" EntitySet="SaleOrderProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Warehouse_WarehouseRooms" Association="Infonova.Data.FK_Warehouse_WarehouseRooms">
+            <End Role="Warehouse" EntitySet="Warehouses" />
+            <End Role="WarehouseRoom" EntitySet="WarehouseRooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WarehouseRoom_WarehouseRows" Association="Infonova.Data.FK_WarehouseRoom_WarehouseRows">
+            <End Role="WarehouseRoom" EntitySet="WarehouseRooms" />
+            <End Role="WarehouseRow" EntitySet="WarehouseRows" />
+          </AssociationSet>
+          <AssociationSet Name="CompanyEmployeeEnrollmentGroupLinks" Association="Infonova.Data.CompanyEmployeeEnrollmentGroupLinks">
+            <End Role="CompanyEmployeeEnrollment" EntitySet="CompanyEmployeeEnrollments" />
+            <End Role="EmployeeGroup" EntitySet="EmployeeGroups" />
+          </AssociationSet>
+          <AssociationSet Name="EmployeeGroupCompanyLocationLinks" Association="Infonova.Data.EmployeeGroupCompanyLocationLinks">
+            <End Role="CompanyLocation" EntitySet="CompanyLocations" />
+            <End Role="EmployeeGroup" EntitySet="EmployeeGroups" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ArticleCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VATId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ArticleGroups" Relationship="Infonova.Data.FK_ArticleCategory_ArticleGroups" FromRole="ArticleCategory" ToRole="ArticleGroup" />
+          <NavigationProperty Name="VAT" Relationship="Infonova.Data.FK_VAT_ArticleCategories" FromRole="ArticleCategory" ToRole="VAT" />
+        </EntityType>
+        <EntityType Name="ArticleGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleCategoryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ArticleCategory" Relationship="Infonova.Data.FK_ArticleCategory_ArticleGroups" FromRole="ArticleGroup" ToRole="ArticleCategory" />
+          <NavigationProperty Name="ArticleSubGroups" Relationship="Infonova.Data.FK_ArticleGroup_ArticleSubGroups" FromRole="ArticleGroup" ToRole="ArticleSubGroup" />
+        </EntityType>
+        <EntityType Name="ArticlePackage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Double" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="IsReusable" Type="Boolean" Nullable="false" />
+          <Property Name="UnitMultiplicationFactor" Type="Double" Nullable="false" />
+          <Property Name="SelectionPriority" Type="Int32" Nullable="false" />
+          <Property Name="IsRetired" Type="Boolean" Nullable="false" />
+          <Property Name="ArticleId" Type="Int32" Nullable="false" />
+          <Property Name="CollaboratorId" Type="Int32" />
+          <NavigationProperty Name="Article" Relationship="Infonova.Data.FK_Article_ArticlePackages" FromRole="ArticlePackage" ToRole="Article" />
+          <NavigationProperty Name="SaleOrderProducts" Relationship="Infonova.Data.FK_ArticlePackage_SaleOrderProducts" FromRole="ArticlePackage" ToRole="SaleOrderProduct" />
+          <NavigationProperty Name="Collaborator" Relationship="Infonova.Data.FK_Collaborator_ArticlePackages" FromRole="ArticlePackage" ToRole="Collaborator" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameFull" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameFromSupplier" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameInvoice" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsCalibrated" Type="Boolean" Nullable="false" />
+          <Property Name="UnitWeightFactor" Type="Double" Nullable="false" />
+          <Property Name="IsForbiddenUnitySale" Type="Boolean" Nullable="false" />
+          <Property Name="IsForbiddenUnityPurchase" Type="Boolean" Nullable="false" />
+          <Property Name="ArticleSubGroupId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ArticlePackages" Relationship="Infonova.Data.FK_Article_ArticlePackages" FromRole="Article" ToRole="ArticlePackage" />
+          <NavigationProperty Name="PurchaseOrderProducts" Relationship="Infonova.Data.FK_Article_PurchaseOrderProducts" FromRole="Article" ToRole="PurchaseOrderProduct" />
+          <NavigationProperty Name="SaleOrderProducts" Relationship="Infonova.Data.FK_Article_SaleOrderProducts" FromRole="Article" ToRole="SaleOrderProduct" />
+          <NavigationProperty Name="Stocks" Relationship="Infonova.Data.FK_Article_Stocks" FromRole="Article" ToRole="Stock" />
+          <NavigationProperty Name="ArticleSubGroup" Relationship="Infonova.Data.FK_ArticleSubGroup_Articles" FromRole="Article" ToRole="ArticleSubGroup" />
+        </EntityType>
+        <EntityType Name="ArticleSubGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleGroupId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ArticleGroup" Relationship="Infonova.Data.FK_ArticleGroup_ArticleSubGroups" FromRole="ArticleSubGroup" ToRole="ArticleGroup" />
+          <NavigationProperty Name="Articles" Relationship="Infonova.Data.FK_ArticleSubGroup_Articles" FromRole="ArticleSubGroup" ToRole="Article" />
+        </EntityType>
+        <EntityType Name="CollaboratorArticleGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CollaboratorArticles" Relationship="Infonova.Data.FK_CollaboratorArticleGroup_CollaboratorArticles" FromRole="CollaboratorArticleGroup" ToRole="CollaboratorArticle" />
+        </EntityType>
+        <EntityType Name="CollaboratorArticle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameFull" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameFriendly" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameInvoice" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CollaboratorId" Type="Int32" Nullable="false" />
+          <Property Name="CollaboratorArticleGroupId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CollaboratorArticleGroup" Relationship="Infonova.Data.FK_CollaboratorArticleGroup_CollaboratorArticles" FromRole="CollaboratorArticle" ToRole="CollaboratorArticleGroup" />
+          <NavigationProperty Name="Collaborator" Relationship="Infonova.Data.FK_Collaborator_CollaboratorArticles" FromRole="CollaboratorArticle" ToRole="Collaborator" />
+        </EntityType>
+        <EntityType Name="CollaboratorLocation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsHeadquarters" Type="Boolean" Nullable="false" />
+          <Property Name="IsGPSDetermined" Type="Boolean" Nullable="false" />
+          <Property Name="DateGPSDetermined" Type="DateTime" Precision="3" />
+          <Property Name="GPSLongitude" Type="Double" Nullable="false" />
+          <Property Name="GPSLatitude" Type="Double" Nullable="false" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="CollaboratorId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Collaborator" Relationship="Infonova.Data.FK_Collaborator_CollaboratorLocations" FromRole="CollaboratorLocation" ToRole="Collaborator" />
+          <NavigationProperty Name="SaleAgentRouteCollaborators" Relationship="Infonova.Data.FK_CollaboratorLocation_SaleAgentRouteCollaborators" FromRole="CollaboratorLocation" ToRole="SaleAgentRouteCollaborator" />
+          <NavigationProperty Name="Country" Relationship="Infonova.Data.FK_Country_CollaboratorLocations" FromRole="CollaboratorLocation" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="Collaborator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameFull" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameFriendly" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CodeAlpha2Chars" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CodeAlpha3Chars" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsRelationCustomer" Type="Boolean" Nullable="false" />
+          <Property Name="IsRelationSupplier" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ArticlePackages" Relationship="Infonova.Data.FK_Collaborator_ArticlePackages" FromRole="Collaborator" ToRole="ArticlePackage" />
+          <NavigationProperty Name="CollaboratorArticles" Relationship="Infonova.Data.FK_Collaborator_CollaboratorArticles" FromRole="Collaborator" ToRole="CollaboratorArticle" />
+          <NavigationProperty Name="CollaboratorLocations" Relationship="Infonova.Data.FK_Collaborator_CollaboratorLocations" FromRole="Collaborator" ToRole="CollaboratorLocation" />
+          <NavigationProperty Name="PurchaseOrders" Relationship="Infonova.Data.FK_Collaborator_PurchaseOrders" FromRole="Collaborator" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="SaleOrders" Relationship="Infonova.Data.FK_Collaborator_SaleOrders" FromRole="Collaborator" ToRole="SaleOrder" />
+        </EntityType>
+        <EntityType Name="CollaboratorUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LoginName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameFull" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameFriendly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CompanyEmployeeEnrollments" Relationship="Infonova.Data.FK_Company_CompanyEmployeeEnrollments" FromRole="Company" ToRole="CompanyEmployeeEnrollment" />
+          <NavigationProperty Name="CompanyLocations" Relationship="Infonova.Data.FK_Company_CompanyLocations" FromRole="Company" ToRole="CompanyLocation" />
+          <NavigationProperty Name="PurchaseOrders" Relationship="Infonova.Data.FK_Company_PurchaseOrders" FromRole="Company" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="Purchases" Relationship="Infonova.Data.FK_Company_Purchases" FromRole="Company" ToRole="Purchase" />
+          <NavigationProperty Name="SaleOrders" Relationship="Infonova.Data.FK_Company_SaleOrders" FromRole="Company" ToRole="SaleOrder" />
+        </EntityType>
+        <EntityType Name="CompanyEmployeeEnrollment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateEmployed" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateResignation" Type="DateTime" Precision="3" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <Property Name="IsLoginAllowed" Type="Boolean" Nullable="false" />
+          <Property Name="JobName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Infonova.Data.FK_Company_CompanyEmployeeEnrollments" FromRole="CompanyEmployeeEnrollment" ToRole="Company" />
+          <NavigationProperty Name="Employee" Relationship="Infonova.Data.FK_Employee_CompanyEmployeeEnrollments" FromRole="CompanyEmployeeEnrollment" ToRole="Employee" />
+          <NavigationProperty Name="EmployeeGroups" Relationship="Infonova.Data.CompanyEmployeeEnrollmentGroupLinks" FromRole="CompanyEmployeeEnrollment" ToRole="EmployeeGroup" />
+        </EntityType>
+        <EntityType Name="CompanyLocation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsHeadquarters" Type="Boolean" Nullable="false" />
+          <Property Name="AddressDistrict" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLocality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressStreet" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddressPostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumbers" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FaxNumbers" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Emails" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Infonova.Data.FK_Company_CompanyLocations" FromRole="CompanyLocation" ToRole="Company" />
+          <NavigationProperty Name="Warehouses" Relationship="Infonova.Data.FK_CompanyLocation_Warehouses" FromRole="CompanyLocation" ToRole="Warehouse" />
+          <NavigationProperty Name="Country" Relationship="Infonova.Data.FK_Country_CompanyLocations" FromRole="CompanyLocation" ToRole="Country" />
+          <NavigationProperty Name="EmployeeGroups" Relationship="Infonova.Data.EmployeeGroupCompanyLocationLinks" FromRole="CompanyLocation" ToRole="EmployeeGroup" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CodeAlpha2Chars" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CodeAlpha3Chars" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CollaboratorLocations" Relationship="Infonova.Data.FK_Country_CollaboratorLocations" FromRole="Country" ToRole="CollaboratorLocation" />
+          <NavigationProperty Name="CompanyLocations" Relationship="Infonova.Data.FK_Country_CompanyLocations" FromRole="Country" ToRole="CompanyLocation" />
+          <NavigationProperty Name="Employees" Relationship="Infonova.Data.FK_Country_Employees" FromRole="Country" ToRole="Employee" />
+          <NavigationProperty Name="VATs" Relationship="Infonova.Data.FK_Country_VATs" FromRole="Country" ToRole="VAT" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CurrencyExchangeRate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CurrencyCodeOriginal" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyCodeExchange" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Rate" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmailMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="EmployeeGroupPermission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Module" Type="Int32" Nullable="false" />
+          <Property Name="AccessLevel" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeGroupId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeGroup" Relationship="Infonova.Data.FK_EmployeeGroup_EmployeeGroupPermissions" FromRole="EmployeeGroupPermission" ToRole="EmployeeGroup" />
+        </EntityType>
+        <EntityType Name="EmployeeGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmployeeGroupPermissions" Relationship="Infonova.Data.FK_EmployeeGroup_EmployeeGroupPermissions" FromRole="EmployeeGroup" ToRole="EmployeeGroupPermission" />
+          <NavigationProperty Name="CompanyEmployeeEnrollments" Relationship="Infonova.Data.CompanyEmployeeEnrollmentGroupLinks" FromRole="EmployeeGroup" ToRole="CompanyEmployeeEnrollment" />
+          <NavigationProperty Name="CompanyLocations" Relationship="Infonova.Data.EmployeeGroupCompanyLocationLinks" FromRole="EmployeeGroup" ToRole="CompanyLocation" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameFirst" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameLast" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameMiddle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateBirth" Type="DateTime" Precision="3" />
+          <Property Name="PhoneNumbers" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Emails" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDSeriesAndNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PersonalNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="LoginName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LoginPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsLoginToDomain" Type="Boolean" Nullable="false" />
+          <Property Name="LoginDomain" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CompanyEmployeeEnrollments" Relationship="Infonova.Data.FK_Employee_CompanyEmployeeEnrollments" FromRole="Employee" ToRole="CompanyEmployeeEnrollment" />
+          <NavigationProperty Name="Country" Relationship="Infonova.Data.FK_Country_Employees" FromRole="Employee" ToRole="Country" />
+          <NavigationProperty Name="PurchaseOrders" Relationship="Infonova.Data.FK_Employee_PurchaseOrders" FromRole="Employee" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="Purchases" Relationship="Infonova.Data.FK_Employee_Purchases" FromRole="Employee" ToRole="Purchase" />
+          <NavigationProperty Name="SaleOrders" Relationship="Infonova.Data.FK_Employee_SaleOrders" FromRole="Employee" ToRole="SaleOrder" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quantity" Type="Double" Nullable="false" />
+          <Property Name="ArticleId" Type="Int32" Nullable="false" />
+          <Property Name="PurchaseOrderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="Infonova.Data.FK_Article_PurchaseOrderProducts" FromRole="PurchaseOrderProduct" ToRole="Article" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Infonova.Data.FK_PurchaseOrder_PurchaseOrderProducts" FromRole="PurchaseOrderProduct" ToRole="PurchaseOrder" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateValid" Type="DateTime" Precision="3" />
+          <Property Name="IsClosed" Type="Boolean" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="CollaboratorId" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Collaborator" Relationship="Infonova.Data.FK_Collaborator_PurchaseOrders" FromRole="PurchaseOrder" ToRole="Collaborator" />
+          <NavigationProperty Name="Company" Relationship="Infonova.Data.FK_Company_PurchaseOrders" FromRole="PurchaseOrder" ToRole="Company" />
+          <NavigationProperty Name="Employee" Relationship="Infonova.Data.FK_Employee_PurchaseOrders" FromRole="PurchaseOrder" ToRole="Employee" />
+          <NavigationProperty Name="PurchaseOrderProducts" Relationship="Infonova.Data.FK_PurchaseOrder_PurchaseOrderProducts" FromRole="PurchaseOrder" ToRole="PurchaseOrderProduct" />
+          <NavigationProperty Name="Purchases" Relationship="Infonova.Data.FK_PurchaseOrder_Purchases" FromRole="PurchaseOrder" ToRole="Purchase" />
+        </EntityType>
+        <EntityType Name="Purchase">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="PurchaseOrderId" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Infonova.Data.FK_Company_Purchases" FromRole="Purchase" ToRole="Company" />
+          <NavigationProperty Name="Employee" Relationship="Infonova.Data.FK_Employee_Purchases" FromRole="Purchase" ToRole="Employee" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="Infonova.Data.FK_PurchaseOrder_Purchases" FromRole="Purchase" ToRole="PurchaseOrder" />
+        </EntityType>
+        <EntityType Name="SaleAgentRouteCollaborator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="SaleAgentRouteId" Type="Int32" Nullable="false" />
+          <Property Name="CollaboratorLocationId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CollaboratorLocation" Relationship="Infonova.Data.FK_CollaboratorLocation_SaleAgentRouteCollaborators" FromRole="SaleAgentRouteCollaborator" ToRole="CollaboratorLocation" />
+          <NavigationProperty Name="SaleAgentRoute" Relationship="Infonova.Data.FK_SaleAgentRoute_SaleAgentRouteCollaborators" FromRole="SaleAgentRouteCollaborator" ToRole="SaleAgentRoute" />
+        </EntityType>
+        <EntityType Name="SaleAgentRoute">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DayOfWeek" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SaleAgentRouteCollaborators" Relationship="Infonova.Data.FK_SaleAgentRoute_SaleAgentRouteCollaborators" FromRole="SaleAgentRoute" ToRole="SaleAgentRouteCollaborator" />
+        </EntityType>
+        <EntityType Name="SaleOrderProduct">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QuantityUnity" Type="Double" Nullable="false" />
+          <Property Name="QuantityPackage" Type="Double" Nullable="false" />
+          <Property Name="PriceWithoutVAT" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ArticleId" Type="Int32" Nullable="false" />
+          <Property Name="ArticlePackageId" Type="Int32" />
+          <Property Name="SaleOrderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ArticlePackage" Relationship="Infonova.Data.FK_ArticlePackage_SaleOrderProducts" FromRole="SaleOrderProduct" ToRole="ArticlePackage" />
+          <NavigationProperty Name="Article" Relationship="Infonova.Data.FK_Article_SaleOrderProducts" FromRole="SaleOrderProduct" ToRole="Article" />
+          <NavigationProperty Name="SaleOrder" Relationship="Infonova.Data.FK_SaleOrder_SaleOrderProducts" FromRole="SaleOrderProduct" ToRole="SaleOrder" />
+        </EntityType>
+        <EntityType Name="SaleOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateSale" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsClosed" Type="Boolean" Nullable="false" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+          <Property Name="CollaboratorId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Collaborator" Relationship="Infonova.Data.FK_Collaborator_SaleOrders" FromRole="SaleOrder" ToRole="Collaborator" />
+          <NavigationProperty Name="Company" Relationship="Infonova.Data.FK_Company_SaleOrders" FromRole="SaleOrder" ToRole="Company" />
+          <NavigationProperty Name="Employee" Relationship="Infonova.Data.FK_Employee_SaleOrders" FromRole="SaleOrder" ToRole="Employee" />
+          <NavigationProperty Name="SaleOrderProducts" Relationship="Infonova.Data.FK_SaleOrder_SaleOrderProducts" FromRole="SaleOrder" ToRole="SaleOrderProduct" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BatchNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Double" Nullable="false" />
+          <Property Name="ArticleId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="Infonova.Data.FK_Article_Stocks" FromRole="Stock" ToRole="Article" />
+        </EntityType>
+        <EntityType Name="VAT">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameDocuments" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameFriendly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Percentage" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ArticleCategories" Relationship="Infonova.Data.FK_VAT_ArticleCategories" FromRole="VAT" ToRole="ArticleCategory" />
+          <NavigationProperty Name="Country" Relationship="Infonova.Data.FK_Country_VATs" FromRole="VAT" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="WarehouseContainer">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsUnlimitedCapacity" Type="Boolean" Nullable="false" />
+          <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WarehouseRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="TemperatureRangeMin" Type="Double" Nullable="false" />
+          <Property Name="TemperatureRangeMax" Type="Double" Nullable="false" />
+          <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Warehouse" Relationship="Infonova.Data.FK_Warehouse_WarehouseRooms" FromRole="WarehouseRoom" ToRole="Warehouse" />
+          <NavigationProperty Name="WarehouseRows" Relationship="Infonova.Data.FK_WarehouseRoom_WarehouseRows" FromRole="WarehouseRoom" ToRole="WarehouseRow" />
+        </EntityType>
+        <EntityType Name="WarehouseRow">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsMirrored" Type="Boolean" Nullable="false" />
+          <Property Name="WarehouseRoomId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="WarehouseRoom" Relationship="Infonova.Data.FK_WarehouseRoom_WarehouseRows" FromRole="WarehouseRow" ToRole="WarehouseRoom" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyLocationId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CompanyLocation" Relationship="Infonova.Data.FK_CompanyLocation_Warehouses" FromRole="Warehouse" ToRole="CompanyLocation" />
+          <NavigationProperty Name="WarehouseRooms" Relationship="Infonova.Data.FK_Warehouse_WarehouseRooms" FromRole="Warehouse" ToRole="WarehouseRoom" />
+        </EntityType>
+        <Association Name="FK_ArticleCategory_ArticleGroups">
+          <End Type="Infonova.Data.ArticleCategory" Role="ArticleCategory" Multiplicity="1" />
+          <End Type="Infonova.Data.ArticleGroup" Role="ArticleGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleGroup">
+              <PropertyRef Name="ArticleCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VAT_ArticleCategories">
+          <End Type="Infonova.Data.VAT" Role="VAT" Multiplicity="1" />
+          <End Type="Infonova.Data.ArticleCategory" Role="ArticleCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VAT">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategory">
+              <PropertyRef Name="VATId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleGroup_ArticleSubGroups">
+          <End Type="Infonova.Data.ArticleGroup" Role="ArticleGroup" Multiplicity="1" />
+          <End Type="Infonova.Data.ArticleSubGroup" Role="ArticleSubGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleSubGroup">
+              <PropertyRef Name="ArticleGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_ArticlePackages">
+          <End Type="Infonova.Data.Article" Role="Article" Multiplicity="1" />
+          <End Type="Infonova.Data.ArticlePackage" Role="ArticlePackage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticlePackage">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticlePackage_SaleOrderProducts">
+          <End Type="Infonova.Data.ArticlePackage" Role="ArticlePackage" Multiplicity="0..1" />
+          <End Type="Infonova.Data.SaleOrderProduct" Role="SaleOrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticlePackage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrderProduct">
+              <PropertyRef Name="ArticlePackageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_ArticlePackages">
+          <End Type="Infonova.Data.Collaborator" Role="Collaborator" Multiplicity="0..1" />
+          <End Type="Infonova.Data.ArticlePackage" Role="ArticlePackage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborator">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticlePackage">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_PurchaseOrderProducts">
+          <End Type="Infonova.Data.Article" Role="Article" Multiplicity="1" />
+          <End Type="Infonova.Data.PurchaseOrderProduct" Role="PurchaseOrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrderProduct">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_SaleOrderProducts">
+          <End Type="Infonova.Data.Article" Role="Article" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleOrderProduct" Role="SaleOrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrderProduct">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_Stocks">
+          <End Type="Infonova.Data.Article" Role="Article" Multiplicity="1" />
+          <End Type="Infonova.Data.Stock" Role="Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleSubGroup_Articles">
+          <End Type="Infonova.Data.ArticleSubGroup" Role="ArticleSubGroup" Multiplicity="1" />
+          <End Type="Infonova.Data.Article" Role="Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleSubGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="ArticleSubGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CollaboratorArticleGroup_CollaboratorArticles">
+          <End Type="Infonova.Data.CollaboratorArticleGroup" Role="CollaboratorArticleGroup" Multiplicity="1" />
+          <End Type="Infonova.Data.CollaboratorArticle" Role="CollaboratorArticle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollaboratorArticleGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorArticle">
+              <PropertyRef Name="CollaboratorArticleGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_CollaboratorArticles">
+          <End Type="Infonova.Data.Collaborator" Role="Collaborator" Multiplicity="1" />
+          <End Type="Infonova.Data.CollaboratorArticle" Role="CollaboratorArticle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborator">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorArticle">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_CollaboratorLocations">
+          <End Type="Infonova.Data.Collaborator" Role="Collaborator" Multiplicity="1" />
+          <End Type="Infonova.Data.CollaboratorLocation" Role="CollaboratorLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborator">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorLocation">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CollaboratorLocation_SaleAgentRouteCollaborators">
+          <End Type="Infonova.Data.CollaboratorLocation" Role="CollaboratorLocation" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleAgentRouteCollaborator" Role="SaleAgentRouteCollaborator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollaboratorLocation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleAgentRouteCollaborator">
+              <PropertyRef Name="CollaboratorLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_CollaboratorLocations">
+          <End Type="Infonova.Data.Country" Role="Country" Multiplicity="1" />
+          <End Type="Infonova.Data.CollaboratorLocation" Role="CollaboratorLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CollaboratorLocation">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_PurchaseOrders">
+          <End Type="Infonova.Data.Collaborator" Role="Collaborator" Multiplicity="1" />
+          <End Type="Infonova.Data.PurchaseOrder" Role="PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborator">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Collaborator_SaleOrders">
+          <End Type="Infonova.Data.Collaborator" Role="Collaborator" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleOrder" Role="SaleOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Collaborator">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrder">
+              <PropertyRef Name="CollaboratorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_CompanyEmployeeEnrollments">
+          <End Type="Infonova.Data.Company" Role="Company" Multiplicity="1" />
+          <End Type="Infonova.Data.CompanyEmployeeEnrollment" Role="CompanyEmployeeEnrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyEmployeeEnrollment">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_CompanyLocations">
+          <End Type="Infonova.Data.Company" Role="Company" Multiplicity="1" />
+          <End Type="Infonova.Data.CompanyLocation" Role="CompanyLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyLocation">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_PurchaseOrders">
+          <End Type="Infonova.Data.Company" Role="Company" Multiplicity="1" />
+          <End Type="Infonova.Data.PurchaseOrder" Role="PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_Purchases">
+          <End Type="Infonova.Data.Company" Role="Company" Multiplicity="1" />
+          <End Type="Infonova.Data.Purchase" Role="Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_SaleOrders">
+          <End Type="Infonova.Data.Company" Role="Company" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleOrder" Role="SaleOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrder">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_CompanyEmployeeEnrollments">
+          <End Type="Infonova.Data.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Infonova.Data.CompanyEmployeeEnrollment" Role="CompanyEmployeeEnrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyEmployeeEnrollment">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyLocation_Warehouses">
+          <End Type="Infonova.Data.CompanyLocation" Role="CompanyLocation" Multiplicity="1" />
+          <End Type="Infonova.Data.Warehouse" Role="Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyLocation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Warehouse">
+              <PropertyRef Name="CompanyLocationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_CompanyLocations">
+          <End Type="Infonova.Data.Country" Role="Country" Multiplicity="1" />
+          <End Type="Infonova.Data.CompanyLocation" Role="CompanyLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CompanyLocation">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_Employees">
+          <End Type="Infonova.Data.Country" Role="Country" Multiplicity="1" />
+          <End Type="Infonova.Data.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Country_VATs">
+          <End Type="Infonova.Data.Country" Role="Country" Multiplicity="1" />
+          <End Type="Infonova.Data.VAT" Role="VAT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VAT">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeGroup_EmployeeGroupPermissions">
+          <End Type="Infonova.Data.EmployeeGroup" Role="EmployeeGroup" Multiplicity="1" />
+          <End Type="Infonova.Data.EmployeeGroupPermission" Role="EmployeeGroupPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmployeeGroupPermission">
+              <PropertyRef Name="EmployeeGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_PurchaseOrders">
+          <End Type="Infonova.Data.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Infonova.Data.PurchaseOrder" Role="PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Purchases">
+          <End Type="Infonova.Data.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Infonova.Data.Purchase" Role="Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_SaleOrders">
+          <End Type="Infonova.Data.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleOrder" Role="SaleOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrder">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_PurchaseOrderProducts">
+          <End Type="Infonova.Data.PurchaseOrder" Role="PurchaseOrder" Multiplicity="1" />
+          <End Type="Infonova.Data.PurchaseOrderProduct" Role="PurchaseOrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseOrderProduct">
+              <PropertyRef Name="PurchaseOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseOrder_Purchases">
+          <End Type="Infonova.Data.PurchaseOrder" Role="PurchaseOrder" Multiplicity="1" />
+          <End Type="Infonova.Data.Purchase" Role="Purchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Purchase">
+              <PropertyRef Name="PurchaseOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaleAgentRoute_SaleAgentRouteCollaborators">
+          <End Type="Infonova.Data.SaleAgentRoute" Role="SaleAgentRoute" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleAgentRouteCollaborator" Role="SaleAgentRouteCollaborator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleAgentRoute">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleAgentRouteCollaborator">
+              <PropertyRef Name="SaleAgentRouteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaleOrder_SaleOrderProducts">
+          <End Type="Infonova.Data.SaleOrder" Role="SaleOrder" Multiplicity="1" />
+          <End Type="Infonova.Data.SaleOrderProduct" Role="SaleOrderProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaleOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaleOrderProduct">
+              <PropertyRef Name="SaleOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Warehouse_WarehouseRooms">
+          <End Type="Infonova.Data.Warehouse" Role="Warehouse" Multiplicity="1" />
+          <End Type="Infonova.Data.WarehouseRoom" Role="WarehouseRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Warehouse">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WarehouseRoom">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WarehouseRoom_WarehouseRows">
+          <End Type="Infonova.Data.WarehouseRoom" Role="WarehouseRoom" Multiplicity="1" />
+          <End Type="Infonova.Data.WarehouseRow" Role="WarehouseRow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WarehouseRoom">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WarehouseRow">
+              <PropertyRef Name="WarehouseRoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CompanyEmployeeEnrollmentGroupLinks">
+          <End Type="Infonova.Data.CompanyEmployeeEnrollment" Role="CompanyEmployeeEnrollment" Multiplicity="*" />
+          <End Type="Infonova.Data.EmployeeGroup" Role="EmployeeGroup" Multiplicity="*" />
+        </Association>
+        <Association Name="EmployeeGroupCompanyLocationLinks">
+          <End Type="Infonova.Data.CompanyLocation" Role="CompanyLocation" Multiplicity="*" />
+          <End Type="Infonova.Data.EmployeeGroup" Role="EmployeeGroup" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelInfonovaStoreContainer" CdmEntityContainer="ModelInfonova">
+          <EntitySetMapping Name="ArticleCategories">
+            <EntityTypeMapping TypeName="Infonova.Data.ArticleCategory">
+              <MappingFragment StoreEntitySet="ArticleCategories">
+                <ScalarProperty Name="VATId" ColumnName="VATId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleGroups">
+            <EntityTypeMapping TypeName="Infonova.Data.ArticleGroup">
+              <MappingFragment StoreEntitySet="ArticleGroups">
+                <ScalarProperty Name="ArticleCategoryId" ColumnName="ArticleCategoryId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticlePackages">
+            <EntityTypeMapping TypeName="Infonova.Data.ArticlePackage">
+              <MappingFragment StoreEntitySet="ArticlePackages">
+                <ScalarProperty Name="CollaboratorId" ColumnName="CollaboratorId" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="IsRetired" ColumnName="IsRetired" />
+                <ScalarProperty Name="SelectionPriority" ColumnName="SelectionPriority" />
+                <ScalarProperty Name="UnitMultiplicationFactor" ColumnName="UnitMultiplicationFactor" />
+                <ScalarProperty Name="IsReusable" ColumnName="IsReusable" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="Infonova.Data.Article">
+              <MappingFragment StoreEntitySet="Articles">
+                <ScalarProperty Name="ArticleSubGroupId" ColumnName="ArticleSubGroupId" />
+                <ScalarProperty Name="IsForbiddenUnityPurchase" ColumnName="IsForbiddenUnityPurchase" />
+                <ScalarProperty Name="IsForbiddenUnitySale" ColumnName="IsForbiddenUnitySale" />
+                <ScalarProperty Name="UnitWeightFactor" ColumnName="UnitWeightFactor" />
+                <ScalarProperty Name="IsCalibrated" ColumnName="IsCalibrated" />
+                <ScalarProperty Name="NameInvoice" ColumnName="NameInvoice" />
+                <ScalarProperty Name="NameFromSupplier" ColumnName="NameFromSupplier" />
+                <ScalarProperty Name="NameFull" ColumnName="NameFull" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleSubGroups">
+            <EntityTypeMapping TypeName="Infonova.Data.ArticleSubGroup">
+              <MappingFragment StoreEntitySet="ArticleSubGroups">
+                <ScalarProperty Name="ArticleGroupId" ColumnName="ArticleGroupId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CollaboratorArticleGroups">
+            <EntityTypeMapping TypeName="Infonova.Data.CollaboratorArticleGroup">
+              <MappingFragment StoreEntitySet="CollaboratorArticleGroups">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CollaboratorArticles">
+            <EntityTypeMapping TypeName="Infonova.Data.CollaboratorArticle">
+              <MappingFragment StoreEntitySet="CollaboratorArticles">
+                <ScalarProperty Name="CollaboratorArticleGroupId" ColumnName="CollaboratorArticleGroupId" />
+                <ScalarProperty Name="CollaboratorId" ColumnName="CollaboratorId" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="NameInvoice" ColumnName="NameInvoice" />
+                <ScalarProperty Name="NameFriendly" ColumnName="NameFriendly" />
+                <ScalarProperty Name="NameFull" ColumnName="NameFull" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CollaboratorLocations">
+            <EntityTypeMapping TypeName="Infonova.Data.CollaboratorLocation">
+              <MappingFragment StoreEntitySet="CollaboratorLocations">
+                <ScalarProperty Name="CollaboratorId" ColumnName="CollaboratorId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="GPSLatitude" ColumnName="GPSLatitude" />
+                <ScalarProperty Name="GPSLongitude" ColumnName="GPSLongitude" />
+                <ScalarProperty Name="DateGPSDetermined" ColumnName="DateGPSDetermined" />
+                <ScalarProperty Name="IsGPSDetermined" ColumnName="IsGPSDetermined" />
+                <ScalarProperty Name="IsHeadquarters" ColumnName="IsHeadquarters" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Collaborators">
+            <EntityTypeMapping TypeName="Infonova.Data.Collaborator">
+              <MappingFragment StoreEntitySet="Collaborators">
+                <ScalarProperty Name="IsRelationSupplier" ColumnName="IsRelationSupplier" />
+                <ScalarProperty Name="IsRelationCustomer" ColumnName="IsRelationCustomer" />
+                <ScalarProperty Name="CodeAlpha3Chars" ColumnName="CodeAlpha3Chars" />
+                <ScalarProperty Name="CodeAlpha2Chars" ColumnName="CodeAlpha2Chars" />
+                <ScalarProperty Name="NameFriendly" ColumnName="NameFriendly" />
+                <ScalarProperty Name="NameFull" ColumnName="NameFull" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CollaboratorUsers">
+            <EntityTypeMapping TypeName="Infonova.Data.CollaboratorUser">
+              <MappingFragment StoreEntitySet="CollaboratorUsers">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="Infonova.Data.Company">
+              <MappingFragment StoreEntitySet="Companies">
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="NameFriendly" ColumnName="NameFriendly" />
+                <ScalarProperty Name="NameFull" ColumnName="NameFull" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyEmployeeEnrollments">
+            <EntityTypeMapping TypeName="Infonova.Data.CompanyEmployeeEnrollment">
+              <MappingFragment StoreEntitySet="CompanyEmployeeEnrollments">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="IsLoginAllowed" ColumnName="IsLoginAllowed" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="DateResignation" ColumnName="DateResignation" />
+                <ScalarProperty Name="DateEmployed" ColumnName="DateEmployed" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyLocations">
+            <EntityTypeMapping TypeName="Infonova.Data.CompanyLocation">
+              <MappingFragment StoreEntitySet="CompanyLocations">
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="Emails" ColumnName="Emails" />
+                <ScalarProperty Name="FaxNumbers" ColumnName="FaxNumbers" />
+                <ScalarProperty Name="PhoneNumbers" ColumnName="PhoneNumbers" />
+                <ScalarProperty Name="AddressPostalCode" ColumnName="AddressPostalCode" />
+                <ScalarProperty Name="AddressStreet" ColumnName="AddressStreet" />
+                <ScalarProperty Name="AddressLocality" ColumnName="AddressLocality" />
+                <ScalarProperty Name="AddressDistrict" ColumnName="AddressDistrict" />
+                <ScalarProperty Name="IsHeadquarters" ColumnName="IsHeadquarters" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="Infonova.Data.Country">
+              <MappingFragment StoreEntitySet="Countries">
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="CodeAlpha3Chars" ColumnName="CodeAlpha3Chars" />
+                <ScalarProperty Name="CodeAlpha2Chars" ColumnName="CodeAlpha2Chars" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currencies">
+            <EntityTypeMapping TypeName="Infonova.Data.Currency">
+              <MappingFragment StoreEntitySet="Currencies">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CurrencyExchangeRates">
+            <EntityTypeMapping TypeName="Infonova.Data.CurrencyExchangeRate">
+              <MappingFragment StoreEntitySet="CurrencyExchangeRates">
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="CurrencyCodeExchange" ColumnName="CurrencyCodeExchange" />
+                <ScalarProperty Name="CurrencyCodeOriginal" ColumnName="CurrencyCodeOriginal" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailMessages">
+            <EntityTypeMapping TypeName="Infonova.Data.EmailMessage">
+              <MappingFragment StoreEntitySet="EmailMessages">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeGroupPermissions">
+            <EntityTypeMapping TypeName="Infonova.Data.EmployeeGroupPermission">
+              <MappingFragment StoreEntitySet="EmployeeGroupPermissions">
+                <ScalarProperty Name="EmployeeGroupId" ColumnName="EmployeeGroupId" />
+                <ScalarProperty Name="AccessLevel" ColumnName="AccessLevel" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeGroups">
+            <EntityTypeMapping TypeName="Infonova.Data.EmployeeGroup">
+              <MappingFragment StoreEntitySet="EmployeeGroups">
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Infonova.Data.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="LoginDomain" ColumnName="LoginDomain" />
+                <ScalarProperty Name="IsLoginToDomain" ColumnName="IsLoginToDomain" />
+                <ScalarProperty Name="LoginPassword" ColumnName="LoginPassword" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="PersonalNumber" ColumnName="PersonalNumber" />
+                <ScalarProperty Name="IDSeriesAndNumber" ColumnName="IDSeriesAndNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Emails" ColumnName="Emails" />
+                <ScalarProperty Name="PhoneNumbers" ColumnName="PhoneNumbers" />
+                <ScalarProperty Name="DateBirth" ColumnName="DateBirth" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="NameMiddle" ColumnName="NameMiddle" />
+                <ScalarProperty Name="NameLast" ColumnName="NameLast" />
+                <ScalarProperty Name="NameFirst" ColumnName="NameFirst" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrderProducts">
+            <EntityTypeMapping TypeName="Infonova.Data.PurchaseOrderProduct">
+              <MappingFragment StoreEntitySet="PurchaseOrderProducts">
+                <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrders">
+            <EntityTypeMapping TypeName="Infonova.Data.PurchaseOrder">
+              <MappingFragment StoreEntitySet="PurchaseOrders">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="CollaboratorId" ColumnName="CollaboratorId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="IsClosed" ColumnName="IsClosed" />
+                <ScalarProperty Name="DateValid" ColumnName="DateValid" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Purchases">
+            <EntityTypeMapping TypeName="Infonova.Data.Purchase">
+              <MappingFragment StoreEntitySet="Purchases">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="PurchaseOrderId" ColumnName="PurchaseOrderId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaleAgentRouteCollaborators">
+            <EntityTypeMapping TypeName="Infonova.Data.SaleAgentRouteCollaborator">
+              <MappingFragment StoreEntitySet="SaleAgentRouteCollaborators">
+                <ScalarProperty Name="CollaboratorLocationId" ColumnName="CollaboratorLocationId" />
+                <ScalarProperty Name="SaleAgentRouteId" ColumnName="SaleAgentRouteId" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaleAgentRoutes">
+            <EntityTypeMapping TypeName="Infonova.Data.SaleAgentRoute">
+              <MappingFragment StoreEntitySet="SaleAgentRoutes">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaleOrderProducts">
+            <EntityTypeMapping TypeName="Infonova.Data.SaleOrderProduct">
+              <MappingFragment StoreEntitySet="SaleOrderProducts">
+                <ScalarProperty Name="SaleOrderId" ColumnName="SaleOrderId" />
+                <ScalarProperty Name="ArticlePackageId" ColumnName="ArticlePackageId" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="PriceWithoutVAT" ColumnName="PriceWithoutVAT" />
+                <ScalarProperty Name="QuantityPackage" ColumnName="QuantityPackage" />
+                <ScalarProperty Name="QuantityUnity" ColumnName="QuantityUnity" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaleOrders">
+            <EntityTypeMapping TypeName="Infonova.Data.SaleOrder">
+              <MappingFragment StoreEntitySet="SaleOrders">
+                <ScalarProperty Name="CollaboratorId" ColumnName="CollaboratorId" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="IsClosed" ColumnName="IsClosed" />
+                <ScalarProperty Name="DateSale" ColumnName="DateSale" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="Infonova.Data.Stock">
+              <MappingFragment StoreEntitySet="Stocks">
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VATs">
+            <EntityTypeMapping TypeName="Infonova.Data.VAT">
+              <MappingFragment StoreEntitySet="VATs">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="NameFriendly" ColumnName="NameFriendly" />
+                <ScalarProperty Name="NameDocuments" ColumnName="NameDocuments" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WarehouseContainers">
+            <EntityTypeMapping TypeName="Infonova.Data.WarehouseContainer">
+              <MappingFragment StoreEntitySet="WarehouseContainers">
+                <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+                <ScalarProperty Name="IsUnlimitedCapacity" ColumnName="IsUnlimitedCapacity" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WarehouseRooms">
+            <EntityTypeMapping TypeName="Infonova.Data.WarehouseRoom">
+              <MappingFragment StoreEntitySet="WarehouseRooms">
+                <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+                <ScalarProperty Name="TemperatureRangeMax" ColumnName="TemperatureRangeMax" />
+                <ScalarProperty Name="TemperatureRangeMin" ColumnName="TemperatureRangeMin" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WarehouseRows">
+            <EntityTypeMapping TypeName="Infonova.Data.WarehouseRow">
+              <MappingFragment StoreEntitySet="WarehouseRows">
+                <ScalarProperty Name="WarehouseRoomId" ColumnName="WarehouseRoomId" />
+                <ScalarProperty Name="IsMirrored" ColumnName="IsMirrored" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Warehouses">
+            <EntityTypeMapping TypeName="Infonova.Data.Warehouse">
+              <MappingFragment StoreEntitySet="Warehouses">
+                <ScalarProperty Name="CompanyLocationId" ColumnName="CompanyLocationId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="CompanyEmployeeEnrollmentGroupLinks" TypeName="Infonova.Data.CompanyEmployeeEnrollmentGroupLinks" StoreEntitySet="CompanyEmployeeEnrollmentGroupLinks">
+            <EndProperty Name="EmployeeGroup">
+              <ScalarProperty Name="Id" ColumnName="EmployeeGroupId" />
+            </EndProperty>
+            <EndProperty Name="CompanyEmployeeEnrollment">
+              <ScalarProperty Name="Id" ColumnName="CompanyEmployeeEnrollmentId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="EmployeeGroupCompanyLocationLinks" TypeName="Infonova.Data.EmployeeGroupCompanyLocationLinks" StoreEntitySet="EmployeeGroupCompanyLocationLinks">
+            <EndProperty Name="EmployeeGroup">
+              <ScalarProperty Name="Id" ColumnName="EmployeeGroupId" />
+            </EndProperty>
+            <EndProperty Name="CompanyLocation">
+              <ScalarProperty Name="Id" ColumnName="CompanyLocationId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

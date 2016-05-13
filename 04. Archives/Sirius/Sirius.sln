@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius", "Sirius\Sirius.csproj", "{EF6254BB-58AA-488E-93AB-9CDBE6A4DEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExtensions", "WpfExtensions\WpfExtensions.csproj", "{B2602346-E7C7-4B3F-8FA3-36CDDAB7F04E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Data", "Sirius.Data\Sirius.Data.csproj", "{33E9C5F5-7BA0-41A2-ADA0-4EA3A69A1544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Resources", "Sirius.Resources\Sirius.Resources.csproj", "{981025B4-A126-4B95-8416-C004D149F299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF6254BB-58AA-488E-93AB-9CDBE6A4DEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6254BB-58AA-488E-93AB-9CDBE6A4DEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6254BB-58AA-488E-93AB-9CDBE6A4DEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6254BB-58AA-488E-93AB-9CDBE6A4DEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2602346-E7C7-4B3F-8FA3-36CDDAB7F04E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2602346-E7C7-4B3F-8FA3-36CDDAB7F04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2602346-E7C7-4B3F-8FA3-36CDDAB7F04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2602346-E7C7-4B3F-8FA3-36CDDAB7F04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E9C5F5-7BA0-41A2-ADA0-4EA3A69A1544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E9C5F5-7BA0-41A2-ADA0-4EA3A69A1544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E9C5F5-7BA0-41A2-ADA0-4EA3A69A1544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E9C5F5-7BA0-41A2-ADA0-4EA3A69A1544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981025B4-A126-4B95-8416-C004D149F299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981025B4-A126-4B95-8416-C004D149F299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981025B4-A126-4B95-8416-C004D149F299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981025B4-A126-4B95-8416-C004D149F299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C85DAE34-27D2-48FC-9E63-1ED20C8FBC19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sirius.CustomControls</RootNamespace>
+    <AssemblyName>CustomControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityControls\EntityCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntityControls\EntityListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntityControls\EntityItem.cs" />
+    <Compile Include="EntityControls\EntityTablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormReport.Designer.cs">
+      <DependentUpon>EntityFormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormAdd.Designer.cs">
+      <DependentUpon>EntityFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormBrowse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormBrowse.Designer.cs">
+      <DependentUpon>EntityFormBrowse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntityForms\EntityFormEdit.Designer.cs">
+      <DependentUpon>EntityFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityControls\EntityGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntityReport\IEntityReport.cs" />
+    <Compile Include="EntityReport\IEntityReportElement.cs" />
+    <Compile Include="EntityReport\EntityReport.cs" />
+    <Compile Include="EntityReport\EntityReportElement.cs" />
+    <Compile Include="EntityReport\EntityReportParagraph.cs" />
+    <Compile Include="EntityReport\EntityReportTable.cs" />
+    <Compile Include="EntityReport\EntityReportTableCell.cs" />
+    <Compile Include="EntityReport\EntityReportTableRow.cs" />
+    <Compile Include="Miscellaneous\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous\TabControlWizard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous\TreeViewMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityControls\EntitySelectBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Miscellaneous\TablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EntityForms\EntityFormReport.resx">
+      <DependentUpon>EntityFormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityForms\EntityFormAdd.resx">
+      <DependentUpon>EntityFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityForms\EntityFormBrowse.resx">
+      <DependentUpon>EntityFormBrowse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityForms\EntityFormEdit.resx">
+      <DependentUpon>EntityFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_arrow-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_chart-bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_chart-curve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_chart-organisation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_door-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_lock-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_page-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_wrench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-legend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-nav-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-nav-forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-open-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-organizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-org-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-protect-form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-save-all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-show-rule-lines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-book-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-book-stack-reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-breakpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-calendar-schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-choose-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-document-empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-double-left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-double-right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-edit-information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-edit-redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-edit-undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-envelope-closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-envelope-open-large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-go-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-go-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-go-to-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-go-to-next-record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-go-to-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-go-to-previous-record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-get-permission.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-refresh-arrow-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-refresh-arrow-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-sort-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-up-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-zoom-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-add-category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-add-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-arrow-return-left-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-arrow-return-right-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-command_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-folder-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-favorite-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_win-folder-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_16_table_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_radan.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

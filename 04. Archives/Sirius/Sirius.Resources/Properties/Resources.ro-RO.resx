@@ -1,0 +1,2384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Exit_Button" xml:space="preserve">
+    <value>Iesire</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Login_Button" xml:space="preserve">
+    <value>Autentificare</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Logout_Tooltip" xml:space="preserve">
+    <value>Deconectare</value>
+    <comment>Tooltip</comment>
+  </data>
+  <data name="NA_Text" xml:space="preserve">
+    <value>N/A</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sirius_Title" xml:space="preserve">
+    <value>Sirius</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Management_Text" xml:space="preserve">
+    <value>Administrare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Users_Button" xml:space="preserve">
+    <value>Utilizatori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Users_Title" xml:space="preserve">
+    <value>Utilizatori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Orders_Button" xml:space="preserve">
+    <value>Comenzi</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Orders_Title" xml:space="preserve">
+    <value>Comenzi</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Product_Text" xml:space="preserve">
+    <value>Produs</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Username_Text" xml:space="preserve">
+    <value>Utilizator</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AccessCode_Text" xml:space="preserve">
+    <value>Nr. Marca</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AccessRight_Text" xml:space="preserve">
+    <value>Drepturi acces</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Address_Text" xml:space="preserve">
+    <value>Adresa</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Email_Text" xml:space="preserve">
+    <value>Email</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FirstName_Text" xml:space="preserve">
+    <value>Prenume</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Function_Text" xml:space="preserve">
+    <value>Functia</value>
+    <comment>Text</comment>
+  </data>
+  <data name="LastName_Text" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Password_Text" xml:space="preserve">
+    <value>Parola</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Phone_Text" xml:space="preserve">
+    <value>Telefon</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Add_Button" xml:space="preserve">
+    <value>Adauga</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AreaOfUse_Header" xml:space="preserve">
+    <value>Aria de utilizare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Delete_MenuItem" xml:space="preserve">
+    <value>Sterge</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="Edit_MenuItem" xml:space="preserve">
+    <value>Editeaza</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="Name_Header" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AreaOfUse_Text" xml:space="preserve">
+    <value>Aria de utilizare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AccessCode_Header" xml:space="preserve">
+    <value>Nr. Marca</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MoldPieces_Header" xml:space="preserve">
+    <value>Bucati/matrita</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AccessRight_Header" xml:space="preserve">
+    <value>Drepturi acces</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Weight_Text" xml:space="preserve">
+    <value>Greutate (g)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Address_Header" xml:space="preserve">
+    <value>Adresa</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Norm_Header" xml:space="preserve">
+    <value>Norma (secunde)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MoldPieces_Text" xml:space="preserve">
+    <value>Bucati/matrita</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Details_MenuItem" xml:space="preserve">
+    <value>Detalii</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="Norm_Text" xml:space="preserve">
+    <value>Norma (secunde)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Email_Header" xml:space="preserve">
+    <value>Email</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FirstName_Header" xml:space="preserve">
+    <value>Prenume</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Function_Header" xml:space="preserve">
+    <value>Functia</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LastName_Header" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Password_Header" xml:space="preserve">
+    <value>Parola</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Phone_Header" xml:space="preserve">
+    <value>Telefon</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Username_Header" xml:space="preserve">
+    <value>Utilizator</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Cancel_Button" xml:space="preserve">
+    <value>Renunta</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Confirmation_Title" xml:space="preserve">
+    <value>Confirmare</value>
+    <comment>Title</comment>
+  </data>
+  <data name="DeleteConfirmation_Message" xml:space="preserve">
+    <value>Sunteti sigur ca doriti sa stergeti inregistrarea?</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Ok_Button" xml:space="preserve">
+    <value>OK</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UsernameExists_Message" xml:space="preserve">
+    <value>Utilizator existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AccessCodeExists_Message" xml:space="preserve">
+    <value>Nr. Marca existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineType_Title" xml:space="preserve">
+    <value>Tipuri Masini</value>
+    <comment>Title</comment>
+  </data>
+  <data name="MachineName_Header" xml:space="preserve">
+    <value>Nume Masina</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MachineTypeName_Header" xml:space="preserve">
+    <value>Tip Masina</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Vendor_Header" xml:space="preserve">
+    <value>Furnizor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FillAllFields_Message" xml:space="preserve">
+    <value>Va rugam sa introduceti toate campurile obligatorii!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SearchProduct_Text" xml:space="preserve">
+    <value>Cauta Produs</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Search_Button" xml:space="preserve">
+    <value>Cauta</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineType_Button" xml:space="preserve">
+    <value>Tipuri Masini</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Date_Header" xml:space="preserve">
+    <value>Data</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorsType_Title" xml:space="preserve">
+    <value>Tip Senzori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="EndHour_Header" xml:space="preserve">
+    <value>Ora terminare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="EndHour_Text" xml:space="preserve">
+    <value>Ora terminare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ShiftNameExists_Message" xml:space="preserve">
+    <value>Nume Schimb existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ShiftName_Header" xml:space="preserve">
+    <value>Nume Schimb</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ShiftName_Text" xml:space="preserve">
+    <value>Nume Schimb</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Shifts_Button" xml:space="preserve">
+    <value>Schimburi</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Shifts_Title" xml:space="preserve">
+    <value>Schimburi</value>
+    <comment>Title</comment>
+  </data>
+  <data name="StartHour_Header" xml:space="preserve">
+    <value>Ora incepere</value>
+    <comment>Header</comment>
+  </data>
+  <data name="StartHour_Text" xml:space="preserve">
+    <value>Ora incepere</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakPlan_Button" xml:space="preserve">
+    <value>Stationari Planificate</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SensorsType_Button" xml:space="preserve">
+    <value>Tip Senzori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakPlan_Title" xml:space="preserve">
+    <value>Stationari Planificate</value>
+    <comment>Title</comment>
+  </data>
+  <data name="MachineName_Text" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineType_Text" xml:space="preserve">
+    <value>Tip Masina</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Machines_Text" xml:space="preserve">
+    <value>Masini</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sensors_Text" xml:space="preserve">
+    <value>Senzori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Vendor_Text" xml:space="preserve">
+    <value>Furnizor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="InputType_Button" xml:space="preserve">
+    <value>Tip Intrare</value>
+    <comment>Button</comment>
+  </data>
+  <data name="InputType_Title" xml:space="preserve">
+    <value>Tip Intrare</value>
+    <comment>Title</comment>
+  </data>
+  <data name="InputType_Text" xml:space="preserve">
+    <value>Tip Intrare </value>
+    <comment>Text</comment>
+  </data>
+  <data name="UM_Text" xml:space="preserve">
+    <value>Unitate de masura</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypeName_Header" xml:space="preserve">
+    <value>Tip Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakTypeName_Text" xml:space="preserve">
+    <value>Tip Stationare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsGlobalBreak_Text" xml:space="preserve">
+    <value>Stationare Globala</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsAvailabilityAffected_Text" xml:space="preserve">
+    <value>Disponibilitate Afectata</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsPlanned_Text" xml:space="preserve">
+    <value>Planificat</value>
+    <comment>Text</comment>
+  </data>
+  <data name="WeekSchema_Text" xml:space="preserve">
+    <value>Schema saptamanala</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Breaks_Text" xml:space="preserve">
+    <value>Stationari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DayName_Header" xml:space="preserve">
+    <value>Ziua</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DayNo_Header" xml:space="preserve">
+    <value>Numar zi</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DaySchemaName_Header" xml:space="preserve">
+    <value>Nume Schema</value>
+    <comment>Header</comment>
+  </data>
+  <data name="HasBreak_Header" xml:space="preserve">
+    <value>Cu stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DaysSchema_Title" xml:space="preserve">
+    <value>Schema pe zile</value>
+    <comment>Title</comment>
+  </data>
+  <data name="DayName_Text" xml:space="preserve">
+    <value>Ziua</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DayNo_Text" xml:space="preserve">
+    <value>Numar zi</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CalibrationInterval_Header" xml:space="preserve">
+    <value>Interval Calibrare (zile)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="InputType_Header" xml:space="preserve">
+    <value>Tip Intrare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaxInputValue_Header" xml:space="preserve">
+    <value>Val. Max. Intrare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaxOutputValue_Header" xml:space="preserve">
+    <value>Val. Max. Iesire</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MinInputValue_Header" xml:space="preserve">
+    <value>Val. Min. Intrare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MinOutputValue_Header" xml:space="preserve">
+    <value>Val. Min. Iesire</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OutputType_Header" xml:space="preserve">
+    <value>Tip Iesire</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorType_Header" xml:space="preserve">
+    <value>Tip Senzor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DaySchemaExists_Message" xml:space="preserve">
+    <value>Ziua existenta!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DaySchemaNameExists_Message" xml:space="preserve">
+    <value>Schema existenta!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DaySchema_Button" xml:space="preserve">
+    <value>Schema pe zile</value>
+    <comment>Button</comment>
+  </data>
+  <data name="HasBreak_Text" xml:space="preserve">
+    <value>Cu stationare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SchemaName_Text" xml:space="preserve">
+    <value>Nume Schema</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Configure_MenuItem" xml:space="preserve">
+    <value>Configurare</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="CalibrationInterval_Text" xml:space="preserve">
+    <value>Interval Calibrare (zile)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxInputValue_Text" xml:space="preserve">
+    <value>Val. Max. Intrare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxOutputValue_Text" xml:space="preserve">
+    <value>Val. Max. Iesire</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinInputValue_Text" xml:space="preserve">
+    <value>Val. Min. Intrare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinOutputValue_Text" xml:space="preserve">
+    <value>Val. Min. Iesire</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputType_Text" xml:space="preserve">
+    <value>Tip Iesire </value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorType_Text" xml:space="preserve">
+    <value>Tip Senzor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorsTypes_Header" xml:space="preserve">
+    <value>Tipuri Senzori</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Machines_Title" xml:space="preserve">
+    <value>Masini</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Monday_Text" xml:space="preserve">
+    <value>Luni</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Machines_Button" xml:space="preserve">
+    <value>Masini</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Tuesday_Text" xml:space="preserve">
+    <value>Marti</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineType_Header" xml:space="preserve">
+    <value>Tip Masina</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OutputType_Title" xml:space="preserve">
+    <value>Tip Iesire</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SensorsType_Text" xml:space="preserve">
+    <value>Tip Senzori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputType_Button" xml:space="preserve">
+    <value>Tip Iesire</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MeasurementUnit_Text" xml:space="preserve">
+    <value>Unitate de masura</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Manage_Button" xml:space="preserve">
+    <value>Administrare</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Sensors_Title" xml:space="preserve">
+    <value>Senzori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Sensor_Button" xml:space="preserve">
+    <value>Senzori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="InputValueUM_Header" xml:space="preserve">
+    <value>Valoare Intrare / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="InputValueUM_Text" xml:space="preserve">
+    <value>Valoare Intrare / UM</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineDescription_Header" xml:space="preserve">
+    <value>Masina</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Name_Text" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputValueUM_Header" xml:space="preserve">
+    <value>Valoare Iesire / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="NoSchemaSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati Schema!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SelectDay_Message" xml:space="preserve">
+    <value>Va rugam selectati o zi!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Friday_Text" xml:space="preserve">
+    <value>Vineri</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Saturday_Text" xml:space="preserve">
+    <value>Sambata</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sunday_Text" xml:space="preserve">
+    <value>Duminica</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Thursday_Text" xml:space="preserve">
+    <value>Joi</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Wednesday_Text" xml:space="preserve">
+    <value>Miercuri</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OutputValueUM_Text" xml:space="preserve">
+    <value>Valoare Iesire / UM</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorTypeName_Text" xml:space="preserve">
+    <value>Nume Tip Senzor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sensors_Header" xml:space="preserve">
+    <value>Senzori</value>
+    <comment>Header</comment>
+  </data>
+  <data name="InputTypeUM_Header" xml:space="preserve">
+    <value>Tip Intrare / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FillSchemaName_Message" xml:space="preserve">
+    <value>Va rugam sa introduceti Nume Schema!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AddDaysSchema_Button" xml:space="preserve">
+    <value>Adauga Zile</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AddSchemaName_Button" xml:space="preserve">
+    <value>Adauga Schema</value>
+    <comment>Button</comment>
+  </data>
+  <data name="OutputTypeUM_Header" xml:space="preserve">
+    <value>Tip Iesire / UM</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SelectMachine_Text" xml:space="preserve">
+    <value>Masina</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ViewAll_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypes_Title" xml:space="preserve">
+    <value>Tipuri Stationari</value>
+    <comment>Title</comment>
+  </data>
+  <data name="IsGlobalBreak_Header" xml:space="preserve">
+    <value>Stationare Globala</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IsAvailabilityAffected_Header" xml:space="preserve">
+    <value>Disponibilitate Afectata</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IsPlanned_Header" xml:space="preserve">
+    <value>Planificat</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakTypes_Button" xml:space="preserve">
+    <value>Tipuri Stationari</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakTypeNameExists_Message" xml:space="preserve">
+    <value>Tip Stationare existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorsTypes_Text" xml:space="preserve">
+    <value>Tipuri Senzori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Sensors_Button" xml:space="preserve">
+    <value>Senzori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineParametersTypes_Header" xml:space="preserve">
+    <value>Tipuri de Senzori pe Masina</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Machine_Header" xml:space="preserve">
+    <value>Masina</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Sensor_Header" xml:space="preserve">
+    <value>Senzori</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FirstRead_Header" xml:space="preserve">
+    <value>Prima citire</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FirstResult_Header" xml:space="preserve">
+    <value>Primul rezultat</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Offset_Header" xml:space="preserve">
+    <value>Abatere</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Scale_Header" xml:space="preserve">
+    <value>Proportie</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SecondRead_Header" xml:space="preserve">
+    <value>A doua citire</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SecondResult_Header" xml:space="preserve">
+    <value>A doua valoare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LastModifiedDate_Header" xml:space="preserve">
+    <value>Ultima modificare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LastModifiedDate_Text" xml:space="preserve">
+    <value>Ultima modificare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AddSensor_Button" xml:space="preserve">
+    <value>Adauga Senzor</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SensorCalibration_Text" xml:space="preserve">
+    <value>Calibrare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ModifiedDate_Header" xml:space="preserve">
+    <value>Data modificare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ModifiedDate_Text" xml:space="preserve">
+    <value>Data modificare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IntroducetiUserSiParola_Text" xml:space="preserve">
+    <value>Introduceti userul si parola</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoShiftMatches_Message" xml:space="preserve">
+    <value>Nici un schimb nu se potriveste cu intervalul pauzei!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UnplannedBreaks_Title" xml:space="preserve">
+    <value>Stationari Neplanificate</value>
+    <comment>Title</comment>
+  </data>
+  <data name="UnplannedBreaks_Button" xml:space="preserve">
+    <value>Stationari Neplanificate</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ScanDate_Text" xml:space="preserve">
+    <value>Data Scanare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Eroare</value>
+    <comment>Title</comment>
+  </data>
+  <data name="InvalidUsernameAndPassword_Message" xml:space="preserve">
+    <value>Utilizator si parola inexistente!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="PleaseEnterUsernameAndPassword_Text" xml:space="preserve">
+    <value>Va rugam introduceti utilizator si parola!</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AnvisGroup_Title" xml:space="preserve">
+    <value>ANVIS ROM</value>
+    <comment>Title</comment>
+  </data>
+  <data name="AllDays_Text" xml:space="preserve">
+    <value>Toate zilele</value>
+    <comment>Text</comment>
+  </data>
+  <data name="General_Text" xml:space="preserve">
+    <value>General</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DaySchemaNameAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Schema pe zile nu poate fi stearsa pentru ca este asignata unei pauze!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BreakTypeAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Tipul de stationare nu poate sters pentru ca este asignat unei pauze!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ShiftAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Schimbul nu poate fi sters pentru ca este asignat unei pauze!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Products_Text" xml:space="preserve">
+    <value>Produse</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ProductTypes_Button" xml:space="preserve">
+    <value>Tipuri Produse</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ProductType_Header" xml:space="preserve">
+    <value>Tip Produs</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ProductType_Text" xml:space="preserve">
+    <value>Tip Produs</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Weight_Header" xml:space="preserve">
+    <value>Greutate (g)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ProductTypes_Title" xml:space="preserve">
+    <value>Tipuri Produse</value>
+    <comment>Title</comment>
+  </data>
+  <data name="ProductTypeAssignedToOrder_Message" xml:space="preserve">
+    <value>Tip Produs nu poate fi sters pentru ce este asignat unei comenzi!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineTypeAssignedToBreakPlan_Message" xml:space="preserve">
+    <value>Tip Masina nu poate fi sters pentru ca este asignat unei stationari!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorTypeAssignedToMachine_Message" xml:space="preserve">
+    <value>Tip Senzor nu poate fi sters pentru ca este asignat unei masini!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="InputTypeAssignedToSensorType_Message" xml:space="preserve">
+    <value>Tip Intrare nu poate fi sters pentru ca este asignat unui tip de senzor!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="OutputTypeAssignedToSensorType_Message" xml:space="preserve">
+    <value>Tip Iesire nu poate fi sters pentru ca este asignat unui tip de senzor !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypes_Title" xml:space="preserve">
+    <value>Tipuri Cicluri</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Cycles_Text" xml:space="preserve">
+    <value>Cicluri</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CycleTypeName_Header" xml:space="preserve">
+    <value>Nume Tip Ciclu</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CycleTypes_Button" xml:space="preserve">
+    <value>Tipuri Cicluri</value>
+    <comment>Button</comment>
+  </data>
+  <data name="CycleTypeName_Text" xml:space="preserve">
+    <value>Nume Tip Ciclu</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillCycleTypeName_Message" xml:space="preserve">
+    <value>Va rugam sa introduceti Numele Tipului de Ciclu!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleDivisionName_Header" xml:space="preserve">
+    <value>Nume Diviziune Ciclu</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaxTime_Header" xml:space="preserve">
+    <value>Timp maxim (secunde)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Order_Header" xml:space="preserve">
+    <value>Comanda</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorName_Header" xml:space="preserve">
+    <value>Nume Senzor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SensorValue_Header" xml:space="preserve">
+    <value>Valoare Senzor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CycleDivisionName_Text" xml:space="preserve">
+    <value>Diviziune Ciclu</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxTime_Text" xml:space="preserve">
+    <value>Timp maxim (secunde)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Order_Text" xml:space="preserve">
+    <value>Comanda</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorName_Text" xml:space="preserve">
+    <value>Nume Senzor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorValue_Text" xml:space="preserve">
+    <value>Valoare Senzor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoCycleTypeSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati un Tip de Ciclu!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypeAssignedToMachineType_Message" xml:space="preserve">
+    <value>Tipul de ciclu nu poate fi sters pentru ca este asignat unui tip de masina!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypeExists_Message" xml:space="preserve">
+    <value>Tip de ciclu existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleDivisionAssignedToCycle_Message" xml:space="preserve">
+    <value>Diviziunea ciclului nu poate fi stearsa pentru ca este asignata unui ciclu!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleTypeAssignedToCycle_Message" xml:space="preserve">
+    <value>Tipul de ciclu nu poate fi sters pentru ca este asignat unui ciclu!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="IP_Text" xml:space="preserve">
+    <value>IP</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CycleType_Text" xml:space="preserve">
+    <value>Tip Ciclu</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Date_Text" xml:space="preserve">
+    <value>Data</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FirstRead_Text" xml:space="preserve">
+    <value>Prima citire</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FirstResult_Text" xml:space="preserve">
+    <value>Primul rezultat</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Offset_Text" xml:space="preserve">
+    <value>Abatere</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Scale_Text" xml:space="preserve">
+    <value>Proportie</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SecondRead_Text" xml:space="preserve">
+    <value>A doua citire</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SecondResult_Text" xml:space="preserve">
+    <value>A doua valoare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NameAlreadyExists_Message" xml:space="preserve">
+    <value>Nume existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleType_Header" xml:space="preserve">
+    <value>Tip Ciclu</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Calibration_Button" xml:space="preserve">
+    <value>Calibrare</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SensorTypeAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Tip Senzor este deja asignat masinii!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorNameAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Nume Senzor este deja asignat masinii!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineAlreadyExists_Message" xml:space="preserve">
+    <value>Masina existenta!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="NoSensorSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati Senzorul!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Scans_Title" xml:space="preserve">
+    <value>Scanari</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Code_Header" xml:space="preserve">
+    <value>Cod</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Code_Text" xml:space="preserve">
+    <value>Cod</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanCodeExists_Message" xml:space="preserve">
+    <value>Cod Scanare existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Scans_Button" xml:space="preserve">
+    <value>Scanari</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Scans_Text" xml:space="preserve">
+    <value>Scanari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanTypeNameExists_Message" xml:space="preserve">
+    <value>Tip Scanare existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ScanTypeName_Header" xml:space="preserve">
+    <value>Tip Scanare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ScanTypeName_Text" xml:space="preserve">
+    <value>Tip Scanare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanTypes_Button" xml:space="preserve">
+    <value>Tipuri Scanari</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ScanTypes_Title" xml:space="preserve">
+    <value>Tipuri Scanari</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Value_Header" xml:space="preserve">
+    <value>Valoare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Value_Text" xml:space="preserve">
+    <value>Valoare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanTypeAssignedToScan_Message" xml:space="preserve">
+    <value>Tip Scanare nu poate fi sters pentru ca este asignat unei comenzi de scanare!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineSensorsTypeUncorespondingCycle_Message" xml:space="preserve">
+    <value>Tip senzor nu corespunde cu tipul de ciclu selectat!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MachineNameTypeAlreadyExist_Message" xml:space="preserve">
+    <value>Tip Masina existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CycleDivision_Header" xml:space="preserve">
+    <value>Diviziune Ciclu</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Cycles_Button" xml:space="preserve">
+    <value>Cicluri</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Cycles_Title" xml:space="preserve">
+    <value>Cicluri</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Reports_Text" xml:space="preserve">
+    <value>Rapoarte</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoMachineSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati Masina!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AddCalibration_Button" xml:space="preserve">
+    <value>Adauga Calibrare</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Calibration_Title" xml:space="preserve">
+    <value>Calibrare</value>
+    <comment>Title</comment>
+  </data>
+  <data name="ProductTypeAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Tip Produs este deja asignat masinii!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="IP_Header" xml:space="preserve">
+    <value>IP</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Time_Text" xml:space="preserve">
+    <value>Timp</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineTypeAssignedToMachine_Message" xml:space="preserve">
+    <value>Tip Masina nu poate fi sters pentru ca este asignat unei masini!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RejectedProducts_Title" xml:space="preserve">
+    <value>Produse Defecte</value>
+    <comment>Title</comment>
+  </data>
+  <data name="State_Header" xml:space="preserve">
+    <value>Stare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RejectedProducts_Button" xml:space="preserve">
+    <value>Produse Defecte</value>
+    <comment>Button</comment>
+  </data>
+  <data name="State_Text" xml:space="preserve">
+    <value>Stare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineSensorsIncludedInCycle_Message" xml:space="preserve">
+    <value>Tip senzor nu poate fi sters pentru ca este asignat unui tip de ciclu!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Description_Header" xml:space="preserve">
+    <value>Descriere</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Description_Text" xml:space="preserve">
+    <value>Descriere</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorsReading_Title" xml:space="preserve">
+    <value>Citire Senzori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="SensorsReading_Button" xml:space="preserve">
+    <value>Citire Senzori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="InputTypeAlreadyExists_Message" xml:space="preserve">
+    <value>Tip Intrare existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="OutputTypeAlreadyExists_Message" xml:space="preserve">
+    <value>Tip Iesire existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FromDate_Text" xml:space="preserve">
+    <value>De la data</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ToDate_Text" xml:space="preserve">
+    <value>Pana la data</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RejectedProductsStates_Title" xml:space="preserve">
+    <value>Coduri Decizie</value>
+    <comment>Title</comment>
+  </data>
+  <data name="StateName_Header" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RejectedProductsStates_Button" xml:space="preserve">
+    <value>Coduri Decizie</value>
+    <comment>Button</comment>
+  </data>
+  <data name="StateName_Text" xml:space="preserve">
+    <value>Nume</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillStateName_Message" xml:space="preserve">
+    <value>Va rugam sa introduceti Nume Stare!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="StateNameOrCodeAlreadyExists_Message" xml:space="preserve">
+    <value>Nume sau Cod existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionName_Header" xml:space="preserve">
+    <value>Functia</value>
+    <comment>Header</comment>
+  </data>
+  <data name="FunctionName_Text" xml:space="preserve">
+    <value>Functia</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillFunctionName_Message" xml:space="preserve">
+    <value>Va rugam sa introduceti Functia!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionNameExists_Message" xml:space="preserve">
+    <value>Functie existenta!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionNameAlreadyAssignedToUser_Message" xml:space="preserve">
+    <value>Functia nu poate fi stearsa pentru ca este asignata unui utilizator!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UsersFunctions_Button" xml:space="preserve">
+    <value>Functii Utilizatori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UsersFunctions_Title" xml:space="preserve">
+    <value>Functii Utilizatori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="CannotModifyCurrentShift_Message" xml:space="preserve">
+    <value>Shiftul nu poate fi modificat pentru ca este in derulare!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Hour_Text" xml:space="preserve">
+    <value>Ora</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoCycleMatches_Message" xml:space="preserve">
+    <value>Pauza nu poate fi adaugata pentru ca nu se potriveste cu nici un ciclu de masina!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CauseCode_Header" xml:space="preserve">
+    <value>Cod Defect</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CauseCode_Text" xml:space="preserve">
+    <value>Cod Defect</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ReadValue_Header" xml:space="preserve">
+    <value>Val. citita</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ReadValue_Text" xml:space="preserve">
+    <value>Val. citita</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ResultValue_Header" xml:space="preserve">
+    <value>Val. rezultat</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ResultValue_Text" xml:space="preserve">
+    <value>Val. rezultat</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Remove_Button" xml:space="preserve">
+    <value>Sterge</value>
+    <comment>Button</comment>
+  </data>
+  <data name="NoItemSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati un element!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CannotDeleteCalibration_Message" xml:space="preserve">
+    <value>Calibrarea nu poate fi stearsa!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ReadingsList_Text" xml:space="preserve">
+    <value>Lista citiri</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorsAlert_Title" xml:space="preserve">
+    <value>Alerte Senzori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Alerts_Button" xml:space="preserve">
+    <value>Alerte</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Column_Text" xml:space="preserve">
+    <value>Pozitia</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Row_Text" xml:space="preserve">
+    <value>Linie</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Column_Header" xml:space="preserve">
+    <value>Pozitia</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Row_Header" xml:space="preserve">
+    <value>Linie</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RowColumnOccupied_Message" xml:space="preserve">
+    <value>Linia si Pozitia sunt ocupate !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="LiveBoard_Button" xml:space="preserve">
+    <value>Live Board</value>
+    <comment>Button</comment>
+  </data>
+  <data name="LiveBoard_Title" xml:space="preserve">
+    <value>Live Board</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Graphic_Text" xml:space="preserve">
+    <value>Grafic</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScrapProducts_Title" xml:space="preserve">
+    <value>Top 5 Produse Rebut</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Top5_Text" xml:space="preserve">
+    <value>Top 5</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScrapNumber_Header" xml:space="preserve">
+    <value>Nr. rebuturi</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Top5ScrapMachine_Title" xml:space="preserve">
+    <value>Top 5 Scrap Masini</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Top5_Button" xml:space="preserve">
+    <value>Top 5</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreaksNumber_Header" xml:space="preserve">
+    <value>Nr. stationari</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Top5MachineScrap_Text" xml:space="preserve">
+    <value>Top 5 Scrap Masini</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Top5_Title" xml:space="preserve">
+    <value>Top 5</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Top5ProductScrap_Text" xml:space="preserve">
+    <value>Top 5 Scrap Produse</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorTypeAndOrderExists_Message" xml:space="preserve">
+    <value>Tip Senzor si Ordine existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ScanOrderExists_Message" xml:space="preserve">
+    <value>Ordine Scanare existenta!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CauseCodeExists_Message" xml:space="preserve">
+    <value>Codul exista!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CauseDescription_Header" xml:space="preserve">
+    <value>Descriere</value>
+    <comment>Header</comment>
+  </data>
+  <data name="CauseDescription_Text" xml:space="preserve">
+    <value>Descriere</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FillCauseCode_Message" xml:space="preserve">
+    <value>Va rugam sa introduceti Codul!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="NOKCauses_Title" xml:space="preserve">
+    <value>Tip Defecte</value>
+    <comment>Title</comment>
+  </data>
+  <data name="NOKProductsCauses_Button" xml:space="preserve">
+    <value>Tip Defecte</value>
+    <comment>Button</comment>
+  </data>
+  <data name="OrderCode_Header" xml:space="preserve">
+    <value>Comanda</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OrderCode_Text" xml:space="preserve">
+    <value>Comanda</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Cause1_Header" xml:space="preserve">
+    <value>Cauza 1</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Cause2_Header" xml:space="preserve">
+    <value>Cauza 2</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Productivity_Text" xml:space="preserve">
+    <value>Productivitate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxOutputValueIsNull_Message" xml:space="preserve">
+    <value>Valoare Maxima Iesire nu poate fi nul!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MinOutputValueIsNull_Message" xml:space="preserve">
+    <value>Valoare Minima Iesire nu poate fi nul!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MinOVandMaxOVCannotBenull_Message" xml:space="preserve">
+    <value>Valoare Minima si Maxima Iesire nu pot fi nul!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Generate_Button" xml:space="preserve">
+    <value>Genereaza</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineProcessesRealtime_Button" xml:space="preserve">
+    <value>Procese masina in timp real</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineProcessesRealtime_Title" xml:space="preserve">
+    <value>Procese masina in timp real</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Stop_Button" xml:space="preserve">
+    <value>Stop</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakType_Header" xml:space="preserve">
+    <value>Tip Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Top5Breaks_Text" xml:space="preserve">
+    <value>Top 5 Stationari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Scrap_Button" xml:space="preserve">
+    <value>Rebut</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Quality_Text" xml:space="preserve">
+    <value>Calitate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Availability_Text" xml:space="preserve">
+    <value>Disponibilitate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Start_Button" xml:space="preserve">
+    <value>Start</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AllMachines_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllOrders_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllScans_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllSensorTypes_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Running_Text" xml:space="preserve">
+    <value>Ruleaza</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Stopped_Text" xml:space="preserve">
+    <value>Oprit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IntervalMinutes_Text" xml:space="preserve">
+    <value>Interval (min)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ProductCode_Header" xml:space="preserve">
+    <value>Cod Produs</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AllProductCodes_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ProductCode_Text" xml:space="preserve">
+    <value>Cod Produs</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ResetSensors_Text" xml:space="preserve">
+    <value>Senzori resetare ciclu</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoCycleDivisionSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati o diviziune de ciclu!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Details_Button" xml:space="preserve">
+    <value>Detalii</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UnknownBreak_Text" xml:space="preserve">
+    <value>Stationare necunoscuta</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MaxAlert_Text" xml:space="preserve">
+    <value>Alerta maxima</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinAlert_Text" xml:space="preserve">
+    <value>Alerta maxima</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OrderDivision_Header" xml:space="preserve">
+    <value>Ordine</value>
+    <comment>Header</comment>
+  </data>
+  <data name="OrderDivision_Text" xml:space="preserve">
+    <value>Ordine</value>
+    <comment>Text</comment>
+  </data>
+  <data name="StoppedIn_Message" xml:space="preserve">
+    <value>OPRIT IN</value>
+    <comment>Message</comment>
+  </data>
+  <data name="OEE_Text" xml:space="preserve">
+    <value>OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="VisibleOnLiveBoard_Header" xml:space="preserve">
+    <value>Vizibil pe LiveBoard</value>
+    <comment>Header</comment>
+  </data>
+  <data name="VisibleOnLiveBoard_Text" xml:space="preserve">
+    <value>Vizibil pe LiveBoard</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TechnicalSupport_Title" xml:space="preserve">
+    <value>Interventii</value>
+    <comment>Title</comment>
+  </data>
+  <data name="BreakTypeCodeExists_Message" xml:space="preserve">
+    <value>Cod Stationare existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="TechSupport_Button" xml:space="preserve">
+    <value>Interventii</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BreakCode_Header" xml:space="preserve">
+    <value>Cod Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakCode_Text" xml:space="preserve">
+    <value>Cod Stationare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllBreakTypes_Text" xml:space="preserve">
+    <value>Toate Stationarile</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Top5HighestProductivity_Text" xml:space="preserve">
+    <value>TOP 5 Cea mai mare performanta</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Top5LowestOEE_Text" xml:space="preserve">
+    <value>Top 5 Cel mai mic OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OEE_Header" xml:space="preserve">
+    <value>OEE</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Productivity_Header" xml:space="preserve">
+    <value>Productivitate</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Refresh_Button" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Top5NormDeviation_Text" xml:space="preserve">
+    <value>Top 5 Deviatii de la norma</value>
+    <comment>Text</comment>
+  </data>
+  <data name="PercentRealised_Header" xml:space="preserve">
+    <value>Procent realizat</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Status_Text" xml:space="preserve">
+    <value>Stare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CannotConnectToDB_Message" xml:space="preserve">
+    <value>Conexiunea cu baza de date nu functioneaza.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="IndicatorsHistory_Button" xml:space="preserve">
+    <value>Indicatori pe zi</value>
+    <comment>Button</comment>
+  </data>
+  <data name="IndicatorsHistory_Title" xml:space="preserve">
+    <value>Indicatori pe zi</value>
+    <comment>Title</comment>
+  </data>
+  <data name="IndicatorsPeriod_Button" xml:space="preserve">
+    <value>Indicatori pe perioada</value>
+    <comment>Button</comment>
+  </data>
+  <data name="IndicatorsPeriod_Title" xml:space="preserve">
+    <value>Indicatori pe perioada</value>
+    <comment>Title</comment>
+  </data>
+  <data name="DateEndBreak_Header" xml:space="preserve">
+    <value>Sfarsit Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DateScanBreak_Header" xml:space="preserve">
+    <value>Scanare Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DateScanTechBegin_Header" xml:space="preserve">
+    <value>Incepere Interventie</value>
+    <comment>Header</comment>
+  </data>
+  <data name="DateStartBreak_Header" xml:space="preserve">
+    <value>Inceput Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeBreakDuration_Header" xml:space="preserve">
+    <value>Durata stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeBreakSolve_Header" xml:space="preserve">
+    <value>Timp remediere</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeScanBreak_Header" xml:space="preserve">
+    <value>Timp scanare stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="TimeScanTechSupport_Header" xml:space="preserve">
+    <value>Timp scanare intervetie</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Day_Text" xml:space="preserve">
+    <value>Zi</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Shift_Text" xml:space="preserve">
+    <value>Schimb</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineProcessesHistory_Button" xml:space="preserve">
+    <value>Procese masina istoric</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineProcessesHistory_Title" xml:space="preserve">
+    <value>Procese masina istoric</value>
+    <comment>Title</comment>
+  </data>
+  <data name="UserSettings_Button" xml:space="preserve">
+    <value>Setari Utilizatori</value>
+    <comment>Button</comment>
+  </data>
+  <data name="UserSettings_Title" xml:space="preserve">
+    <value>Setari Utilizatori</value>
+    <comment>Title</comment>
+  </data>
+  <data name="Language_Header" xml:space="preserve">
+    <value>Limba</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RealtimeDisplayMinutes_Header" xml:space="preserve">
+    <value>Interval calcul realtime (m)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshSensorsSeconds_Header" xml:space="preserve">
+    <value>Interval refresh senzori (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="User_Header" xml:space="preserve">
+    <value>Utilizator</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>Limba</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RealtimeDisplayMinutes_Text" xml:space="preserve">
+    <value>Interval calcul realtime (m)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshSensorsSeconds_Text" xml:space="preserve">
+    <value>Interval refresh senzori (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AppSettings_Button" xml:space="preserve">
+    <value>Setari Aplicatie</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>Setari Aplicatie</value>
+    <comment>Title</comment>
+  </data>
+  <data name="RefreshAlertsSeconds_Header" xml:space="preserve">
+    <value>Interval refresh alerte (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshCycleSeconds_Header" xml:space="preserve">
+    <value>Inteval refresh cicluri (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshIndicatorsMinutes_Header" xml:space="preserve">
+    <value>Interval refresh indicatori (m)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="RefreshLiveBoardSeconds_Header" xml:space="preserve">
+    <value>Interval refresh LiveBoard (s)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IndicatorsIntervalMinutes_Header" xml:space="preserve">
+    <value>Interval indicatori (m)</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IndicatorsIntervalMinutes_Text" xml:space="preserve">
+    <value>Interval indicatori (m)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshAlertsSeconds_Text" xml:space="preserve">
+    <value>Interval refresh alerte (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshCycleSeconds_Text" xml:space="preserve">
+    <value>Interval refresh cicluri (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshIndicatorsMinutes_Text" xml:space="preserve">
+    <value>Interval refresh indicatori (m)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RefreshLiveBoardSeconds_Text" xml:space="preserve">
+    <value>Interval refresh LiveBoard (s)</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NeedsRestart_Message" xml:space="preserve">
+    <value>Aplicatie trebuie repornita, va rugam reporniti aplicatia !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Alerts_Title" xml:space="preserve">
+    <value>Alerte</value>
+    <comment>Title</comment>
+  </data>
+  <data name="AlertOnMax_Header" xml:space="preserve">
+    <value>Alerteaza la max</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AlertOnMin_Header" xml:space="preserve">
+    <value>Alerteaza la min</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakAlertRules_Text" xml:space="preserve">
+    <value>Reguli de alerta pentru stationari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypeAlertRules_Text" xml:space="preserve">
+    <value>Reguli de alerta pentru tipuri de stationari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorAlertRules_Text" xml:space="preserve">
+    <value>Reguli de alerta pentru senzori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Users_Text" xml:space="preserve">
+    <value>Utilizatori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakAlert_Text" xml:space="preserve">
+    <value>Alerta stationari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakTypeAlert_Text" xml:space="preserve">
+    <value>Alerta tipuri de stationari</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorAlert_Text" xml:space="preserve">
+    <value>Alerta senzori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AlertType_Text" xml:space="preserve">
+    <value>Tip de alerta</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Color_Header" xml:space="preserve">
+    <value>Culoare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Color_Text" xml:space="preserve">
+    <value>Culoare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Machine_Text" xml:space="preserve">
+    <value>Masina</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineDescriptionCannotContainSpaces_Message" xml:space="preserve">
+    <value>Descrierea masinii nu poate sa contina spatii</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CodeAlreadyExists_Message" xml:space="preserve">
+    <value>Cod existent!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AddSensorCondition_MenuItem" xml:space="preserve">
+    <value>Adauga conditie senzor</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="AllNOKStates_Text" xml:space="preserve">
+    <value>Toate starile</value>
+    <comment>Text</comment>
+  </data>
+  <data name="StateCode_Header" xml:space="preserve">
+    <value>Cod Stare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Next_Button" xml:space="preserve">
+    <value>Inainte &gt;</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Previous_Button" xml:space="preserve">
+    <value>&lt; Inapoi</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Information_Text" xml:space="preserve">
+    <value>Informatii</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreakType_Text" xml:space="preserve">
+    <value>Tip de stationare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="All_Text" xml:space="preserve">
+    <value>Toti</value>
+    <comment>Text</comment>
+  </data>
+  <data name="EndDate_Text" xml:space="preserve">
+    <value>Data terminare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="StartDate_Text" xml:space="preserve">
+    <value>Data incepere</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ScanDate_Header" xml:space="preserve">
+    <value>Data Scanare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ScanHour_Text" xml:space="preserve">
+    <value>Ora Scanare</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Finish_Button" xml:space="preserve">
+    <value>Finalizeaza</value>
+    <comment>Button</comment>
+  </data>
+  <data name="RuleName_Text" xml:space="preserve">
+    <value>Nume regula</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AlertOn_Text" xml:space="preserve">
+    <value>Alerteaza la</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Maximum_Text" xml:space="preserve">
+    <value>Maxim</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Minimum_Text" xml:space="preserve">
+    <value>Minim</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ChannelCode_Header" xml:space="preserve">
+    <value>Cod Canal</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ChannelCode_Text" xml:space="preserve">
+    <value>Cod Canal</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ChannelCodeAlreadyAssignedToMachine_Message" xml:space="preserve">
+    <value>Cod Canal este deja asignat masinii!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Import_Button" xml:space="preserve">
+    <value>Import</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Browse_Button" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BrowseFile_Message" xml:space="preserve">
+    <value>Selectati un fisier!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="WrongExcelFormat_Message" xml:space="preserve">
+    <value>Format gresit pentru fisier Excel !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="From_Message" xml:space="preserve">
+    <value>din</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Information_Message" xml:space="preserve">
+    <value>Informatii</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsInserted_Message" xml:space="preserve">
+    <value>inregistrari inserate</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsRejectedBecauseNullNormOrMoldPieces_Message" xml:space="preserve">
+    <value>inregistrari respinse (valoare null pentru Norma sau Bucati/Matrita )</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsRejectedBecauseZeroNormOrMoldPieces_Message" xml:space="preserve">
+    <value>inregistrari respinse (valoare 0 pentru Norma sau Bucati/Matrita )</value>
+    <comment>Message</comment>
+  </data>
+  <data name="RecordsUpdated_Message" xml:space="preserve">
+    <value>inregistrari modificate</value>
+    <comment>Message</comment>
+  </data>
+  <data name="TotalProducts_Message" xml:space="preserve">
+    <value>total produse</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Zoom_Button" xml:space="preserve">
+    <value>Mareste</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SerialNumber_Text" xml:space="preserve">
+    <value>Numar Serial</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SerialNumber_Header" xml:space="preserve">
+    <value>Numar Serial</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SenderEmail_Header" xml:space="preserve">
+    <value>Email expeditor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SenderPassword_Header" xml:space="preserve">
+    <value>Parola expeditor</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SMTPAddress_Header" xml:space="preserve">
+    <value>Address SMTP</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SMTPPort_Header" xml:space="preserve">
+    <value>Port SMTP</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SSL_Header" xml:space="preserve">
+    <value>SSL</value>
+    <comment>Header</comment>
+  </data>
+  <data name="SenderEmail_Text" xml:space="preserve">
+    <value>Email expeditor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SenderPassword_Text" xml:space="preserve">
+    <value>Parola expeditor</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SMTPAddress_Text" xml:space="preserve">
+    <value>Adresa SMTP</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SMTPPort_Text" xml:space="preserve">
+    <value>Port SMTP</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SSL_Text" xml:space="preserve">
+    <value>SSL</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DateScanTechEnd_Header" xml:space="preserve">
+    <value>Terminare Interventie</value>
+    <comment>Header</comment>
+  </data>
+  <data name="GeneralSettings_Text" xml:space="preserve">
+    <value>Setari generale</value>
+    <comment>Text</comment>
+  </data>
+  <data name="OEESettings_Text" xml:space="preserve">
+    <value>Setari OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Maximum_Header" xml:space="preserve">
+    <value>Maxim</value>
+    <comment>Header</comment>
+  </data>
+  <data name="Minimum_Header" xml:space="preserve">
+    <value>Minim</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IntervalAlreadyExists_Message" xml:space="preserve">
+    <value>Intervalul introdus este deja inclus intr-un interval existent.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Blinking_Header" xml:space="preserve">
+    <value>Intermitent</value>
+    <comment>Header</comment>
+  </data>
+  <data name="AlertSubjectBreakType_Message" xml:space="preserve">
+    <value>Alerta Tip Stationare</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSubjectSensor_Message" xml:space="preserve">
+    <value>Alerta Senzor</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSubjectUnplannedBreak_Message" xml:space="preserve">
+    <value>Alerta Stationare</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertMessageBreakType_Message" xml:space="preserve">
+    <value>A avut loc o stationare cu urmatoarele informatii</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertMessageSensor_Message" xml:space="preserve">
+    <value>A avut loc o alerta pe valoare senzor cu urmatoarele informatii</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertMessageUnplannedBreak_Message" xml:space="preserve">
+    <value>A avut loc o stationare cu urmatoarele informatii</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSensorValueOverMax_Message" xml:space="preserve">
+    <value>Valoarea senzorului este peste valoarea Maxima setata</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertSensorValueUnderMin_Message" xml:space="preserve">
+    <value>Valoarea senzorului este sub valoarea Minima setata</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Top5HighestOEE_Text" xml:space="preserve">
+    <value>Top 5 Cel mai mare OEE</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SaveAsNewGroup_CheckBox" xml:space="preserve">
+    <value>Salveaza selectia ca grup nou</value>
+    <comment>CheckBox</comment>
+  </data>
+  <data name="AlertUserGroupAlreadyExists_Message" xml:space="preserve">
+    <value>Exista deja un grup cu acest nume, va rugam alegeti alt nume.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ExportToExcel_Button" xml:space="preserve">
+    <value>Export in Excel</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Application_Text" xml:space="preserve">
+    <value>Aplicatie</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AlertLimits_Button" xml:space="preserve">
+    <value>Limite Alerte</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MachineTypes_Text" xml:space="preserve">
+    <value>Tipuri de masini</value>
+    <comment>Text</comment>
+  </data>
+  <data name="SensorTypes_Text" xml:space="preserve">
+    <value>Tipuri de senzori</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TechnicalSupportBreak_Text" xml:space="preserve">
+    <value>Stationare Interventii</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BreaksMinutes_Header" xml:space="preserve">
+    <value>Minute Stationari</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakMinutes_Header" xml:space="preserve">
+    <value>Minute Stationare</value>
+    <comment>Header</comment>
+  </data>
+  <data name="NoProductSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati un produs !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="TechSupport_Text" xml:space="preserve">
+    <value>Interventii</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TechSupportDuration_Header" xml:space="preserve">
+    <value>Durata</value>
+    <comment>Header</comment>
+  </data>
+  <data name="IsBeginTechSupport_Text" xml:space="preserve">
+    <value>Inceput Interventie</value>
+    <comment>Text</comment>
+  </data>
+  <data name="IsEndTechSupport_Text" xml:space="preserve">
+    <value>Sfarsit Interventie</value>
+    <comment>Text</comment>
+  </data>
+  <data name="ShowCycles_Text" xml:space="preserve">
+    <value>Arata cicli</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoTechSupportSelected_Message" xml:space="preserve">
+    <value>Va rugam selectati o stationare !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DateBegin_Text" xml:space="preserve">
+    <value>Data Inceput</value>
+    <comment>Text</comment>
+  </data>
+  <data name="DateEnd_Text" xml:space="preserve">
+    <value>Data Sfarsit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="BeginDateCouldNotBeGreaterThanEndDate_Message" xml:space="preserve">
+    <value>Data Inceput nu poate fi mai mare decat Data Sfarsit !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Blinking_Text" xml:space="preserve">
+    <value>Intermitent</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinimumCannotBeGreaterThanMaximum_Message" xml:space="preserve">
+    <value>Minim nu poate fi mai mare decat Maxim!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="AlertLimits_Title" xml:space="preserve">
+    <value>Limite Alerte</value>
+    <comment>Title</comment>
+  </data>
+  <data name="BrokenMoldPieces_Header" xml:space="preserve">
+    <value>Nr. cuiburi stricate/matrita</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BrokenMoldPieces_Text" xml:space="preserve">
+    <value>Nr.cuiburi stricate/matrita</value>
+    <comment>Text</comment>
+  </data>
+  <data name="CannotDeleteActiveMachine_Message" xml:space="preserve">
+    <value>O masina activa nu poate fi stearsa !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UserSettingExists_Message" xml:space="preserve">
+    <value>Exista deja setare pentru utilizator !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ProductTypeNotOnCurrentOrder_Message" xml:space="preserve">
+    <value>Reperul nu poate fi diferit de cel din comanda curenta a masinii !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="CurrentStateMinutes_Text" xml:space="preserve">
+    <value>Minute stare curenta</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MachineIsAlreadyInBreak_Message" xml:space="preserve">
+    <value>Masina este deja in stationare !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="DefectTypeCannotBeNull_Message" xml:space="preserve">
+    <value>Tip Defect nu poate fi null !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SensorTypeAndProductTypeAlreadyExist_Message" xml:space="preserve">
+    <value>Tip Senzor si Tip Produs deja introdus!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ProducedPieces_Text" xml:space="preserve">
+    <value>Piese produse</value>
+    <comment>Text</comment>
+  </data>
+  <data name="AllTypes_Text" xml:space="preserve">
+    <value>Toate</value>
+    <comment>Text</comment>
+  </data>
+  <data name="FunctionCannotBeDeleted_Message" xml:space="preserve">
+    <value>Functia nu poate fi stearsa!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FunctionCannotBeRenamed_Message" xml:space="preserve">
+    <value>Function nu poate fi redenumita !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ImportFromERP_Button" xml:space="preserve">
+    <value>Import din ERP</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ImportFromExcel_Button" xml:space="preserve">
+    <value>Import din Excel</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ImportFinished_Message" xml:space="preserve">
+    <value>Importul s-a terminat!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BreaksRights_Button" xml:space="preserve">
+    <value>Drepturi Stationari</value>
+    <comment>Button</comment>
+  </data>
+  <data name="AddBreakRight_MenuItem" xml:space="preserve">
+    <value>Adauga drept stationare</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="BreakTypeAlreadyAssigned_Message" xml:space="preserve">
+    <value>Tip stationare este deja asignat !</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BreaksRights_Title" xml:space="preserve">
+    <value>Drepturi Stationari</value>
+    <comment>Title</comment>
+  </data>
+  <data name="MaximumLimit_Header" xml:space="preserve">
+    <value>Limita Max.</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MinimumLimit_Header" xml:space="preserve">
+    <value>Limita Min.</value>
+    <comment>Header</comment>
+  </data>
+  <data name="MaximumLimit_Text" xml:space="preserve">
+    <value>Max. Limit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="MinimumLimit_Text" xml:space="preserve">
+    <value>Min. Limit</value>
+    <comment>Text</comment>
+  </data>
+  <data name="GroupByMachine_Text" xml:space="preserve">
+    <value>Grupare pe masina</value>
+    <comment>Text</comment>
+  </data>
+  <data name="GroupByOrder_Text" xml:space="preserve">
+    <value>Grupare pe comanda</value>
+    <comment>Text</comment>
+  </data>
+  <data name="TotalBreakMinutes_Header" xml:space="preserve">
+    <value>Total Min Stationari</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakCode1_Header" xml:space="preserve">
+    <value>Cod Stationare 1</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakCode2_Header" xml:space="preserve">
+    <value>Cod Stationare 2</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakMinutes1_Header" xml:space="preserve">
+    <value>Min. Stationare 1</value>
+    <comment>Header</comment>
+  </data>
+  <data name="BreakMinutes2_Header" xml:space="preserve">
+    <value>Min. Stationare 2</value>
+    <comment>Header</comment>
+  </data>
+  <data name="HighestOEE_Header" xml:space="preserve">
+    <value>Cel mai mare OEE</value>
+    <comment>Header</comment>
+  </data>
+  <data name="LowestOEE_Header" xml:space="preserve">
+    <value>Cel mai mic OEE</value>
+    <comment>Header</comment>
+  </data>
+  <data name="ForDecision_Text" xml:space="preserve">
+    <value>Decizie</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Scrap_Text" xml:space="preserve">
+    <value>Rebut</value>
+    <comment>Text</comment>
+  </data>
+  <data name="RejectedProductsTmp_Title" xml:space="preserve">
+    <value>Produse Defecte Temp</value>
+    <comment>Title</comment>
+  </data>
+  <data name="RejectedProductsTmp_Button" xml:space="preserve">
+    <value>Produse Defecte Temp</value>
+    <comment>Button</comment>
+  </data>
+  <data name="NoMoldPcs_Text" xml:space="preserve">
+    <value>FARA PIESE MATRITA</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoOrder_Text" xml:space="preserve">
+    <value>FARA COMANDA</value>
+    <comment>Text</comment>
+  </data>
+  <data name="NoUser_Text" xml:space="preserve">
+    <value>FARA USER</value>
+    <comment>Text</comment>
+  </data>
+  <data name="Reboot_MenuItem" xml:space="preserve">
+    <value>Reboot</value>
+    <comment>MenuItem</comment>
+  </data>
+  <data name="CannotConnectViaSSH_Message" xml:space="preserve">
+    <value>Conexiunea SSH nu se poate stabili pentru masina</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Calibration_Sent_Message" xml:space="preserve">
+    <value>Calibrare trimisa</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Reboot_Started_Message" xml:space="preserve">
+    <value>Restartare initiata</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SendCalibration_Button" xml:space="preserve">
+    <value>Trimite calibrare</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SendCalibration_MenuItem" xml:space="preserve">
+    <value>Trimite calibrare</value>
+    <comment>MenuItem</comment>
+  </data>
+</root>
